@@ -13,7 +13,7 @@ function Hero() {
 					I enjoy <span className='heroShiny1 text-blue-500'>building</span> and{' '}
 					<span className='heroShiny2 text-blue-500'>designing</span> for the web.
 					<Image
-						className='sqD squiggle-hero-html w-16 top-[-90px] right-[5%] sm:top-[-90px] sm:right-[170px]'
+						className='sqD squiggle-hero-html w-16 top-[-90px] right-[3%] sm:top-[-90px] sm:right-[170px]'
 						style={{ animationDelay: '0.1s' }}
 						src='/static/doodles/hero/html.svg'
 						alt='HTML Logo'
@@ -21,7 +21,7 @@ function Hero() {
 						height={100}
 					/>
 					<Image
-						className='sqD squiggle-hero-nextjs hidden top-[75px] right-0 w-11'
+						className='sqD squiggle-hero-nextjs  top-[75px] right-0 w-11'
 						style={{ animationDelay: '0.2s' }}
 						src='/static/doodles/hero/nextjs.svg'
 						alt='Nextjs Logo'
@@ -29,15 +29,7 @@ function Hero() {
 						height={100}
 					/>
 					<Image
-						className='sqD bottom-[-300px] -right-1/4 sm:right-[-20%] lg:bottom-[-310px] lg:right-[-120px] w-[400px]'
-						style={{ animationDelay: '0.3s' }}
-						src='/static/doodles/hero/brayden.svg'
-						alt='Logo Creator'
-						width={100}
-						height={100}
-					/>
-					<Image
-						className='sqD hidden sm:block bottom-[-340px] left-[-180px]'
+						className='sqD hidden sm:block top-[25px] left-[-5%]'
 						style={{ animationDelay: '0.4s' }}
 						src='/static/doodles/hero/coder.svg'
 						alt='coder'
@@ -53,7 +45,7 @@ function Hero() {
 						height={100}
 					/>
 					<Image
-						className='sqD bottom-[-320px] right-[65%] sm:right-[45%]'
+						className='sqD bottom-[-180px] right-[65%] sm:bottom-[-200px] sm:right-[45%]'
 						style={{ animationDelay: '0.6s' }}
 						src='/static/doodles/hero/dino.svg'
 						alt='chrome dino'
@@ -61,22 +53,22 @@ function Hero() {
 						height={100}
 					/>
 					<Image
-						className='sqD right-[-60px] sm:right-0 bottom-[-180px] lg:[5%]'
+						className='sqD right-[-50px] sm:right-0 bottom-[-180px] lg:[5%]'
 						style={{ animationDelay: '0.7s' }}
 						src='/static/doodles/hero/paintbrush.svg'
 						alt='paint logo'
-						width={100}
-						height={100}
+						width={120}
+						height={120}
 					/>
 					<Image
-						className='sqD squiggle-hero-pop1 hidden sm:block sm:top-[-130px] sm:left-[15%] lg:top-[-130px] lg:left-[120px]'
+						className='sqD squiggle-hero-pop1 top-[-110px] opacity-75 sm:block sm:top-[-120px] sm:left-[15%] sm:opacity-100'
 						src='/static/doodles/hero/pop1.svg'
 						alt='pop logo'
 						width={100}
 						height={100}
 					/>
 					<Image
-						className='sqD left-[-35px] bottom-[-85px] sm:bottom-[-100px] sm:left-5 opacity-40'
+						className='sqD left-[-35px] bottom-[-85px] sm:bottom-[-70px] sm:left-5 opacity-40'
 						style={{ animationDelay: '0.9s' }}
 						src='/static/doodles/hero/code.svg'
 						alt='code logo'

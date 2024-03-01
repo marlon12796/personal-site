@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' className={notoSansMono.className}>
-			<body className={'max-w-6xl m-auto bg-foreground'}>
+			<body className={'max-w-6xl m-auto flex  flex-col bg-foreground min-h-[100dvh]'}>
 				<header className='sticky top-0 bg-slate-950 z-[500]'>
 					<MobileNavbar />
 				</header>
