@@ -1,5 +1,5 @@
 'use client';
-import { JSX, SVGProps, useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import Link from 'next/link';
 import { routes } from '../data/global';
@@ -8,11 +8,7 @@ export default function MobileNavbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	function toggleMenu() {
-		if (isMenuOpen) {
-			setIsMenuOpen(false);
-		} else {
-			setIsMenuOpen(true);
-		}
+		isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
 	}
 
 	return (
@@ -57,9 +53,9 @@ export default function MobileNavbar() {
 						{routes.map((item, idx) => {
 							return (
 								<li key={idx} className='text-gray-300 hover:text-gray-500'>
-									<a href={item.path} className='block'>
+									<Link href={item.path} className='block'>
 										{item.title}
-									</a>
+									</Link>
 								</li>
 							);
 						})}

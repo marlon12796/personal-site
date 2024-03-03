@@ -6,12 +6,12 @@ export const projects: PersonalProject[] = [
 		description:
 			'A full-stack web application. Play AI-generated trivias about different topics such as art, entertainment, geography, history and science.',
 		images: [
-			'/projects/Tic-Tac-Toe/main.png',
-			'/projects/Tic-Tac-Toe/1.jpg',
-			'/projects/Tic-Tac-Toe/2.jpg',
-			'/projects/Tic-Tac-Toe/3.jpg',
-			'/projects/Tic-Tac-Toe/4.jpg',
-			'/projects/Tic-Tac-Toe/5.jpg',
+			'/projects/Tic-Tac-Toe/main.webp',
+			'/projects/Tic-Tac-Toe/1.webp',
+			'/projects/Tic-Tac-Toe/2.webp',
+			'/projects/Tic-Tac-Toe/3.webp',
+			'/projects/Tic-Tac-Toe/4.webp',
+			'/projects/Tic-Tac-Toe/5.webp',
 		],
 		stack: ['React', 'JavaScript', 'Zustand', 'Vite', 'TypeScript'],
 		githubLink: 'https://github.com/marlon12796/Tic-Tac-Toe-Emoji',
@@ -20,7 +20,7 @@ export const projects: PersonalProject[] = [
 	{
 		name: 'Tetris',
 		description: 'A portable Yuzu Emulator version manager for Windows.',
-		images: ['/projects/tetris/main.webp', '/projects/tetris/1.jpg', '/projects/tetris/2.jpg'],
+		images: ['/projects/tetris/main.webp', '/projects/tetris/1.webp', '/projects/tetris/2.webp'],
 		stack: ['TypeScript', 'Vite', 'Zustand', 'CSS', 'React'],
 		githubLink: 'https://github.com/marlon12796/tetris/',
 		previewLink: 'https://marlon12796.github.io/tetris/',
