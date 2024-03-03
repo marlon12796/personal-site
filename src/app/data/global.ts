@@ -58,7 +58,7 @@ export const footer: Footer = {
 			items: [
 				{
 					name: 'GitHub',
-					href: 'https://github.com/braydentw',
+					href: 'https://github.com/marlon12796',
 					icon: '/static/icons/github-f.svg',
 					leavesWebsite: true,
 				},
@@ -70,7 +70,7 @@ export const footer: Footer = {
 				},
 				{
 					name: 'Email',
-					href: 'mailto:contact@braydentw.io',
+					href: 'mailto:fabrisio021@gmail.com',
 					icon: '/static/icons/mail-f.svg',
 					leavesWebsite: true,
 				},

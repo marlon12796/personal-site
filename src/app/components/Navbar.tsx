@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 import { routes } from '../data/global';
 import Image from 'next/image';
 function Navbar() {
