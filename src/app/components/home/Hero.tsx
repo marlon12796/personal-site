@@ -5,7 +5,7 @@ function Hero() {
 	return (
 		<>
 			<div
-				className='relative heroElem w-full [padding-block:5em] flex justify-center text-center flex-col items-center z-1'
+				className='relative animate-scale-down-in w-full  [padding-block:5em] flex justify-center text-center flex-col items-center z-1  overflow-hidden'
 				style={{ maxWidth: '1200px' }}
 			>
 				<p className='text-xl mb-5 text-white'>Hey, I&apos;m Marlon.</p>

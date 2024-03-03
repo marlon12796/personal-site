@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import React from 'react';
-import Image from 'next/image';
 import { footer } from '../data/global';
 
 function Footer() {
@@ -39,7 +37,7 @@ function Footer() {
 					))}
 				</div>
 			</div>
-			<div className='mt-8 py-6 border-t items-center justify-between sm:flex'>
+			<div className='mt-8 [padding-block-start:1em] border-t items-center justify-between sm:flex'>
 				<div className='mt-4 sm:mt-0'>&copy; 2024 Marlon Web All rights reserved.</div>
 				<div className='mt-6 sm:mt-0'>
 					<ul className='flex items-center space-x-4'>

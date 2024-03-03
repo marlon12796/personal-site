@@ -1,77 +1,56 @@
-import { Project } from '@/types';
-import { kebabCase } from '@/utils/utils';
+import { PersonalProject } from '@/types';
 
-const projects: Project[] = [
+export const projects: PersonalProject[] = [
 	{
-		id: 0,
-		title: 'Learn.TheYEI',
-		desc: 'All the resources you will need to get a boost into economics.',
-		img: '/static/projects/yei-learn.png',
-		link: 'https://learn.theyei.org/',
-		github: 'https://github.com/braydentw/learn.theyei',
-		tags: ['React', 'NextJS', 'TailwindCSS', 'CSS', 'Firebase'],
+		name: 'Tic Tac Toe!',
+		description:
+			'A full-stack web application. Play AI-generated trivias about different topics such as art, entertainment, geography, history and science.',
+		images: [
+			'/projects/Tic-Tac-Toe/main.png',
+			'/projects/Tic-Tac-Toe/1.jpg',
+			'/projects/Tic-Tac-Toe/2.jpg',
+			'/projects/Tic-Tac-Toe/3.jpg',
+			'/projects/Tic-Tac-Toe/4.jpg',
+			'/projects/Tic-Tac-Toe/5.jpg',
+		],
+		stack: ['React', 'JavaScript', 'Zustand', 'Vite', 'TypeScript'],
+		githubLink: 'https://github.com/marlon12796/Tic-Tac-Toe-Emoji',
+		previewLink: 'https://marlon12796.github.io/Tic-Tac-Toe-Emoji/',
 	},
 	{
-		id: 1,
-		title: 'BuildFaster',
-		desc: 'Beautiful HTML templates ready-made for your next landing page.',
-		img: '/static/projects/buildfaster.png',
-		link: 'https://buildfaster-io.vercel.app/',
-		tags: ['HTML', 'CSS', 'Javascript', 'Gumroad'],
+		name: 'Tetris',
+		description: 'A portable Yuzu Emulator version manager for Windows.',
+		images: ['/projects/tetris/main.webp', '/projects/tetris/1.jpg', '/projects/tetris/2.jpg'],
+		stack: ['TypeScript', 'Vite', 'Zustand', 'CSS', 'React'],
+		githubLink: 'https://github.com/marlon12796/tetris/',
+		previewLink: 'https://marlon12796.github.io/tetris/',
 	},
 	{
-		id: 2,
-		title: 'React Emoji Search',
-		desc: '1800+ emojis at your fingertips. Ready-to-use with just a simple copy+paste.',
-		img: '/static/projects/react-emoji-search.png',
-		link: 'https://react-emoji-search.braydentw.vercel.app/',
-		github: 'https://github.com/braydentw/react-emoji-search',
-		tags: ['React', 'CSS', 'JSON'],
+		name: 'Weather Forecast',
+		description: 'A portable Yuzu Emulator version manager for Windows.',
+		images: [
+			'/projects/weather/main.svg',
+			'/projects/weather/1.webp',
+			'/projects/weather/2.webp',
+			'/projects/weather/3.webp',
+		],
+		stack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'React'],
+		githubLink: 'https://github.com/marlon12796/open-weather',
+		previewLink: 'https://open-weather-lyart.vercel.app/',
 	},
 	{
-		id: 3,
-		title: 'BitcoinTemp',
-		desc: 'A fun way to check the price of bitcoin! Cloudy days, sunny days, and Bitcoin Storms!',
-		img: '/static/projects/bitcointemp.png',
-		link: 'https://bitcointemp.com',
-		tags: ['React', 'NextJS', 'SCSS', 'API'],
-	},
-	{
-		id: 4,
-		title: 'Create HTML Boilerplate',
-		desc: 'Generate a vanilla HTML boilerplate in a flash!',
-		img: '/static/projects/create-html-boilerplate.png',
-		github: 'https://github.com/BraydenTW/create-html-boilerplate',
-		tags: ['Node', 'Javascript', 'NPM', 'HTML'],
-	},
-	{
-		id: 5,
-		title: '8 Ball in your CLI',
-		desc: 'An 8 ball simulation in your CLI built with Rust!',
-		img: '/static/projects/8ball-rust.png',
-		github: 'https://github.com/BraydenTW/8ball-rust',
-		tags: ['Rust', 'CLI', 'Game'],
-	},
-	{
-		id: 6,
-		title: 'DontLeaveMe 😭',
-		desc: 'Beg for users to stay on your website.',
-		img: '/static/projects/dontleaveme.png',
-		link: 'https://github.com/BraydenTW/dontleaveme/',
-		tags: ['Javascript', 'NPM'],
-	},
-	{
-		id: 7,
-		title: 'Madlibs',
-		desc: 'A simple version of Madlibs built for the web!',
-		img: '/static/projects/madlibs.png',
-		link: 'https://fillemin.netlify.app/',
-		github: 'https://github.com/braydentw/madlibs',
-		tags: ['HTML', 'CSS', 'Javascript'],
+		name: 'Movies App',
+		description: 'A portable Yuzu Emulator version manager for Windows.',
+		images: [
+			'/projects/movies/main.webp',
+			'/projects/movies/1.webp',
+			'/projects/movies/2.webp',
+			'/projects/movies/3.webp',
+			'/projects/movies/4.webp',
+		],
+		stack: ['TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'Vite', 'React'],
+		githubLink: 'https://github.com/marlon12796/t-movies/',
+		previewLink: 'https://marlon12796.github.io/t-movies/',
 	},
 ];
-const allTags: string[] = Array.from(new Set(projects.flatMap((project) => project.tags)));
-
-const allKebabTags = allTags.map((tag) => kebabCase(tag));
-
-export { allTags, allKebabTags, projects };
+//  '/projects/tetris/2.jpg';

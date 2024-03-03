@@ -9,5 +9,7 @@ export const RandomTitle = () => {
 	useEffect(() => {
 		randomNumberText('404', setNum404);
 	}, []);
-	return <h1 className='text-7xl text-white font-monospace font-bold opacity-100'>{`{ error: ${num404} }`}</h1>;
+	return (
+		<h1 className='[font-size:clamp(1.8rem,2vw_+_2rem,6rem)] text-white font-monospace font-bold opacity-100'>{`{ error: ${num404} }`}</h1>
+	);
 };
