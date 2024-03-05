@@ -53,4 +53,4 @@ export const projects: PersonalProject[] = [
 		previewLink: 'https://marlon12796.github.io/t-movies/',
 	},
 ];
-//  '/projects/tetris/2.jpg';
+

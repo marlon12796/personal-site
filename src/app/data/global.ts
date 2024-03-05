@@ -25,8 +25,8 @@ export const routes: Route[] = [
 		path: '/',
 	},
 	{
-		title: 'Projects',
-		path: '/projects',
+		title: 'About',
+		path: '/about',
 	},
 	{
 		title: 'Contact',
@@ -44,8 +44,8 @@ export const footer: Footer = {
 					href: '/',
 				},
 				{
-					name: 'Projects',
-					href: '/projects',
+					name: 'About',
+					href: '/about',
 				},
 				{
 					name: 'Contact',

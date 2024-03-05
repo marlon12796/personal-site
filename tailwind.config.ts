@@ -84,6 +84,10 @@ const config = {
 				'scale-down-in': 'scale-down-in 1s ease-in',
 				'background-shine': 'background-shine 3s ease-in-out infinite alternate',
 			},
+			boxShadow: {
+				'right-bottom-4': '4px 4px #dedede',
+				'right-bottom': '0px 0px #dedede',
+			},
 		},
 	},
 	plugins: [require('tailwindcss-animate')],
