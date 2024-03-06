@@ -7,7 +7,7 @@ function Footer() {
 			<div className='gap-6 justify-between md:flex md:gap-10'>
 				<div className='max-w-md flex  flex-col-reverse md:flex-col justify-start gap-6'>
 					<p className='leading-relaxed  text-[15px]'>
-						Transformando ideas en experiencias visuales, construyendo el futuro del web con creatividad y código.
+						Transforming ideas into visual experiences, building the future of the web with creativity and code.
 					</p>
 					<form
 						action='mailto:fabrisio021@gmail.com'

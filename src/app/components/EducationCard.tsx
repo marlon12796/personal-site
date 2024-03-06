@@ -5,8 +5,9 @@ interface EducationCardTypes {
 	description: string;
 	even: boolean;
 	headerIcon: React.ReactNode;
+	time: string;
 }
-export const EducationCard = ({ title, description, even, headerIcon }: EducationCardTypes) => {
+export const EducationCard = ({ title, description, even, headerIcon, time }: EducationCardTypes) => {
 	return (
 		<article
 			className={cn(
@@ -29,7 +30,10 @@ export const EducationCard = ({ title, description, even, headerIcon }: Educatio
 			>
 				<header className='[padding-block:0.5em] [padding-inline:1em] flex gap-x-4 items-center  bg-indigo-600 rounded-t-md'>
 					<span className='w-8 aspect-square text-black'>{headerIcon}</span>
-					<h3 className='uppercase font-bold text-stone-900'>{title}</h3>
+					<div>
+						<h3 className='uppercase font-bold text-stone-900'>{title}</h3>
+						<time className='text-sm text-stone-200'>{`(${time})`}</time>
+					</div>
 				</header>
 				<p className='[padding-block:0.5em] [padding-inline:1em] text-slate-700'>{description}</p>
 			</div>

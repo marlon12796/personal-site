@@ -38,6 +38,7 @@ export const ContactForm = () => {
 			toast.error('An unexpected error occurred.');
 		} finally {
 			setContactStatus('success');
+			form.reset();
 		}
 	};
 

@@ -11,6 +11,7 @@ const Education = () => {
 					key={education.title}
 					headerIcon={education.icon}
 					even={(index + 1) % 2 === 0}
+					time={education.date}
 				/>
 			))}
 		</div>

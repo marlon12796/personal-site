@@ -36,7 +36,7 @@ export const EductionData = [
 				<path d='M6 12.5V16a6 3 0 0 0 12 0v-3.5' />
 			</svg>
 		),
-		date: 'Year - Year',
+		date: '2015 - 2019',
 	},
 	{
 		title: 'Primary Education',
@@ -59,6 +59,6 @@ export const EductionData = [
 			</svg>
 		),
 		location: 'Dorado School, Puente Piedra',
-		date: 'Year - Year',
+		date: '2009 - 2014',
 	},
 ];

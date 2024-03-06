@@ -59,7 +59,9 @@ const page = () => {
 				</p>
 			</section>
 			<section>
-				<h2 className=' text-slate-300 text-center text-2xl [padding-block-start:0.5em] sm:text-4xl'>Education</h2>
+				<h2 className='font-bold text-slate-300 text-center text-2xl [padding-block-start:0.5em] sm:text-4xl'>
+					Education
+				</h2>
 				<Education />
 			</section>
 		</main>
