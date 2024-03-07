@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import AboutImage from '../../../public/static/about.avif';
 import Education from '../components/Education';
+import Link from 'next/link';
 const page = () => {
 	return (
 		<main className='w-full [padding-inline:2rem] mb-16'>
@@ -11,9 +12,11 @@ const page = () => {
 							Simplifying digital experiences for everyone.
 						</h2>
 						<p>Crafting accessible, intuitive solutions alongside Programmer Marlon to enhance user interactions.</p>
-						<button
-							type='button'
-							className='group cursor-pointer relative flex gap-2 justify-between items-center overflow-hidden bg-gray-800 rounded-md border-2 border-slate-50 shadow-right-bottom-4 transition-all duration-300 active:shadow-right-bottom active:[translate:3px]'
+						<Link
+							href='/static/cv.pdf'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='w-max group cursor-pointer relative flex gap-2 justify-between items-center overflow-hidden bg-gray-800 rounded-md border-2 border-slate-50 shadow-right-bottom-4 transition-all duration-300 active:shadow-right-bottom active:[translate:3px]'
 						>
 							<span className='[padding-inline-start:1em] font-semibold text-slate-300 '>Download Csv</span>
 							<span className='bg-black p-[0.35em] grid place-items-center'>
@@ -28,7 +31,7 @@ const page = () => {
 									<path d='M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z'></path>
 								</svg>
 							</span>
-						</button>
+						</Link>
 					</div>
 					<div className='relative w-full aspect-square mt-14 md:mt-0 md:max-w-xl '>
 						<Image

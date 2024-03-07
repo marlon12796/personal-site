@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 
 const Projects = () => {
 	return (
-		<section className='w-full px-4 my-16'>
+		<section className='w-full px-4 my-16' id='projects'>
 			<article className='mx-auto max-w-screen-xl w-full '>
 				<Subtitle text='My projects' />
 				<span className='text-slate-300 block mt-4'>

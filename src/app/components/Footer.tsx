@@ -71,7 +71,7 @@ function Footer() {
 						</li>
 
 						<li className='w-10 h-10 border rounded-full flex items-center justify-center'>
-							<a href=''>
+							<a href='https://www.linkedin.com/in/marlon-ureta-9147161b2/' target='_blank' rel='noopener noreferrer'>
 								<svg viewBox='0 0 448 512' className='svg-icon w-6 h-6 text-blue-700'>
 									<path
 										fill='currentColor'

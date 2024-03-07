@@ -3,10 +3,12 @@ import { useState } from 'react';
 
 import Link from 'next/link';
 import { routes } from '../data/global';
+import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 export default function MobileNavbar() {
+	const pathname = usePathname();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-
 	function toggleMenu() {
 		isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
 	}
@@ -14,7 +16,7 @@ export default function MobileNavbar() {
 	return (
 		<nav
 			className={` pb-5 md:text-sm  ${
-				isMenuOpen ? 'shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0' : ''
+				isMenuOpen ? 'shadow-lg rounded-xl  shadow-blue-900  md:shadow-none md:border-none md:mx-2 md:mt-0' : ''
 			}`}
 		>
 			<div className='gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8'>
@@ -45,14 +47,23 @@ export default function MobileNavbar() {
 								</svg>
 							)}
 						</button>
-						L
 					</div>
 				</div>
 				<div className={`flex-1 mt-8 md:mt-0 md:flex md:justify-end ${isMenuOpen ? 'block' : 'hidden'} `}>
 					<ul className='justify-center items-center space-y-6  text-lg md:flex md:space-x-6 md:space-y-0'>
 						{routes.map((item, idx) => {
 							return (
-								<li key={idx} className='text-gray-300 hover:text-gray-500'>
+								<li
+									key={idx}
+									className={cn(
+										'text-gray-300 relative',
+										{
+											'text-gray-100 after:content-[" "] after:border-gray-300 after:absolute after:w-full after:h-full after:border-b after:top-0':
+												item.path === pathname,
+										},
+										{ 'hover:text-gray-400': item.path !== pathname }
+									)}
+								>
 									<Link href={item.path} className='block'>
 										{item.title}
 									</Link>
