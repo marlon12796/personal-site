@@ -22,10 +22,10 @@ const Page = () => {
 					<div className='space-y-3 basis-[60%] '>
 						<h2 className='text-indigo-600 font-semibold '>Contact</h2>
 						<p className='text-slate-300 text-3xl animate-background-shine font-semibold sm:text-4xl  bg-[linear-gradient(110deg,#939393,45%,#1e293b,55%,#939393)] bg-[length:250%_100%] bg-clip-text  text-transparent'>
-							Let us know how we can help
+							Let me know how I can help
 						</p>
 						<p className='text-slate-400'>
-							We are here to help and answer any question you might have, We look forward to hearing from you.
+							I am here to help and answer any question you might have, I look forward to hearing from you.
 						</p>
 					</div>
 				</div>
