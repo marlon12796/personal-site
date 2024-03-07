@@ -1,10 +1,11 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/app/components/ui/Card';
 import { ExternalLink, Github } from 'lucide-react';
 import { PersonalProject } from '@/types';
 import { technologies } from '@/app/data/Thecnologies';
-import { Button } from '@/components/ui/Button';
-import CustomTooltip from '@/components/ui/CustomTooltip';
-import Carousel from '@/components/ui/Carousel';
+import { Button } from '@/app/components/ui/Button';
+import CustomTooltip from '@/app/components/ui/CustomTooltip';
+import Carousel from '@/app/components/ui/Carousel';
+
 type Props = {
 	project: PersonalProject;
 };
