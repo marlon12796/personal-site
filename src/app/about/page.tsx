@@ -40,6 +40,8 @@ const page = () => {
 							fill
 							sizes='(min-width:768px) 50vw ,80vw'
 							alt='about image'
+							placeholder='blur'
+							priority
 						/>
 					</div>
 				</div>

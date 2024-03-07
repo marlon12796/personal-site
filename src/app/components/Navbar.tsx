@@ -58,7 +58,7 @@ export default function MobileNavbar() {
 									className={cn(
 										'text-gray-300 relative',
 										{
-											'text-gray-100 after:content-[" "] after:border-gray-300 after:absolute after:w-full after:h-full after:border-b after:top-0':
+											'text-gray-100 md:after:content-[" "] md:after:border-gray-300 md:after:absolute md:after:w-full md:after:h-full md:after:border-b md:after:top-0':
 												item.path === pathname,
 										},
 										{ 'hover:text-gray-400': item.path !== pathname }

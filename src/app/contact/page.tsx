@@ -9,7 +9,15 @@ const Page = () => {
 			<div className='max-w-screen-xl mx-auto px-4  md:px-8'>
 				<div className='relative flex flex-col md:flex-row-reverse gap-6 md:items-center'>
 					<div className='relative min-h-[14rem] md:basis-[40%] md:[min-block-size:15rem]'>
-						<Image src={imgSetup} fill alt='setup pc' className='object-cover' sizes='75vw' priority />
+						<Image
+							src={imgSetup}
+							fill
+							alt='setup pc'
+							className='object-cover'
+							sizes='75vw'
+							priority
+							placeholder='blur'
+						/>
 					</div>
 					<div className='space-y-3 basis-[60%] '>
 						<h2 className='text-indigo-600 font-semibold '>Contact</h2>
