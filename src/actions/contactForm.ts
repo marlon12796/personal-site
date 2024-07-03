@@ -1,6 +1,6 @@
 'use server';
 import { Resend } from 'resend';
-import { formSchema, formSchemaType } from '@/lib/validatons/form';
+import { formSchema, type formSchemaType } from '@/lib/validatons/form';
 const resend = new Resend(process.env.RESEND_API_KEY);
 export const getData = async (values: formSchemaType) => {
 	try {
