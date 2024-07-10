@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_Mono } from 'next/font/google'
 import './globals.css'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const notoSansMono = Noto_Sans_Mono({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '700', '800'] })
 

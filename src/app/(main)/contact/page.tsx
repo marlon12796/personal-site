@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { ContactForm } from '../../components/ContactForm'
-import { contactMethods } from '../data/content/contact'
-import imgSetup from '../../../public/static/setup.webp'
+import { ContactForm } from '@/components/ContactForm'
+import { contactMethods } from '@/app/data/content/contact'
+import imgSetup from '/public/static/setup.webp'
 import { Toaster } from '@/components/ui/sonner'
 const Page = () => {
   return (

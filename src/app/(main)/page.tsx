@@ -1,6 +1,6 @@
-import Projects from '../components/Project'
-import Hero from '../components/home/Hero'
-import Technologies from '../components/home/Thecnologies'
+import Projects from '@/components/Project'
+import Hero from '@/components/home/Hero'
+import Technologies from '@/components/home/Thecnologies'
 
 export default function Home() {
   return (

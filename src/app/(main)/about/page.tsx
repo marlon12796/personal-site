@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import AboutImage from '../../../public/static/about.avif'
-import Education from '../../components/Education'
+import AboutImage from '/public/static/about.avif'
+import Education from '@/components/Education'
 import Link from 'next/link'
 const page = () => {
   return (
