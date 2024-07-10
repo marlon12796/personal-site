@@ -1,0 +1,21 @@
+{
+  "contact": {
+    "heading": "Contact",
+    "subheading": "Let me know how I can help",
+    "description": "I am here to help and answer any question you might have, I look forward to hearing from you.",
+    "button": "Submit",
+    "inputEmail": "Email",
+    "inputMessage": "Message",
+    "labelMessage": "Enter a message",
+    "methods": {
+      "email": {
+        "title": "Email",
+        "contact": "marlon.tafur.21@gmail.com  | ln73074146@zegel.pe"
+      },
+      "phone": {
+        "title": "Phone",
+        "contact": "+51 975 294 691"
+      }
+    }
+  }
+}

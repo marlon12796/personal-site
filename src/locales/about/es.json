@@ -1,21 +1,12 @@
 {
-  "contact": {
-    "heading": "Contacto",
-    "subheading": "Déjame saber cómo puedo ayudarte",
-    "description": "Estoy aquí para ayudar y responder cualquier pregunta que puedas tener. Espero con interés saber de ti.",
-    "button": "Enviar",
-    "inputEmail": "Correo",
-    "inputMessage": "Mensaje",
-    "labelMessage":"Ingresa un Mensaje",
-    "methods": {
-      "email": {
-        "title": "Correo Electrónico",
-        "contact": "marlon.tafur.21@gmail.com | ln73074146@zegel.pe"
-      },
-      "phone": {
-        "title": "Teléfono",
-        "contact": "+51 975 294 691"
-      }
-    }
+  "about": {
+    "heading": "Simplificando las experiencias digitales para todos.",
+    "description": "Creando soluciones accesibles e intuitivas junto al Programador Marlon para mejorar las interacciones de los usuarios.",
+    "downloadCV": "Descargar CV",
+    "intro": "Soy Marlon, dedicado a hacer las experiencias digitales más simples y amigables para todos.",
+    "paragraph1": "¡Hola! Mi nombre es Marlon. Soy apasionado por desmitificar la tecnología y crear interfaces que hablen a todos. Con un ojo agudo para el diseño y un corazón para el código, cierro la brecha entre lo complejo y lo accesible. Comencé mi carrera como desarrollador web hace unos 8 años.",
+    "paragraph2": "He probado algunos lenguajes de programación y tecnologías, tanto en el Back-End como en el Front-End.",
+    "paragraph3": "Aunque el alcance del desarrollo web es amplio, me interesé mucho y me enfoqué en el Desarrollo Front-End y SQL.",
+    "education": "Educación"
   }
 }

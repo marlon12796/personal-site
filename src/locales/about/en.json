@@ -1,21 +1,12 @@
 {
-  "contact": {
-    "heading": "Contact",
-    "subheading": "Let me know how I can help",
-    "description": "I am here to help and answer any question you might have, I look forward to hearing from you.",
-    "button": "Submit",
-    "inputEmail": "Email",
-    "inputMessage": "Message",
-    "labelMessage": "Enter a message",
-    "methods": {
-      "email": {
-        "title": "Email",
-        "contact": "marlon.tafur.21@gmail.com  | ln73074146@zegel.pe"
-      },
-      "phone": {
-        "title": "Phone",
-        "contact": "+51 975 294 691"
-      }
-    }
+  "about": {
+    "heading": "Simplifying digital experiences for everyone.",
+    "description": "Crafting accessible, intuitive solutions alongside Programmer Marlon to enhance user interactions.",
+    "downloadCV": "Download CV",
+    "intro": "I'm Marlon, dedicated to making digital experiences simpler and more user-friendly for everyone.",
+    "paragraph1": "Hey there! My name is Marlon. I'm passionate about demystifying technology and crafting interfaces that speak to everyone. With a keen eye for design and a heart for code, I bridge the gap between the complex and the accessible. I started my career as a web developer about 8 years ago.",
+    "paragraph2": "I've tried some programming languages and tech stack, both Back-End, and Front-End.",
+    "paragraph3": "Even though the scope of web development is broad, I was very interested and focused on Front-End Development and SQL.",
+    "education": "Education"
   }
 }
