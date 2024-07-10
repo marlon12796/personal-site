@@ -9,8 +9,11 @@ import { getData } from '@/actions/contactForm'
 import { formSchema, type formSchemaType } from '@/lib/validatons/form'
 import { useState } from 'react'
 import { toast } from 'sonner'
+import { useTranslations } from 'next-intl'
 
 export const ContactForm = () => {
+  const t = useTranslations('contact')
+
   const [contactStatus, setContactStatus] = useState<'success' | 'pending' | 'initial'>('initial')
   const form = useForm<formSchemaType>({
     resolver: zodResolver(formSchema),
@@ -34,7 +37,7 @@ export const ContactForm = () => {
         toast.error('Error in validation fields', { description: errorMessages ?? 'Failed to send message.' })
         return
       }
-    } catch (error) {
+    } catch (_error) {
       toast.error('An unexpected error occurred.')
     } finally {
       setContactStatus('success')
@@ -50,7 +53,7 @@ export const ContactForm = () => {
           name='email'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-slate-400'>Email:</FormLabel>
+              <FormLabel className='text-slate-400'>{t('inputEmail')}</FormLabel>
               <FormControl>
                 <Input placeholder='marc@gmail.com' className='placeholder:text-slate-700' {...field} />
               </FormControl>
@@ -63,10 +66,10 @@ export const ContactForm = () => {
           name='message'
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-slate-400'>Message:</FormLabel>
+              <FormLabel className='text-slate-400'>{t('inputMessage')}</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder='Enter a message'
+                  placeholder={t('labelMessage')}
                   className='resize-none [form-sizing:content] placeholder:text-slate-700'
                   {...field}
                 />
@@ -86,7 +89,7 @@ export const ContactForm = () => {
                 fill='none'
                 className='w-5 h-5 text-green-400'
               >
-                <path d='M14 5l7 7m0 0l-7 7m7-7H3' strokeWidth='2' strokeLinejoin='round' strokeLinecap='round'></path>
+                <path d='M14 5l7 7m0 0l-7 7m7-7H3' strokeWidth='2' strokeLinejoin='round' strokeLinecap='round' />
               </svg>
             </span>
             <span className='absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200'>
@@ -97,11 +100,11 @@ export const ContactForm = () => {
                 fill='none'
                 className='w-5 h-5 text-green-400'
               >
-                <path d='M14 5l7 7m0 0l-7 7m7-7H3' strokeWidth='2' strokeLinejoin='round' strokeLinecap='round'></path>
+                <path d='M14 5l7 7m0 0l-7 7m7-7H3' strokeWidth='2' strokeLinejoin='round' strokeLinecap='round' />
               </svg>
             </span>
             <span className='relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200'>
-              Submit
+              {t('button')}
             </span>
           </div>
         </button>

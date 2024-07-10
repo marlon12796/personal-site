@@ -1,10 +1,10 @@
 'use client'
 import { useState } from 'react'
 
-import Link from 'next/link'
 import { routes } from '../app/data/global'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { Link } from '@/app/navigation'
 
 export default function MobileNavbar() {
   const pathname = usePathname()
@@ -64,7 +64,7 @@ export default function MobileNavbar() {
                     { 'hover:text-gray-400': item.path !== pathname }
                   )}
                 >
-                  <Link href={item.path} className='block'>
+                  <Link href={item.path}  className='block'>
                     {item.title}
                   </Link>
                 </li>

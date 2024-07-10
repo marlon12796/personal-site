@@ -1,0 +1,21 @@
+{
+  "contact": {
+    "heading": "Contacto",
+    "subheading": "Déjame saber cómo puedo ayudarte",
+    "description": "Estoy aquí para ayudar y responder cualquier pregunta que puedas tener. Espero con interés saber de ti.",
+    "button": "Enviar",
+    "inputEmail": "Correo",
+    "inputMessage": "Mensaje",
+    "labelMessage":"Ingresa un Mensaje",
+    "methods": {
+      "email": {
+        "title": "Correo Electrónico",
+        "contact": "marlon.tafur.21@gmail.com | ln73074146@zegel.pe"
+      },
+      "phone": {
+        "title": "Teléfono",
+        "contact": "+51 975 294 691"
+      }
+    }
+  }
+}
