@@ -1,31 +1,31 @@
-import type { Metadata } from 'next';
-import { Noto_Sans_Mono } from 'next/font/google';
-import './globals.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import type { Metadata } from 'next'
+import { Noto_Sans_Mono } from 'next/font/google'
+import './globals.css'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
-const notoSansMono = Noto_Sans_Mono({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '700', '800'] });
+const notoSansMono = Noto_Sans_Mono({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '700', '800'] })
 
 export const metadata: Metadata = {
-	title: 'Marlon Ureta | Software Developer',
-	description: "Marlon's developer portfolio",
-};
+  title: 'Marlon Ureta | Software Developer',
+  description: "Marlon's developer portfolio"
+}
 
 export default function RootLayout({
-	children,
+  children
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode
 }>) {
-	return (
-		<html lang='en' className={notoSansMono.className}>
-			<body className={'max-w-6xl m-auto flex  flex-col bg-foreground min-h-[100dvh] overflow-x-hidden'}>
-				<header className='sticky top-0 bg-slate-950 z-[500]'>
-					<Navbar />
-				</header>
+  return (
+    <html lang='en' className={notoSansMono.className}>
+      <body className={'max-w-6xl m-auto flex  flex-col bg-foreground min-h-[100dvh] overflow-x-hidden'}>
+        <header className='sticky top-0 bg-slate-950 z-[500]'>
+          <Navbar />
+        </header>
 
-				{children}
-				<Footer />
-			</body>
-		</html>
-	);
+        {children}
+        <Footer />
+      </body>
+    </html>
+  )
 }
