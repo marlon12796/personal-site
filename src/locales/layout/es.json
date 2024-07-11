@@ -1,0 +1,26 @@
+{
+  "layout": {
+    "routes": {
+      "home": {
+        "title": "Inicio",
+        "path": "/"
+      },
+      "about": {
+        "title": "Sobre Mi",
+        "path": "/sobre-mi"
+      },
+      "contact": {
+        "title": "Contacto",
+        "path": "/contacto"
+      }
+    },
+    "footerTitle": "Transformando ideas en experiencias visuales, construyendo el futuro de la web con creatividad y código.",
+    "footerLabel": "Ingresa tú email",
+    "footerSubmit": "Enviar",
+    "footerCopyright": "&copy; 2024 Marlon Web todos los derechos Reservados.",
+    "footer": {
+      "pages": "Páginas",
+      "social": "Redes Sociales"
+    }
+  }
+}

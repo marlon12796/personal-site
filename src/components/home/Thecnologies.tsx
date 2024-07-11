@@ -1,11 +1,14 @@
 import { mainTechnologies, technologies } from '@/app/data/Thecnologies'
 import Subtitle from '../Subtitle'
+import { useTranslations } from 'next-intl'
 
 const Technologies = () => {
+  const t = useTranslations('home')
+
   return (
     <section className='w-full px-4 mb-16'>
       <div className='mx-auto max-w-screen-xl'>
-        <Subtitle text='Technologies' />
+        <Subtitle text={t('techTitle')} />
         <div className='flex flex-col'>
           {Object.keys(mainTechnologies).map((category) => (
             <div key={category}>

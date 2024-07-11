@@ -9,6 +9,8 @@
       "text3": "para la web"
     },
     "buttonText": "Proyectos",
+    "projectsTitle": "Mis Proyectos",
+    "projectsDescription": "Aquí encontrarás algunos de mis proyectos más relevantes y populares 🧑‍💻.",
     "projects": {
       "project1": {
         "name": "¡Tic Tac Toe!",
@@ -34,6 +36,7 @@
         "githubLink": "https://github.com/marlon12796/t-movies/",
         "previewLink": "https://marlon12796.github.io/t-movies/"
       }
-    }
+    },
+    "techTitle": "Tecnologías"
   }
 }

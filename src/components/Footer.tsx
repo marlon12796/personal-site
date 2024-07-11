@@ -1,14 +1,17 @@
 import Link from 'next/link'
-import { footer } from '../app/data/global'
+import { socialFooter } from '@/app/data/global'
+import { useTranslations } from 'next-intl'
 
-function Footer() {
+const Footer = () => {
+  const t = useTranslations('layout')
+  const keys = ['pages', 'social'] as const
+  const keysPages = ['home', 'about', 'contact'] as const
+
   return (
     <footer className='text-gray-400 px-4 py-5 max-w-screen-xl md:px-8'>
       <div className='gap-6 justify-between md:flex md:gap-10'>
         <div className='max-w-md flex  flex-col-reverse md:flex-col justify-start gap-6'>
-          <p className='leading-relaxed  text-[15px]'>
-            Transforming ideas into visual experiences, building the future of the web with creativity and code.
-          </p>
+          <p className='leading-relaxed  text-[15px]'>{t('footerTitle')}</p>
           <form
             action='mailto:fabrisio021@gmail.com'
             method='post'
@@ -16,41 +19,44 @@ function Footer() {
             className='flex items-center border rounded-md p-1'
           >
             <label htmlFor='email' className='sr-only'>
-              Enter your email
+              {t('footerLabel')}
             </label>
-            <input type='email' id='email' name='email' placeholder='Enter your email' className='w-full p-2.5 outline-none' />
+            <input type='email' id='email' name='email' placeholder={t('footerLabel')} className='w-full p-2.5 outline-none' />
 
             <button
               type='submit'
               className='p-2.5 rounded-md text-white bg-indigo-600 outline-none shadow-md focus:shadow-none sm:px-5'
             >
-              Submit
+              {t('footerSubmit')}
             </button>
           </form>
         </div>
         <div className='flex-1 mt-6 space-y-6 items-center justify-between sm:flex md:space-y-0 md:mt-0'>
-          {footer.columns.map((item, idx) => (
-            <ul className='space-y-3' key={idx}>
-              <h2 className='text-slate-100 font-medium'>{item.label}</h2>
-              {item.items.map((el, idx) => (
-                <li key={idx} className='hover:underline hover:text-indigo-600'>
-                  {el.leavesWebsite ? (
-                    <a href={el.href} target='_blank' rel='noopener noreferrer'>
-                      {el.name}
-                    </a>
-                  ) : (
-                    <Link href={el.href} scroll>
-                      {el.name}
+          {keys.map((key) => (
+            <ul className='space-y-3' key={key}>
+              <h2 className='text-slate-100 font-medium'>{t(`footer.${key}`)}</h2>
+              {key === 'pages' &&
+                keysPages.map((page, idx) => (
+                  <li key={idx} className='hover:underline hover:text-indigo-600'>
+                    <Link href={t(`routes.${page}.path`)} scroll>
+                      {t(`routes.${page}.title`)}
                     </Link>
-                  )}
-                </li>
-              ))}
+                  </li>
+                ))}
+              {key === 'social' &&
+                Object.values(socialFooter).map((val) => (
+                  <li key={val.name} className='hover:underline hover:text-indigo-600'>
+                    <a href={val.href} target='_blank' rel='noopener noreferrer'>
+                      {val.name}
+                    </a>
+                  </li>
+                ))}
             </ul>
           ))}
         </div>
       </div>
       <div className='mt-8 [padding-block-start:1em] border-t items-center justify-between sm:flex'>
-        <div className='mt-4 sm:mt-0'>&copy; 2024 Marlon Web All rights reserved.</div>
+        <div className='mt-4 sm:mt-0'>{t('footerCopyright')}</div>
         <div className='mt-6 sm:mt-0'>
           <ul className='flex items-center space-x-4'>
             <li className='w-10 h-10 border rounded-full flex items-center justify-center'>

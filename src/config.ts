@@ -6,7 +6,7 @@ export const pathnames: Pathnames<typeof locales> = {
   '/': '/',
   '/about': {
     en: '/about',
-    es: '/sobre-nosotros'
+    es: '/sobre-mi'
   },
   '/contact': {
     en: '/contact',
