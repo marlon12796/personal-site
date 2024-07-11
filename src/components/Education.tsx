@@ -1,4 +1,4 @@
-import { EductionData } from '../app/data/content/education'
+import { EductionData } from '@/app/data/content/education'
 import React from 'react'
 import { EducationCard } from './EducationCard'
 import { useTranslations } from 'next-intl'

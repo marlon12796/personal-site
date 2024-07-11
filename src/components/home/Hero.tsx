@@ -1,16 +1,20 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-function Hero() {
+const Hero = () => {
+  const t = useTranslations('home')
   return (
     <>
       <div
         className='relative animate-scale-down-in w-full  [padding-block:5em] flex justify-center text-center flex-col items-center z-1  overflow-hidden'
         style={{ maxWidth: '1200px' }}
       >
-        <p className='text-xl mb-5 text-white'>Hey, I&apos;m Marlon.</p>
+        <p className='text-xl mb-5 text-white'>{t('greeting')}</p>
         <h1 className='heroTitle inline-block max-w-2xl lg:max-w-4xl  w-auto relative text-5xl md:text-6xl lg:text-7xl tracking-tighter mb-10 font-bold heroShinyBg text-white'>
-          I enjoy <span className='heroShiny1 text-blue-500'>building</span> and{' '}
-          <span className='heroShiny2 text-blue-500'>designing</span> for the web.
+          {t('title.text1')} {''}
+          <span className='heroShiny1 text-blue-500'>{t('title.step1')}</span> {''}
+          {t('title.text2')} <span className='heroShiny2 text-blue-500'>{t('title.step2')}</span> {''}
+          {t('title.text3')}
           <Image
             className='sqD squiggle-hero-html w-auto h-auto top-[-90px] right-[3%] sm:top-[-90px] sm:right-[170px]'
             style={{ animationDelay: '0.1s' }}
@@ -79,7 +83,7 @@ function Hero() {
           href='#projects'
           className='cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white text-white bg-black hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-colors'
         >
-          Projects
+          {t('buttonText')}
         </Link>
       </div>
     </>

@@ -1,0 +1,39 @@
+{
+  "home": {
+    "greeting": "Hello, I'm Marlon!",
+    "title": {
+      "text1": "I enjoy",
+      "step1": "building",
+      "text2": "and",
+      "step2": "designing",
+      "text3": "for the web"
+    },
+    "buttonText": "Projects",
+    "projects": {
+      "project1": {
+        "name": "Tic Tac Toe!",
+        "description": "A fun and engaging twist on the classic Tic Tac Toe game, offering exciting gameplay modes for both single and multiplayer. Each play introduces new emojis, adding a unique touch to the experience.",
+        "githubLink": "https://github.com/marlon12796/Tic-Tac-Toe-Emoji",
+        "previewLink": "https://marlon12796.github.io/Tic-Tac-Toe-Emoji/"
+      },
+      "project2": {
+        "name": "Tetris",
+        "description": "An addictive Tetris clone with a modern twist, designed to challenge both new players and seasoned pros.",
+        "githubLink": "https://github.com/marlon12796/tetris/",
+        "previewLink": "https://marlon12796.github.io/tetris/"
+      },
+      "project3": {
+        "name": "Weather Forecast",
+        "description": "A weather forecast application with a minimalistic design and easy-to-use interface.",
+        "githubLink": "https://github.com/marlon12796/open-weather",
+        "previewLink": "https://open-weather-lyart.vercel.app/"
+      },
+      "project4": {
+        "name": "Movies App",
+        "description": "An application for exploring movies, featuring a sleek design and intuitive user experience.",
+        "githubLink": "https://github.com/marlon12796/t-movies/",
+        "previewLink": "https://marlon12796.github.io/t-movies/"
+      }
+    }
+  }
+}
