@@ -7,6 +7,26 @@
     "paragraph1": "Hey there! My name is Marlon. I'm passionate about demystifying technology and crafting interfaces that speak to everyone. With a keen eye for design and a heart for code, I bridge the gap between the complex and the accessible. I started my career as a web developer about 8 years ago.",
     "paragraph2": "I've tried some programming languages and tech stack, both Back-End, and Front-End.",
     "paragraph3": "Even though the scope of web development is broad, I was very interested and focused on Front-End Development and SQL.",
-    "education": "Education"
+    "education": "Education",
+    "eductionData": {
+      "zegelIpaeInstitute": {
+        "title": "Zegel Ipae Institute",
+        "description": "Currently enrolled in an advanced Software Development program, where I am gaining deep knowledge in programming,database systems and web development.This program is designed to provide a solid theoretical.",
+        "location": "Los Olivos, Lima N.",
+        "date": "2022 - Present"
+      },
+      "secondaryEducation": {
+        "title": "Secondary Education",
+        "description": "Completed secondary education, focusing on foundational academic subjects. This period marked the beginning of my interest in technology and development, setting the stage for my future educational and career pursuits",
+        "location": "Dorado School, Puente Piedra",
+        "date": "2015 - 2019"
+      },
+      "primaryEducation": {
+        "title": "Primary Education",
+        "description": "Completed primary education, where I was introduced to the basics of computing and developed an early interest in technology. ",
+        "location": "Dorado School, Puente Piedra",
+        "date": "2009 - 2014"
+      }
+    }
   }
 }

@@ -7,6 +7,27 @@
     "paragraph1": "¡Hola! Mi nombre es Marlon. Soy apasionado por desmitificar la tecnología y crear interfaces que hablen a todos. Con un ojo agudo para el diseño y un corazón para el código, cierro la brecha entre lo complejo y lo accesible. Comencé mi carrera como desarrollador web hace unos 8 años.",
     "paragraph2": "He probado algunos lenguajes de programación y tecnologías, tanto en el Back-End como en el Front-End.",
     "paragraph3": "Aunque el alcance del desarrollo web es amplio, me interesé mucho y me enfoqué en el Desarrollo Front-End y SQL.",
-    "education": "Educación"
+    "education": "Educación",
+    "eductionData": {
+      "zegelIpaeInstitute": {
+        "title": "Instituto Zegel Ipae",
+        "description": "Actualmente estoy inscrito en un programa avanzado de Desarrollo de Software, donde adquiero conocimientos profundos en programación, sistemas de bases de datos y desarrollo web. Este programa está diseñado para proporcionar una sólida base teórica.",
+        "location": "Los Olivos, Lima N.",
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='currentColor'><path d='M39.9849 26.6348H26.6843V40H39.9849V26.6348Z' fill='currentColor' /><path d='M0.00594264 0V13.3652H17.3538L0 30.6599L9.21176 39.994C9.21176 39.994 37.9881 11.3347 38.1902 11.1197C39.5273 9.68647 40.7457 7.02299 39.4441 3.97133C38.4457 1.62437 36.223 0.209018 33.7685 0.0238877C33.6021 0.0119439 33.4298 0.00597193 33.2574 0.00597193H0.00594264V0Z' fill='currentColor' /></svg>",
+        "date": "2022 - Presente"
+      },
+      "secondaryEducation": {
+        "title": "Educación Secundaria",
+        "description": "Completé la educación secundaria, enfocándome en materias académicas fundamentales. Este período marcó el inicio de mi interés en tecnología y desarrollo, sentando las bases para mis futuros estudios y carrera profesional.",
+        "location": "Colegio Dorado, Puente Piedra",
+        "date": "2015 - 2019"
+      },
+      "primaryEducation": {
+        "title": "Educación Primaria",
+        "description": "Completé la educación primaria, donde fui introducido a los conceptos básicos de computación y desarrollé un interés temprano por la tecnología.",
+        "location": "Colegio Dorado, Puente Piedra",
+        "date": "2009 - 2014"
+      }
+    }
   }
 }
