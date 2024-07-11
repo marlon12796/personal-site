@@ -3,7 +3,12 @@ import AboutImage from '/public/static/about.avif'
 import Education from '@/components/Education'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-const page = () => {
+import { unstable_setRequestLocale } from 'next-intl/server'
+type Props = {
+  params: { locale: string }
+}
+const Page = ({ params }: Props) => {
+  unstable_setRequestLocale(params.locale)
   const t = useTranslations('about')
   return (
     <main className='w-full [padding-inline:2rem] mb-16'>
@@ -63,4 +68,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

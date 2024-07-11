@@ -21,6 +21,10 @@
     "footer": {
       "pages": "Pages",
       "social": "Social"
+    },
+    "404": {
+      "title": "Sorry, looks like that page is missing!",
+      "button": "Go Back"
     }
   }
 }

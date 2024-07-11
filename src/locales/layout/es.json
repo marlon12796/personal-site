@@ -21,6 +21,10 @@
     "footer": {
       "pages": "Páginas",
       "social": "Redes Sociales"
+    },
+    "404": {
+      "title": "Lo siento, parece que esa página no existe!",
+      "button": "Volver"
     }
   }
 }

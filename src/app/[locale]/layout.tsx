@@ -3,8 +3,9 @@ import { Noto_Sans_Mono } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { type Locale } from '@/config'
-import { NextIntlClientProvider, useMessages } from 'next-intl'
+import { locales, Locale } from '@/config'
+import { NextIntlClientProvider } from 'next-intl'
+import { unstable_setRequestLocale, getMessages } from 'next-intl/server'
 
 const notoSansMono = Noto_Sans_Mono({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '700', '800'] })
 
@@ -13,7 +14,10 @@ export const metadata: Metadata = {
   description: "Marlon's developer portfolio"
 }
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
+const RootLayout = async ({
   children,
   params
 }: Readonly<{
@@ -21,8 +25,10 @@ export default function RootLayout({
   params: {
     locale: Locale
   }
-}>) {
-  const messages = useMessages()
+}>) => {
+  unstable_setRequestLocale(params.locale)
+
+  const messages = await getMessages()
   return (
     <html lang={params.locale} className={notoSansMono.className}>
       <body className={'max-w-6xl m-auto flex  flex-col bg-foreground min-h-[100dvh] overflow-x-hidden'}>
@@ -38,3 +44,4 @@ export default function RootLayout({
     </html>
   )
 }
+export default RootLayout

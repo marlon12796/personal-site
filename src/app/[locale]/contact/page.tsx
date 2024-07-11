@@ -5,7 +5,12 @@ import { iconsMethod } from '@/app/data/content/contact'
 import imgSetup from '/public/static/setup.webp'
 
 import { Toaster } from '@/components/ui/sonner'
-const Page = () => {
+import { unstable_setRequestLocale } from 'next-intl/server'
+type Props = {
+  params: { locale: string }
+}
+const Page = ({ params }: Props) => {
+  unstable_setRequestLocale(params.locale)
   const t = useTranslations('contact')
   const keys = ['email', 'phone'] as const
   return (
