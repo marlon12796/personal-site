@@ -1,0 +1,26 @@
+@keyframes progress-color {
+  0% {
+    background-color: transparent;
+  }
+
+  50% {
+    backdrop-filter: blur(3px) saturate(2);
+    background-color: hsl(223, 84%, 5%, 70%);
+  }
+
+  100% {
+    background-color: hsl(223, 84%, 5%);
+  }
+}
+
+.nav {
+  background-color: hsl(223, 84%, 5%);
+}
+
+@supports (animation-timeline: scroll(root block)) {
+  .nav {
+    animation: progress-color linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 150px;
+  }
+}

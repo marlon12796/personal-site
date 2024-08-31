@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_Mono } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/Footer'
 import { locales, Locale } from '@/config'
 import { NextIntlClientProvider } from 'next-intl'
@@ -31,9 +31,9 @@ const RootLayout = async ({
   const messages = await getMessages()
   return (
     <html lang={params.locale} className={notoSansMono.className}>
-      <body className={'max-w-6xl m-auto flex  flex-col bg-foreground min-h-[100dvh] overflow-x-hidden'}>
+      <body className={'flex flex-col bg-foreground min-h-[100dvh] overflow-x-hidden'}>
         <NextIntlClientProvider messages={messages}>
-          <header className='sticky top-0 bg-slate-950 z-[500]'>
+          <header className='sticky top-0  z-[500]'>
             <Navbar />
           </header>
 

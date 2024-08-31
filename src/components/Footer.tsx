@@ -8,7 +8,7 @@ const Footer = () => {
   const keysPages = ['home', 'about', 'contact'] as const
 
   return (
-    <footer className='text-gray-400 px-4 py-5 max-w-screen-xl md:px-8'>
+    <footer className='text-gray-400 px-4 w-full grid py-5 max-w-screen-xl md:px-0'>
       <div className='gap-6 justify-between md:flex md:gap-10'>
         <div className='max-w-md flex  flex-col-reverse md:flex-col justify-start gap-6'>
           <p className='leading-relaxed  text-[15px]'>{t('footerTitle')}</p>
@@ -70,7 +70,7 @@ const Footer = () => {
               </a>
             </li>
 
-            <li className='w-10 h-10 border rounded-full flex items-center justify-center'>
+            <li className='size-10 border rounded-full flex items-center justify-center'>
               <a href='https://www.linkedin.com/in/marlon-ureta-9147161b2/' target='_blank' rel='noopener noreferrer'>
                 <svg viewBox='0 0 448 512' className='svg-icon w-6 h-6 text-blue-700'>
                   <path
