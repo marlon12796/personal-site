@@ -1,61 +1,34 @@
 'use client'
 import { useState } from 'react'
-import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Link } from '@/app/navigation'
-import { useTranslations } from 'next-intl'
 import styles from './Navbar.module.css'
+import { MenuButton } from './MenuButton'
+import NavbarMenu from './NavbarMenu'
 const MobileNavbar = () => {
-  const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const t = useTranslations('layout')
-  const toggleMenu = () => (isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true))
-  const keys = ['home', 'about', 'contact'] as const
+
+  const toggleMenu = () => setIsMenuOpen((menuOpen) => !menuOpen)
   return (
-    <nav
-      className={cn(`${styles.nav} md:text-sm gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8`, {
-        'shadow-lg rounded-xl md:shadow-none md:border-none md:mx-2 md:mt-0': isMenuOpen
-      })}
-    >
-      <div className='flex items-center justify-between py-5 md:block'>
-        <Link href='/' className='text-white text-2xl'>
-          Marlon.Dev
-        </Link>
-        <button className='menu-btn text-gray-200 md:hidden hover:text-gray-400' onClick={toggleMenu}>
-          {isMenuOpen ? (
-            <svg className='size-6' viewBox='0 0 20 20' fill='currentColor'>
-              <path
-                fillRule='evenodd'
-                d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z'
-                clipRule='evenodd'
-              />
-            </svg>
-          ) : (
-            <svg fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-6 h-6'>
-              <path strokeLinecap='round' strokeLinejoin='round' d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5' />
-            </svg>
-          )}
-        </button>
-      </div>
-      <ul
-        className={`justify-center items-center space-y-6  text-lg  md:space-x-6 md:space-y-0 flex-1 mt-8 md:mt-0 md:flex md:justify-end ${isMenuOpen ? 'block' : 'hidden'}`}
+    <header className={`${styles.nav} sticky top-0 z-[500]`}>
+      <nav
+        className={cn(`md:text-sm gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex`, {
+          'shadow-lg rounded-xl md:shadow-none md:border-none md:mx-2 md:mt-0': isMenuOpen
+        })}
       >
-        {keys.map((key, idx) => (
-          <li
-            key={idx}
-            className={cn('text-gray-300 relative', {
-              'text-gray-100 md:after:content-[" "] md:after:border-gray-300 md:after:absolute md:after:w-full md:after:h-full md:after:border-b md:after:top-0':
-                t(`routes.${key}.path`) === pathname,
-              'hover:text-gray-400': t(`routes.${key}.path`) !== pathname
-            })}
-          >
-            <Link href={t(`routes.${key}.path`)} className='block'>
-              {t(`routes.${key}.title`)}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+        <div
+          className={cn('flex items-center justify-between py-5  grow', {
+            'grid grid-cols-2 ': isMenuOpen
+          })}
+        >
+          <Link href='/' className='text-white text-2xl'>
+            Marlon.Dev
+          </Link>
+          <MenuButton isOpen={isMenuOpen} onClick={toggleMenu} />
+          <NavbarMenu isMenuOpen={isMenuOpen} />
+        </div>
+      </nav>
+    </header>
   )
 }
 export default MobileNavbar

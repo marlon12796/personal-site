@@ -33,9 +33,7 @@ const RootLayout = async ({
     <html lang={params.locale} className={notoSansMono.className}>
       <body className={'flex flex-col bg-foreground min-h-[100dvh] overflow-x-hidden'}>
         <NextIntlClientProvider messages={messages}>
-          <header className='sticky top-0  z-[500]'>
-            <Navbar />
-          </header>
+          <Navbar />
 
           {children}
           <Footer />
