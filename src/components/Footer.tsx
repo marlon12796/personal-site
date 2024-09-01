@@ -8,7 +8,7 @@ const Footer = () => {
   const keysPages = ['home', 'about', 'contact'] as const
 
   return (
-    <footer className='text-gray-400 px-4 w-full grid py-5 max-w-screen-xl md:px-0'>
+    <footer className='text-gray-400 px-4 w-full grid py-5 max-w-screen-xl [margin-inline:auto] '>
       <div className='gap-6 justify-between md:flex md:gap-10'>
         <div className='max-w-md flex  flex-col-reverse md:flex-col justify-start gap-6'>
           <p className='leading-relaxed  text-[15px]'>{t('footerTitle')}</p>

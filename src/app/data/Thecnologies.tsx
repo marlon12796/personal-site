@@ -1,23 +1,25 @@
-import CSS3Icon from '../../components/svg/CSS3Icon'
-import CSharpIcon from '../../components/svg/CSharpIcon'
-import ChakraUIIcon from '../../components/svg/ChakraUIIcon'
-import DockerIcon from '../../components/svg/DockerIcon'
-import ExpressIcon from '../../components/svg/ExpressIcon'
-import FigmaIcon from '../../components/svg/FigmaIcon'
-import FirebaseIcon from '../../components/svg/FirebaseIcon'
-import HTML5Icon from '../../components/svg/HTML5Icon'
-import JavaScriptIcon from '../../components/svg/JavaScriptIcon'
-import MUIIcon from '../../components/svg/MUIIcon'
-import NextjsIcon from '../../components/svg/NextjsIcon'
-import PrismaIcon from '../../components/svg/PrismaIcon'
-import PythonIcon from '../../components/svg/PythonIcon'
-import ReactIcon from '../../components/svg/ReactIcon'
-import ReduxIcon from '../../components/svg/ReduxIcon'
-import SQLIcon from '../../components/svg/SQLIcon'
-import SupabaseIcon from '../../components/svg/SupabaseIcon'
-import TailwindIcon from '../../components/svg/TailwindIcon'
-import TypeScriptIcon from '../../components/svg/TypeScriptIcon'
-import ViteIcon from '../../components/svg/ViteIcon'
+import {
+  CSS3Icon,
+  CSharpIcon,
+  ChakraUIIcon,
+  DockerIcon,
+  ExpressIcon,
+  FigmaIcon,
+  FirebaseIcon,
+  HTML5Icon,
+  JavaScriptIcon,
+  MUIIcon,
+  NextjsIcon,
+  PrismaIcon,
+  PythonIcon,
+  ReactIcon,
+  ReduxIcon,
+  SQLIcon,
+  SupabaseIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+  ViteIcon
+} from '@/components/svg'
 export type TechnologyData = {
   color: string
   bgColor: string
@@ -52,8 +54,9 @@ export const technologiesList = [
   'SQL',
   'Express'
 ] as const
-
-export const technologies: { [key in (typeof technologiesList)[number]]: TechnologyData } = {
+export type TechnologiesList = (typeof technologiesList)[number][]
+export type TechnologyKeys   = (typeof technologiesList)[number]
+export const technologies: Record<(typeof technologiesList)[number], TechnologyData> = {
   JavaScript: {
     icon: <JavaScriptIcon />,
     bgColor: 'bg-yellow-400/20',
@@ -181,8 +184,7 @@ export const technologies: { [key in (typeof technologiesList)[number]]: Technol
     color: 'text-green-100'
   }
 }
-
-export const mainTechnologies: { [key: string]: (typeof technologiesList)[number][] } = {
+export const mainTechnologies: { [key: string]: TechnologiesList } = {
   'Front-end': ['HTML', 'CSS', 'React', 'Next.js', 'Vite', 'Redux Toolkit', 'MUI', 'Tailwind CSS'],
   'Back-end': ['Express', 'Prisma', 'Supabase', 'Firebase', 'SQL'],
   Languages: ['JavaScript', 'TypeScript', 'Python']
