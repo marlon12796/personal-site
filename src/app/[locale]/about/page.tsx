@@ -12,9 +12,9 @@ const Page = ({ params }: Props) => {
   const t = useTranslations('about')
   return (
     <main className='w-full [padding-inline:2rem] mb-16'>
-      <section>
+      <section className='max-w-screen-xl [margin-inline:auto]'>
         <div className='text-slate-500 gap-x-4 items-center justify-between  md:flex md:gap-x-10'>
-          <div className='space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl'>
+          <div className='space-y-5 sm:max-w-lg md:px-0 lg:max-w-xl'>
             <h2 className='text-4xl text-slate-300 font-extrabold md:text-5xl'>{t('heading')}</h2>
             <p>{t('description')}</p>
             <Link
@@ -52,13 +52,13 @@ const Page = ({ params }: Props) => {
           </div>
         </div>
       </section>
-      <section className='text-slate-500 [padding-block-start:2em]'>
+      <section className='text-slate-500 max-w-screen-xl [margin-inline:auto] [padding-block-start:2em]'>
         <h2 className='text-2xl font-bold tracking-tight  text-slate-300 dark:text-zinc-100 sm:text-4xl'>{t('intro')}</h2>
         <p className='[padding-block-start:1.5em]'>{t('paragraph1')}</p>
         <p className='[padding-block-start:0.5em]'>{t('paragraph2')}</p>
         <p className='[padding-block-start:0.5em]'>{t('paragraph3')} </p>
       </section>
-      <section>
+      <section className='max-w-screen-xl  [margin-inline:auto]'>
         <h2 className='font-bold text-slate-300 text-center text-2xl [padding-block-start:0.5em] sm:text-4xl'>
           {t('education')}
         </h2>

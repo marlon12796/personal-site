@@ -19,7 +19,7 @@ import {
   TailwindIcon,
   TypeScriptIcon,
   ViteIcon
-} from '@/components/svg'
+} from '@/components/Svg'
 export type TechnologyData = {
   color: string
   bgColor: string

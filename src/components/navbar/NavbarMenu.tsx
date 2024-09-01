@@ -1,7 +1,7 @@
 import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
+import { Link } from '@/app/navigation'
 const NavbarMenu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const keys = ['home', 'about', 'contact'] as const
   const t = useTranslations('layout')

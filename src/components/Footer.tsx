@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { socialFooter } from '@/app/data/global'
+import { Link } from '@/app/navigation'
 import { useTranslations } from 'next-intl'
 
 const Footer = () => {

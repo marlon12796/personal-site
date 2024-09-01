@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_Mono } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/navbar/Navbar'
+import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer'
 import { locales, Locale } from '@/config'
 import { NextIntlClientProvider } from 'next-intl'
