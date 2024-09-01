@@ -14,13 +14,13 @@ const Page = ({ params }: Props) => {
   const t = useTranslations('contact')
   const keys = ['email', 'phone'] as const
   return (
-    <main>
-      <div className='max-w-screen-xl mx-auto px-4  md:px-8'>
-        <div className='relative flex flex-col md:flex-row-reverse gap-6 md:items-center'>
+    <main className='grow grid'>
+      <div className='max-w-screen-xl w-full grid content-center mx-auto px-4 '>
+        <div className='relative flex flex-col  md:flex-row-reverse gap-6 md:items-center'>
           <div className='relative min-h-[14rem] md:basis-[40%] md:[min-block-size:15rem]'>
             <Image src={imgSetup} fill alt='setup pc' className='object-cover' sizes='75vw' priority placeholder='blur' />
           </div>
-          <div className='space-y-3 basis-[60%] '>
+          <div className='space-y-3 px-2 basis-[60%] '>
             <h2 className='text-indigo-600 font-semibold '>{t('heading')}</h2>
             <p className='text-slate-300 text-3xl animate-background-shine font-semibold sm:text-4xl  bg-[linear-gradient(110deg,#939393,45%,#1e293b,55%,#939393)] bg-[length:250%_100%] bg-clip-text  text-transparent'>
               {t('subheading')}
