@@ -3,7 +3,7 @@ import { Noto_Sans_Mono } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer'
-import { locales, Locale } from '@/config'
+import { locales, Locale } from '@/i18n/config'
 import { NextIntlClientProvider } from 'next-intl'
 import { unstable_setRequestLocale, getMessages } from 'next-intl/server'
 

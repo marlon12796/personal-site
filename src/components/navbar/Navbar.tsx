@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { Link } from '@/app/navigation'
+import { Link } from '@/i18n/routing'
 import styles from './Navbar.module.css'
 import { MenuButton } from './MenuButton'
 import NavbarMenu from './NavbarMenu'
