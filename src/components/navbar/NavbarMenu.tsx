@@ -2,6 +2,7 @@ import { usePathname } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 import { Link } from '@/app/navigation'
+
 const NavbarMenu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const keys = ['home', 'about', 'contact'] as const
   const t = useTranslations('layout')
@@ -9,7 +10,13 @@ const NavbarMenu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   const pathname = usePathname()
   return (
     <ul
-      className={`justify-center items-center space-y-6  text-lg  md:space-x-6 md:space-y-0 flex-1 mt-8 md:mt-0 md:flex md:justify-end ${isMenuOpen ? 'block' : 'hidden'}`}
+      className={cn(
+        ` text-lg px-4 max-md:flex-1 max-md:fixed transition-transform  max-md:space-y-6  max-md:-translate-x-full max-md:bg-[#020817] max-md:m-0 max-md:h-svh max-md:inset-[72px_0] md:space-x-6  md:mt-0 md:flex md:justify-end `,
+        {
+          'max-md:translate-x-0': isMenuOpen,
+          'max-md:-translate-x-full': !isMenuOpen
+        }
+      )}
     >
       {keys.map((key, idx) => (
         <li
