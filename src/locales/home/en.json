@@ -35,8 +35,14 @@
         "description": "An application for exploring movies, featuring a sleek design and intuitive user experience.",
         "githubLink": "https://github.com/marlon12796/t-movies/",
         "previewLink": "https://marlon12796.github.io/t-movies/"
+      },
+      "project5": {
+        "name": "Task Manager App",
+        "description": "A task management application with a minimalist design and a sleek interface.",
+        "githubLink": "https://github.com/marlon12796/tasks-manager",
+        "previewLink": "https://marlon12796.github.io/tasks-manager/"
       }
     },
-    "techTitle":"Technologies"
+    "techTitle": "Technologies"
   }
 }

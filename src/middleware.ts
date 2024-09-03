@@ -16,5 +16,5 @@ export default function (req: NextRequest): NextResponse {
 }
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(en|es)/:path*']
+  matcher: ['/', '/(en|es)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
 }

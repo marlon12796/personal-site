@@ -4,7 +4,7 @@ import { PersonalProject } from '@/types'
 import { technologies } from '@/app/data/Thecnologies'
 import { Button } from '@/components/ui/Button'
 import CustomTooltip from '@/components/ui/CustomTooltip'
-import Carousel from '@/components/ui/Carousel'
+import Carousel from '../Carousel/Carousel'
 
 type Props = {
   project: PersonalProject
@@ -13,7 +13,7 @@ type Props = {
 const ProjectCard = ({ project }: Props) => {
   return (
     <Card className='w-full max-w-full rounded-xl bg-slate-950/50 border-slate-800 flex flex-col'>
-      <CardHeader className='p-0 rounded-t-xl overflow-hidden aspect-[2/1]'>
+      <CardHeader className='p-0 rounded-t-xl overflow-hidden aspect-[2/1] lg:min-h-[18rem]'>
         <Carousel images={project.images} imgWidth={650} imgHeight={500} />
       </CardHeader>
       <CardContent className='pt-8'>

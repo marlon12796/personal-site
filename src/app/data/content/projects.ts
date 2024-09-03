@@ -34,5 +34,9 @@ export const projects: Record<
       '/projects/movies/4.webp'
     ],
     stack: ['TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'Vite', 'React']
+  },
+  project5: {
+    images: ['/projects/tasks/main.jpg', '/projects/tasks/1.jpg', '/projects/tasks/2.jpg', '/projects/tasks/3.jpg'],
+    stack: ['Docker', 'React Hook Form', 'TypeScript', 'Tailwind CSS', 'Vite', 'Zustand']
   }
 }

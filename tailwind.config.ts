@@ -12,11 +12,6 @@ const config = {
         '2xl': '1400px'
       }
     },
-    // xs: '540px',
-    // sm: '640px',
-    // md: '768px',
-    // lg: '1024px',
-    // xl: '1280px',
 
     extend: {
       screens: {
