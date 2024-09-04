@@ -22,7 +22,9 @@ const Projects = () => {
                 stack: projects[key].stack,
                 images: projects[key].images,
                 previewLink: t(`${key}.previewLink`),
-                githubLink: t(`${key}.githubLink`)
+                githubLink: t(`${key}.githubLink`),
+                mainPath: projects[key].mainPath,
+                isCover: projects[key].isCover
               }}
             />
           ))}

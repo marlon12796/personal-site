@@ -9,12 +9,15 @@ import Carousel from '../Carousel/Carousel'
 type Props = {
   project: PersonalProject
 }
-
 const ProjectCard = ({ project }: Props) => {
   return (
     <Card className='w-full max-w-full rounded-xl bg-slate-950/50 border-slate-800 flex flex-col'>
-      <CardHeader className='p-0 rounded-t-xl overflow-hidden aspect-[2/1] lg:min-h-[18rem]'>
-        <Carousel images={project.images} imgWidth={650} imgHeight={500} />
+      <CardHeader className='p-0  embla rounded-t-xl overflow-hidden aspect-[2/1] lg:min-h-[18rem]'>
+        <Carousel
+          slides={Array.from(Array(project.images.length).keys())}
+          mainPath={project.mainPath}
+          isCover={project.isCover}
+        />
       </CardHeader>
       <CardContent className='pt-8'>
         <CardTitle className='text-slate-200'>{project.name}</CardTitle>

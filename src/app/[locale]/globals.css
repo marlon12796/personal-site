@@ -33,7 +33,7 @@
 		--ring: 222.2 84% 4.9%;
 
 		--radius: 0.5rem;
-		
+
 	}
 
 	.dark {
@@ -71,6 +71,7 @@
 	* {
 		@apply border-border;
 	}
+
 	body {
 		@apply bg-background text-foreground;
 	}
@@ -91,19 +92,16 @@
 		border-radius: 10px;
 	}
 }
+
 /* All svg squiggle decorations */
 .sqD {
 	@apply absolute z-[-10];
 }
+
 .no-scrollbar::-webkit-scrollbar {
 	display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-}
 
 *::selection {
 	background-color: #7e22ce99;
