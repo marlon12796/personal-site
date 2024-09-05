@@ -1,7 +1,7 @@
-import Technologies from '@/components/Technologies/Technologies'
-import { Hero } from '@/components/Home/Hero'
+import Technologies from '../../components/Technologies/Technologies'
+import { Hero } from '../../components/Home/Hero'
 import { unstable_setRequestLocale } from 'next-intl/server'
-import Projects from '@/components/Navbar/Project'
+import Projects from '../../components/Navbar/Project'
 type Props = {
   params: { locale: string }
 }

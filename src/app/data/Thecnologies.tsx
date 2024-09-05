@@ -1,25 +1,24 @@
-import {
-  CSS3Icon,
-  CSharpIcon,
-  ChakraUIIcon,
-  DockerIcon,
-  ExpressIcon,
-  FigmaIcon,
-  FirebaseIcon,
-  HTML5Icon,
-  JavaScriptIcon,
-  MUIIcon,
-  NextjsIcon,
-  PrismaIcon,
-  PythonIcon,
-  ReactIcon,
-  ReduxIcon,
-  SQLIcon,
-  SupabaseIcon,
-  TailwindIcon,
-  TypeScriptIcon,
-  ViteIcon
-} from '../../components/Svg'
+import ChakraUIIcon from '@/components/Svg/ChakraUIIcon'
+import CSharpIcon from '@/components/Svg/CSharpIcon'
+import CSS3Icon from '@/components/Svg/CSS3Icon'
+import DockerIcon from '@/components/Svg/DockerIcon'
+import ExpressIcon from '@/components/Svg/ExpressIcon'
+import FigmaIcon from '@/components/Svg/FigmaIcon'
+import FirebaseIcon from '@/components/Svg/FirebaseIcon'
+import HTML5Icon from '@/components/Svg/HTML5Icon'
+import JavaScriptIcon from '@/components/Svg/JavaScriptIcon'
+import MUIIcon from '@/components/Svg/MUIIcon'
+import NextjsIcon from '@/components/Svg/NextjsIcon'
+import PrismaIcon from '@/components/Svg/PrismaIcon'
+import PythonIcon from '@/components/Svg/PythonIcon'
+import ReactIcon from '@/components/Svg/ReactIcon'
+import ReduxIcon from '@/components/Svg/ReduxIcon'
+import SupabaseIcon from '@/components/Svg/SupabaseIcon'
+import TailwindIcon from '@/components/Svg/TailwindIcon'
+import TypeScriptIcon from '@/components/Svg/TypeScriptIcon'
+import ViteIcon from '@/components/Svg/ViteIcon'
+import SQLIcon from '@/components/Svg/SQLIcon'
+
 export type TechnologyData = {
   color: string
   bgColor: string
