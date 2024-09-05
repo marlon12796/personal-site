@@ -1,5 +1,4 @@
-import React from 'react'
-import TechnologyItem from './TechnologyItem'
+import TechnologyItem from '@/components/technologies/TechnologyItem'
 import { type TechnologiesList, technologies } from '@/app/data/Thecnologies'
 interface TechnologyCategoryProps {
   category: string

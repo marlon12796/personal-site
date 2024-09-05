@@ -3,8 +3,9 @@ import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import { Link } from '@/i18n/routing'
 import styles from './Navbar.module.css'
-import { MenuButton } from './MenuButton'
-import NavbarMenu from './NavbarMenu'
+import { MenuButton } from '@/components/navbar/MenuButton'
+import NavbarMenu from '@/components/navbar/NavbarMenu'
+
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 

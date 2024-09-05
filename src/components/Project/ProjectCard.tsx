@@ -4,7 +4,7 @@ import { PersonalProject } from '@/types'
 import { technologies } from '@/app/data/Thecnologies'
 import { Button } from '@/components/ui/Button'
 import CustomTooltip from '@/components/ui/CustomTooltip'
-import Carousel from '../Carousel/Carousel'
+import Carousel from '../carousel/Carousel'
 
 type Props = {
   project: PersonalProject

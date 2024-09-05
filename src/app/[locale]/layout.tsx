@@ -1,11 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Noto_Sans_Mono } from 'next/font/google'
-import { Navbar } from '../../components/Navbar/MainNavbar'
 import { locales, Locale } from '@/i18n/config'
 import { NextIntlClientProvider } from 'next-intl'
 import { unstable_setRequestLocale, getMessages } from 'next-intl/server'
-import { Footer } from '../../components/Footer'
+import { Navbar } from '@/components/navbar/MainNavbar'
+import { Footer } from '@/components/Footer'
 
 const notoSansMono = Noto_Sans_Mono({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '700', '800'] })
 

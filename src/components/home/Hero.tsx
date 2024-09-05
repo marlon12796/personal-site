@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-const Hero = () => {
+export const Hero = () => {
   const t = useTranslations('home')
   return (
     <>
@@ -89,5 +89,3 @@ const Hero = () => {
     </>
   )
 }
-
-export default Hero

@@ -1,6 +1,5 @@
 import { EductionData } from '@/app/data/content/education'
-import React from 'react'
-import { EducationCard } from './EducationCard'
+import { EducationCard } from '@/components/education/EducationCard'
 import { useTranslations } from 'next-intl'
 const Education = () => {
   const t = useTranslations('about.eductionData')

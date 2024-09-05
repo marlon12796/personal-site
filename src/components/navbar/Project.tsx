@@ -1,5 +1,5 @@
 import Subtitle from '../Subtitle'
-import ProjectCard from '../Project/ProjectCard'
+import ProjectCard from '../project/ProjectCard'
 import { useTranslations } from 'next-intl'
 import { projects } from '@/app/data/content/projects'
 
