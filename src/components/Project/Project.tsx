@@ -1,7 +1,8 @@
-import Subtitle from '../Subtitle'
-import ProjectCard from '../project/ProjectCard'
+
 import { useTranslations } from 'next-intl'
 import { projects } from '@/app/data/content/projects'
+import Subtitle from '../Subtitle'
+import ProjectCard from '@/components/project/ProjectCard'
 
 const Projects = () => {
   const t = useTranslations('home.projects')
