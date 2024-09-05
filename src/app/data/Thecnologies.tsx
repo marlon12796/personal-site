@@ -19,7 +19,7 @@ import {
   TailwindIcon,
   TypeScriptIcon,
   ViteIcon
-} from '@/components/Svg'
+} from '../../components/Svg'
 export type TechnologyData = {
   color: string
   bgColor: string
@@ -55,7 +55,7 @@ export const technologiesList = [
   'Express'
 ] as const
 export type TechnologiesList = (typeof technologiesList)[number][]
-export type TechnologyKeys   = (typeof technologiesList)[number]
+export type TechnologyKeys = (typeof technologiesList)[number]
 export const technologies: Record<(typeof technologiesList)[number], TechnologyData> = {
   JavaScript: {
     icon: <JavaScriptIcon />,

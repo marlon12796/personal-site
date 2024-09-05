@@ -2,7 +2,7 @@ import { socialFooter } from '@/app/data/global'
 import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 
-const Footer = () => {
+export const Footer = () => {
   const t = useTranslations('layout')
   const keys = ['pages', 'social'] as const
   const keysPages = ['home', 'about', 'contact'] as const
@@ -86,5 +86,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer
