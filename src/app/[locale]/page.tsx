@@ -1,5 +1,5 @@
 import { Hero } from '@/components/home/Hero'
-import Projects from '@/components/navbar/Project'
+import Projects from '@/components/project/Project'
 import Technologies from '@/components/technologies/Technologies'
 import { unstable_setRequestLocale } from 'next-intl/server'
 type Props = {
