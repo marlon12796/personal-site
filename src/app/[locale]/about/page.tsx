@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import AboutImage from '/public/static/about.avif'
-import Education from '@/components/Education'
+import Education from '@/components/Education/Education'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'

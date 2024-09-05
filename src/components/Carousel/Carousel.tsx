@@ -2,10 +2,12 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
-import { CarouselButtons, usePrevNextButtons } from './EmblaCarouselArrowButtons'
+import { CarouselButtons } from './EmblaCarouselArrowButtons'
 import { LazyLoadImage } from './EmblaCarouselLazyloadImage'
 import styles from './Carousel.module.css'
-import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import { DotButton } from './EmblaCarouselDotButton'
+import { usePrevNextButtons } from '@/hooks/usePrevNextButtons'
+import { useDotButton } from '@/hooks/useDotButton'
 
 type PropType = {
   slides: number[]

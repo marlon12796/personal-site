@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import styles from './Carousel.module.css'
-
-const PLACEHOLDER_SRC = `data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D`
+import { urlGeneretePreview } from '@/utils/utils'
 
 type PropType = {
   imgSrc: string
@@ -17,7 +16,7 @@ export const LazyLoadImage: React.FC<PropType> = (props) => {
   return (
     <div className={`${styles['embla__slide']} size-full relative`}>
       <Image
-        src={props.isFirst ? imgSrc : inView ? imgSrc : PLACEHOLDER_SRC}
+        src={props.isFirst ? imgSrc : inView ? imgSrc : urlGeneretePreview()}
         alt='Your alt text'
         className={`size-full ${isCover ? 'object-cover' : 'object-contain'}`}
         height={500}
