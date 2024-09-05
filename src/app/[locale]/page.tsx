@@ -1,5 +1,5 @@
 import { Hero } from '@/components/home/Hero'
-import { Projects } from '@/components/project/Project'
+import { ListProjects } from '@/components/project/ListProjects'
 import { Technologies } from '@/components/technology/Technologies'
 import { unstable_setRequestLocale } from 'next-intl/server'
 type Props = {
@@ -11,7 +11,7 @@ const Home = ({ params: { locale } }: Props) => {
   return (
     <main className='flex min-h-screen flex-col items-center justify-between '>
       <Hero />
-      <Projects />
+      <ListProjects />
       <Technologies />
     </main>
   )
