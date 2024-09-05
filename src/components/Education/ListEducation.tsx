@@ -1,7 +1,7 @@
 import { EductionData } from '@/app/data/content/education'
 import { EducationCard } from '@/components/education/EducationCard'
 import { useTranslations } from 'next-intl'
-const Education = () => {
+export const ListEducation = () => {
   const t = useTranslations('about.eductionData')
   const keys = ['zegelIpaeInstitute', 'secondaryEducation', 'primaryEducation'] as const
   return (
@@ -19,5 +19,3 @@ const Education = () => {
     </div>
   )
 }
-
-export default Education

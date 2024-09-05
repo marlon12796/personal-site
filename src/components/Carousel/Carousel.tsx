@@ -2,12 +2,12 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
-import { CarouselButtons } from './EmblaCarouselArrowButtons'
-import { LazyLoadImage } from './EmblaCarouselLazyloadImage'
 import styles from './Carousel.module.css'
-import { DotButton } from './EmblaCarouselDotButton'
 import { usePrevNextButtons } from '@/hooks/usePrevNextButtons'
 import { useDotButton } from '@/hooks/useDotButton'
+import { LazyLoadImage } from './CarouselLazyloadImage'
+import { CarouselButtons } from './CarouselArrowButtons'
+import { DotButton } from './CarouselDotButton'
 
 type PropType = {
   slides: number[]
@@ -16,7 +16,7 @@ type PropType = {
   options?: EmblaOptionsType
 }
 
-const EmblaCarousel: React.FC<PropType> = (props) => {
+export const MainCarousel: React.FC<PropType> = (props) => {
   const { slides, options, isCover } = props
   const [emblaRed, emblaApi] = useEmblaCarousel(options)
   const [slidesInView, setSlidesInView] = useState<number[]>([])
@@ -75,4 +75,3 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   )
 }
 
-export default EmblaCarousel

@@ -1,4 +1,4 @@
-import TechnologyItem from '@/components/technologies/TechnologyItem'
+import TechnologyItem from '@/components/technology/TechnologyItem'
 import { type TechnologiesList, technologies } from '@/app/data/Thecnologies'
 interface TechnologyCategoryProps {
   category: string

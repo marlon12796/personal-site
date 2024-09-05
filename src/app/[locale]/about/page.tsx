@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import AboutImage from '/public/static/about.avif'
-import { Education } from '@/components/education/Education'
+import { ListEducation } from '@/components/education/ListEducation'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
@@ -57,7 +57,7 @@ const Page = ({ params }: Props) => {
         <h2 className='font-bold text-slate-300 text-center text-2xl [padding-block-start:0.5em] sm:text-4xl'>
           {t('education')}
         </h2>
-        <Education />
+        <ListEducation />
       </section>
     </main>
   )

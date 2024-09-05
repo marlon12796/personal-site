@@ -4,7 +4,7 @@ import Subtitle from '../Subtitle'
 import { useTranslations } from 'next-intl'
 import TechnologyCategory from './TechnologyCategory'
 
-const Technologies: React.FC = () => {
+export const Technologies: React.FC = () => {
   const t = useTranslations('home')
 
   return (
@@ -20,5 +20,3 @@ const Technologies: React.FC = () => {
     </section>
   )
 }
-
-export default Technologies

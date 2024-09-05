@@ -1,10 +1,9 @@
-
 import { useTranslations } from 'next-intl'
 import { projects } from '@/app/data/content/projects'
 import Subtitle from '../Subtitle'
 import ProjectCard from '@/components/project/ProjectCard'
 
-const Projects = () => {
+export const Projects = () => {
   const t = useTranslations('home.projects')
   const h = useTranslations('home')
   const keys = ['project1', 'project2', 'project3', 'project4', 'project5'] as const
@@ -34,5 +33,3 @@ const Projects = () => {
     </section>
   )
 }
-
-export default Projects
