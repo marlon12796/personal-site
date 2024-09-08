@@ -14,9 +14,9 @@ const CustomTooltip = ({ title, children }: Props) => {
         <TooltipTrigger asChild>{children}</TooltipTrigger>
         <TooltipContent
           sideOffset={10}
-          className='bg-purple-950/70 text-purple-100 text-xs px-2 py-1 rounded-md backdrop-blur-md'
+          className=' bg-purple-950/70 text-purple-100 text-xs px-2 py-1 rounded-md backdrop-blur-md'
         >
-          <p>{title}</p>
+          <p className=' relative z-[500]'>{title}</p>
         </TooltipContent>
       </ShadcnTooltip>
     </TooltipProvider>
