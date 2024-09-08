@@ -18,15 +18,15 @@ type PropType = {
 
 export const Carousel: React.FC<PropType> = (props) => {
   const { slides, options, isCover } = props
-  const [emblaRed, emblaApi] = useEmblaCarousel(options)
+  const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
   const { slidesInView } = useSlidesInView(emblaApi)
   const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
 
   return (
     <div className={styles.embla}>
-      <div className='overflow-hidden h-full' ref={emblaRed}>
-        <div className={styles['embla__container']}>
+      <div className='overflow-hidden h-full' ref={emblaRef}>
+        <ul className={styles['embla__container']}>
           {slides.map((index) => (
             <LazyLoadImage
               key={index}
@@ -37,7 +37,7 @@ export const Carousel: React.FC<PropType> = (props) => {
               inView={slidesInView.indexOf(index) > -1}
             />
           ))}
-        </div>
+        </ul>
       </div>
       <CarouselButtons onClick={onPrevButtonClick} typeButton='left' disabled={prevBtnDisabled} />
       <CarouselButtons onClick={onNextButtonClick} typeButton='right' disabled={nextBtnDisabled} />

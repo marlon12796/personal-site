@@ -14,7 +14,7 @@ export const LazyLoadImage: React.FC<PropType> = (props) => {
   const { imgSrc, inView, isCover } = props
 
   return (
-    <div className={`${styles['embla__slide']} size-full relative`}>
+    <li className={`${styles['embla__slide']} size-full relative`}>
       <Image
         src={props.isFirst ? imgSrc : inView ? imgSrc : urlGeneretePreview()}
         alt='Your alt text'
@@ -22,6 +22,6 @@ export const LazyLoadImage: React.FC<PropType> = (props) => {
         height={500}
         width={500}
       />
-    </div>
+    </li>
   )
 }
