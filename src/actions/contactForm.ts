@@ -18,7 +18,7 @@ export const getData = async (values: formSchemaType) => {
       from: 'CONTACT FORM <onboarding@resend.dev>',
       to: ['fabrisio021@gmail.com'],
       subject: 'Message From ContactForm',
-      reply_to: values.email,
+      replyTo: values.email,
       text: values.message
     })
     return { data, status: 200 }

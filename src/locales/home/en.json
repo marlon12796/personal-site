@@ -41,6 +41,12 @@
         "description": "A task management application with a minimalist design and a sleek interface.",
         "githubLink": "https://github.com/marlon12796/tasks-manager",
         "previewLink": "https://marlon12796.github.io/tasks-manager/"
+      },
+      "project6": {
+        "name": "Tic-Tac-Toe",
+        "description": "A classic Tic-Tac-Toe game with a fun and engaging interface. Ideal for playing with friends",
+        "githubLink": "https://github.com/marlon12796/tateti",
+        "previewLink": "https://marlon12796.github.io/tres-en-raya/"
       }
     },
     "techTitle": "Technologies"

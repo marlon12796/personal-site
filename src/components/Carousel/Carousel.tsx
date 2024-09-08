@@ -1,6 +1,5 @@
 'use client'
-import React, { useCallback, useEffect, useState } from 'react'
-import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel'
+import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import styles from './Carousel.module.css'
 import { usePrevNextButtons } from '@/hooks/usePrevNextButtons'
@@ -8,6 +7,7 @@ import { useDotButton } from '@/hooks/useDotButton'
 import { LazyLoadImage } from './CarouselLazyloadImage'
 import { CarouselButtons } from './CarouselArrowButtons'
 import { DotButton } from './CarouselDotButton'
+import { useSlidesInView } from '@/hooks/useSlideInView'
 
 type PropType = {
   slides: number[]
@@ -16,32 +16,12 @@ type PropType = {
   options?: EmblaOptionsType
 }
 
-export const MainCarousel: React.FC<PropType> = (props) => {
+export const Carousel: React.FC<PropType> = (props) => {
   const { slides, options, isCover } = props
   const [emblaRed, emblaApi] = useEmblaCarousel(options)
-  const [slidesInView, setSlidesInView] = useState<number[]>([])
-
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
-
+  const { slidesInView } = useSlidesInView(emblaApi)
   const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
-
-  const updateSlidesInView = useCallback((emblaApi: EmblaCarouselType) => {
-    setSlidesInView((slidesInView) => {
-      if (slidesInView.length === emblaApi.slideNodes().length) {
-        emblaApi.off('slidesInView', updateSlidesInView)
-      }
-      const inView = emblaApi.slidesInView().filter((index) => !slidesInView.includes(index))
-      return slidesInView.concat(inView)
-    })
-  }, [])
-
-  useEffect(() => {
-    if (!emblaApi) return
-
-    updateSlidesInView(emblaApi)
-    emblaApi.on('slidesInView', updateSlidesInView)
-    emblaApi.on('reInit', updateSlidesInView)
-  }, [emblaApi, updateSlidesInView])
 
   return (
     <div className={styles.embla}>
@@ -74,4 +54,3 @@ export const MainCarousel: React.FC<PropType> = (props) => {
     </div>
   )
 }
-

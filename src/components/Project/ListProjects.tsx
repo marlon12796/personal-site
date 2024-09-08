@@ -6,7 +6,7 @@ import ProjectCard from '@/components/project/ProjectCard'
 export const ListProjects: React.FC = () => {
   const t = useTranslations('home.projects')
   const h = useTranslations('home')
-  const keys = ['project1', 'project2', 'project3', 'project4', 'project5'] as const
+  const keys = ['project1', 'project2', 'project3', 'project4', 'project5', 'project6'] as const
   return (
     <section className='w-full px-4 my-16 max-w-screen-xl' id='projects'>
       <article className='mx-auto w-full '>
