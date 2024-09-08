@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.embla_space-2 {
+  --slide-spacing: 2rem;
+}
+
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;

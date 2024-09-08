@@ -27,22 +27,3 @@ export const ListProjects: React.FC = () => {
     </section>
   )
 }
-{
-  /* <div className='grid gap-2 grid-cols-1 sm:grid-cols-2 mt-8'>
-        {keys.map((key) => (
-          <ProjectCard
-            key={key}
-            project={{
-              name: t(`${key}.name`),
-              description: t(`${key}.description`),
-              stack: projects[key].stack,
-              images: projects[key].images,
-              previewLink: t(`${key}.previewLink`),
-              githubLink: t(`${key}.githubLink`),
-              mainPath: projects[key].mainPath,
-              isCover: projects[key].isCover
-            }}
-          />
-        ))}
-      </div> */
-}

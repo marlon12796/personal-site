@@ -11,7 +11,7 @@ type Props = {
 }
 const ProjectCard = ({ project }: Props) => {
   return (
-    <Card className='w-full max-w-full  h-full rounded-xl bg-slate-950/50 border-slate-800 flex flex-col'>
+    <Card className='w-full max-w-full h-full rounded-xl bg-slate-950/50 border-slate-800 flex flex-col'>
       <CardHeader className='p-0  embla rounded-t-xl overflow-hidden aspect-[2/1] lg:min-h-[18rem]'>
         <Carousel
           slides={Array.from(Array(project.images.length).keys())}
@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: Props) => {
           )}
         </div>
       </CardContent>
-      <CardFooter className='flex justify-end gap-2 mt-auto'>
+      <CardFooter className='flex justify-end gap-2 mt-auto '>
         {project.githubLink && (
           <CustomTooltip title='View source code'>
             <a href={project.githubLink} target='_blank' rel='noreferrer'>

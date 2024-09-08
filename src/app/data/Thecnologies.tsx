@@ -18,6 +18,8 @@ import TailwindIcon from '@/components/svg/TailwindIcon'
 import TypeScriptIcon from '@/components/svg/TypeScriptIcon'
 import ViteIcon from '@/components/svg/ViteIcon'
 import SQLIcon from '@/components/svg/SQLIcon'
+import AngularIcon from '@/components/svg/AngularIcon'
+import NestjsIcon from '@/components/svg/NestjsIcon'
 
 export type TechnologyData = {
   color: string
@@ -51,6 +53,8 @@ export const technologiesList = [
   'React Email',
   'React Hook Form',
   'SQL',
+  'Angular',
+  'Nestjs',
   'Express'
 ] as const
 export type TechnologiesList = (typeof technologiesList)[number][]
@@ -181,10 +185,20 @@ export const technologies: Record<(typeof technologiesList)[number], TechnologyD
     icon: <ExpressIcon />,
     bgColor: 'bg-green-500/20',
     color: 'text-green-100'
+  },
+  Angular: {
+    icon: <AngularIcon />,
+    bgColor: 'bg-purple-500/20',
+    color: 'text-green-100'
+  },
+  Nestjs: {
+    icon: <NestjsIcon />,
+    bgColor: 'bg-gray-400/20',
+    color: 'text-teal-100'
   }
 }
 export const mainTechnologies: { [key: string]: TechnologiesList } = {
-  'Front-end': ['HTML', 'CSS', 'React', 'Next.js', 'Vite', 'Redux Toolkit', 'MUI', 'Tailwind CSS'],
-  'Back-end': ['Express', 'Prisma', 'Supabase', 'Firebase', 'SQL'],
+  'Front-end': ['HTML', 'CSS', 'React', 'Next.js', 'Vite', 'Redux Toolkit', 'MUI', 'Tailwind CSS', 'Angular'],
+  'Back-end': ['Express', 'Prisma', 'Supabase', 'Firebase', 'SQL', 'Nestjs'],
   Languages: ['JavaScript', 'TypeScript', 'Python']
 }

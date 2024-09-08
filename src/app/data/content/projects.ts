@@ -44,7 +44,7 @@ export const projects: Record<
   project6: {
     mainPath: 'tateti',
     isCover: false,
-    images: generateImagePaths('tateti', ['1.webp', '2.webp', '3.webp', '4.webp']),
-    stack: ['Docker', 'React Hook Form', 'TypeScript', 'Tailwind CSS', 'Vite', 'Zustand', 'Express', 'CSS']
+    images: generateImagePaths('tateti', ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp']),
+    stack: ['Angular', 'Nestjs', 'Docker', 'TypeScript', 'Tailwind CSS', 'Vite', 'CSS']
   }
 }

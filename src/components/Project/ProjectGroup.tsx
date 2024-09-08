@@ -11,7 +11,7 @@ export const ProjectGroup: React.FC<ProjectGroupProps> = ({ group }) => {
   const t = useTranslations('home.projects')
 
   return (
-    <li className={`${styles['embla__slide']} grid gap-2 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 mt-8`}>
+    <li className={`${styles['embla__slide']} h-fit grid gap-4 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 mt-8`}>
       {group.map((key) => (
         <ProjectCard
           key={key}
