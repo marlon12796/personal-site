@@ -17,19 +17,19 @@ export const ProjectContainerCarousel = ({ children }: { children: React.ReactNo
       <div className='flex w-fit gap-3 [margin-inline-start:auto] [margin-block-start:1.5rem]'>
         <Button
           variant='ghost'
-          className='bg-white/60 p-0 size-8 shadow-md flex disabled:cursor-not-allowed '
+          className='bg-slate-100 p-0 size-8 shadow-md flex disabled:cursor-not-allowed '
           onClick={onPrevButtonClick}
           disabled={prevBtnDisabled}
         >
-          <ChevronLeft className='text-black/30 m-auto ' />
+          <ChevronLeft className='text-black/60 m-auto ' />
         </Button>
         <Button
           variant='ghost'
-          className='bg-white/60 p-0 size-8 shadow-md flex disabled:cursor-not-allowed '
+          className='bg-slate-100 p-0 size-8 shadow-md flex disabled:cursor-not-allowed '
           onClick={onNextButtonClick}
           disabled={nextBtnDisabled}
         >
-          <ChevronRight className='text-black/30 m-auto' />
+          <ChevronRight className='text-black/60 m-auto' />
         </Button>
       </div>
     </div>

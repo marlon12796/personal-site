@@ -1,8 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
 
 @layer base {
+
 	:root {
 		--background: 0 0% 100%;
 		--foreground: 222.2 84% 4.9%;
@@ -33,7 +33,6 @@
 		--ring: 222.2 84% 4.9%;
 
 		--radius: 0.5rem;
-
 	}
 
 	.dark {
@@ -67,33 +66,27 @@
 	}
 }
 
-@layer base {
-	* {
-		@apply border-border;
-	}
-
-	body {
-		@apply bg-background text-foreground;
-	}
-
-	body::-webkit-scrollbar {
-		width: 8px;
-		background: transparent;
-	}
-
-	body::-webkit-scrollbar-track {
-		background: blue;
-		display: none;
-	}
-
-	body::-webkit-scrollbar-thumb {
-		background-color: #fff2;
-		backdrop-filter: blur(5px);
-		border-radius: 10px;
-	}
+body {
+	color: hsl(var(--foreground));
+	background: hsl(var(--background));
 }
 
-/* All svg squiggle decorations */
+body::-webkit-scrollbar {
+	width: 8px;
+	background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+	background: blue;
+	display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #fff2;
+	backdrop-filter: blur(5px);
+	border-radius: 10px;
+}
+
 .sqD {
 	@apply absolute z-[-10];
 }

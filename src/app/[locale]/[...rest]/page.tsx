@@ -1,6 +1,6 @@
-import { notFound } from 'next/navigation'
+import { notFound } from 'next/navigation';
 
 const CatchAllPage = () => {
-  return notFound()
-}
-export default CatchAllPage
+	return notFound();
+};
+export default CatchAllPage;
