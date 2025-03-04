@@ -38,11 +38,12 @@ export const projects: Record<
 		stack: ['TypeScript', 'Vite', 'Zustand', 'CSS', 'React'],
 	},
 	project3: {
-		mainPath: 'weather',
-		isCover: true,
-		images: generateImagePaths('weather', ['1.webp', '2.webp', '3.webp', '4.webp']),
-		stack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'React'],
+		mainPath: 'spotify-clone',
+		isCover: false,
+		images: generateImagePaths('spotify-clone', ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp']),
+		stack: ['TypeScript', 'Vite', 'Zustand', 'Tailwind CSS', 'React', 'SQL'],
 	},
+
 	project4: {
 		mainPath: 'movies',
 		isCover: true,
@@ -68,9 +69,9 @@ export const projects: Record<
 		stack: ['React', 'JavaScript', 'Zustand', 'Vite', 'TypeScript'],
 	},
 	project8: {
-		mainPath: 'spotify-clone',
-		isCover: false,
-		images: generateImagePaths('spotify-clone', ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp']),
-		stack: ['TypeScript', 'Vite', 'Zustand', 'Tailwind CSS', 'React', 'SQL'],
+		mainPath: 'weather',
+		isCover: true,
+		images: generateImagePaths('weather', ['1.webp', '2.webp', '3.webp', '4.webp']),
+		stack: ['TypeScript', 'Next.js', 'Tailwind CSS', 'React'],
 	},
 };

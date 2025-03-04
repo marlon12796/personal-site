@@ -25,10 +25,10 @@
         "previewLink": "https://marlon12796.github.io/tetris/"
       },
       "project3": {
-        "name": "Pronóstico del Tiempo",
-        "description": "Una aplicación de pronóstico del tiempo con un diseño minimalista y una interfaz fácil de usar.",
-        "githubLink": "https://github.com/marlon12796/open-weather",
-        "previewLink": "https://open-weather-lyart.vercel.app/"
+        "name": "Spotify en Tiempo Real",
+        "description": "Una aplicación de transmisión de música en tiempo real con funciones interactivas y un completo panel de administración.",
+        "githubLink": "https://github.com/marlon12796/spotify-clone",
+        "previewLink": "https://spotify-clone-yr9w.onrender.com/"
       },
       "project4": {
         "name": "Aplicación de Películas",
@@ -55,10 +55,10 @@
         "previewLink": "https://marlon12796.github.io/Tic-Tac-Toe-Emoji/"
       },
       "project8": {
-        "name": "Spotify en Tiempo Real",
-        "description": "Una aplicación de transmisión de música en tiempo real con funciones interactivas y un completo panel de administración.",
-        "githubLink": "https://github.com/marlon12796/spotify-clone",
-        "previewLink": "https://spotify-clone-yr9w.onrender.com/"
+        "name": "Pronóstico del Tiempo",
+        "description": "Una aplicación de pronóstico del tiempo con un diseño minimalista y una interfaz fácil de usar.",
+        "githubLink": "https://github.com/marlon12796/open-weather",
+        "previewLink": "https://open-weather-lyart.vercel.app/"
       }
     },
     "techTitle": "Tecnologías"
