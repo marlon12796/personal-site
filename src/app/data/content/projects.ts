@@ -3,7 +3,16 @@ import { type PersonalProject } from '@/types';
 const generateImagePaths = (projectName: string, imageNames: string[]) =>
 	imageNames.map((imageName) => `/projects/${projectName}/${imageName}`);
 
-export const projectKeys = ['project1', 'project2', 'project3', 'project4', 'project5', 'project6', 'project7'] as const;
+export const projectKeys = [
+	'project1',
+	'project2',
+	'project3',
+	'project4',
+	'project5',
+	'project6',
+	'project7',
+	'project8',
+] as const;
 export type ProjectKey = (typeof projectKeys)[number];
 
 export const projects: Record<
@@ -16,11 +25,12 @@ export const projects: Record<
 	}
 > = {
 	project1: {
-		mainPath: 'tic-tac-toe',
-		isCover: true,
-		images: generateImagePaths('tic-tac-toe', ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp']),
-		stack: ['React', 'JavaScript', 'Zustand', 'Vite', 'TypeScript'],
+		mainPath: 'code-editor',
+		isCover: false,
+		images: generateImagePaths('code-editor', ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp']),
+		stack: ['Docker', 'TypeScript', 'Next.js', 'Vite', 'SQL', 'Tailwind CSS'],
 	},
+
 	project2: {
 		mainPath: 'tetris',
 		isCover: true,
@@ -52,9 +62,15 @@ export const projects: Record<
 		stack: ['Angular', 'Nestjs', 'Docker', 'TypeScript', 'Tailwind CSS', 'Vite', 'CSS'],
 	},
 	project7: {
-		mainPath: 'code-editor',
+		mainPath: 'tic-tac-toe',
+		isCover: true,
+		images: generateImagePaths('tic-tac-toe', ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp']),
+		stack: ['React', 'JavaScript', 'Zustand', 'Vite', 'TypeScript'],
+	},
+	project8: {
+		mainPath: 'spotify-clone',
 		isCover: false,
-		images: generateImagePaths('code-editor', ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp']),
-		stack: ['Docker', 'TypeScript', 'Next.js', 'Vite', 'SQL', 'Tailwind CSS'],
+		images: generateImagePaths('spotify-clone', ['1.webp', '2.webp', '3.webp', '4.webp', '5.webp', '6.webp']),
+		stack: ['TypeScript', 'Vite', 'Zustand', 'Tailwind CSS', 'React', 'SQL'],
 	},
 };

@@ -13,10 +13,10 @@
     "projectsDescription": "Aquí encontrarás algunos de mis proyectos más relevantes y populares 🧑‍💻.",
     "projects": {
       "project1": {
-        "name": "¡Tic Tac Toe!",
-        "description": "Una versión divertida y atractiva del clásico juego de Tic Tac Toe, que ofrece emocionantes modos de juego para un solo jugador y multijugador. Cada jugada introduce nuevos emojis, agregando un toque único a la experiencia.",
-        "githubLink": "https://github.com/marlon12796/Tic-Tac-Toe-Emoji",
-        "previewLink": "https://marlon12796.github.io/Tic-Tac-Toe-Emoji/"
+        "name": "Editor de Código",
+        "description": "Un potente editor de código en línea que admite múltiples lenguajes, resaltado de sintaxis en tiempo real y un entorno colaborativo.",
+        "githubLink": "https://github.com/marlon12796/code-craft-next",
+        "previewLink": "https://code-craft-next.vercel.app/"
       },
       "project2": {
         "name": "Tetris",
@@ -49,10 +49,16 @@
         "previewLink": ""
       },
       "project7": {
-        "name": "Editor de Código",
-        "description": "Un potente editor de código en línea que admite múltiples lenguajes, resaltado de sintaxis en tiempo real y un entorno colaborativo.",
-        "githubLink": "https://github.com/marlon12796/code-craft-next",
-        "previewLink": "https://code-craft-next.vercel.app/"
+        "name": "¡Tic Tac Toe!",
+        "description": "Una versión divertida y atractiva del clásico juego de Tic Tac Toe, que ofrece emocionantes modos de juego para un solo jugador y multijugador. Cada jugada introduce nuevos emojis, agregando un toque único a la experiencia.",
+        "githubLink": "https://github.com/marlon12796/Tic-Tac-Toe-Emoji",
+        "previewLink": "https://marlon12796.github.io/Tic-Tac-Toe-Emoji/"
+      },
+      "project8": {
+        "name": "Spotify en Tiempo Real",
+        "description": "Una aplicación de transmisión de música en tiempo real con funciones interactivas y un completo panel de administración.",
+        "githubLink": "https://github.com/marlon12796/spotify-clone",
+        "previewLink": "https://spotify-clone-yr9w.onrender.com/"
       }
     },
     "techTitle": "Tecnologías"

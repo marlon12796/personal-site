@@ -13,10 +13,10 @@
     "projectsDescription": "Here are a few things I&apos;ve created during my free time. 🧑‍💻",
     "projects": {
       "project1": {
-        "name": "Tic Tac Toe!",
-        "description": "A fun and engaging twist on the classic Tic Tac Toe game, offering exciting gameplay modes for both single and multiplayer. Each play introduces new emojis, adding a unique touch to the experience.",
-        "githubLink": "https://github.com/marlon12796/Tic-Tac-Toe-Emoji",
-        "previewLink": "https://marlon12796.github.io/Tic-Tac-Toe-Emoji/"
+        "name": "Code Editor",
+        "description": "A powerful online code editor supporting multiple languages, real-time syntax highlighting, and a collaborative environment.",
+        "githubLink": "https://github.com/marlon12796/code-craft-next",
+        "previewLink": "https://code-craft-next.vercel.app/"
       },
       "project2": {
         "name": "Tetris",
@@ -49,12 +49,18 @@
         "previewLink": ""
       },
       "project7": {
-        "name": "Code Editor",
-        "description": "A powerful online code editor supporting multiple languages, real-time syntax highlighting, and a collaborative environment.",
-        "githubLink": "https://github.com/marlon12796/code-craft-next",
-        "previewLink": "https://code-craft-next.vercel.app/"
+        "name": "Tic Tac Toe!",
+        "description": "A fun and engaging twist on the classic Tic Tac Toe game, offering exciting gameplay modes for both single and multiplayer. Each play introduces new emojis, adding a unique touch to the experience.",
+        "githubLink": "https://github.com/marlon12796/Tic-Tac-Toe-Emoji",
+        "previewLink": "https://marlon12796.github.io/Tic-Tac-Toe-Emoji/"
+      },
+      "project8": {
+        "name": "Realtime Spotify Application",
+        "description": "A real-time music streaming application with interactive features and a complete admin dashboard.",
+        "githubLink": "https://github.com/marlon12796/spotify-clone",
+        "previewLink": "https://spotify-clone-yr9w.onrender.com/"
       }
-    },
-    "techTitle": "Technologies"
-  }
+    }
+  },
+  "techTitle": "Technologies"
 }
