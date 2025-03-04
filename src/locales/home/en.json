@@ -47,6 +47,12 @@
         "description": "A classic Tic-Tac-Toe game with a fun and engaging interface. Ideal for playing with friends",
         "githubLink": "https://github.com/marlon12796/tateti",
         "previewLink": ""
+      },
+      "project7": {
+        "name": "Code Editor",
+        "description": "A powerful online code editor supporting multiple languages, real-time syntax highlighting, and a collaborative environment.",
+        "githubLink": "https://github.com/marlon12796/code-craft-next",
+        "previewLink": "https://code-craft-next.vercel.app/"
       }
     },
     "techTitle": "Technologies"
