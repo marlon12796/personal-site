@@ -3,6 +3,7 @@
   --slide-spacing: 1rem;
   --slide-size: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .embla_space-2 {
