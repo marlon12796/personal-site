@@ -13,6 +13,7 @@ type PropType = {
   slides: number[]
   mainPath: string
   isCover: boolean
+  alt: string
   options?: EmblaOptionsType
 }
 
@@ -35,6 +36,7 @@ export const Carousel: React.FC<PropType> = (props) => {
               isCover={isCover}
               imgSrc={`/projects/${props.mainPath}/${index + 1}.webp`}
               inView={slidesInView.indexOf(index) > -1}
+              alt={props.alt}
             />
           ))}
         </ul>

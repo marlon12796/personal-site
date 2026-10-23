@@ -1,6 +1,17 @@
 {
   "home": {
     "greeting": "¡Hola, soy Marlon!",
+    "heroRole": "Desarrollador Full-Stack",
+    "heroHeadline": "Diseñando sistemas de alto rendimiento",
+    "heroSub": "Especializado en construir aplicaciones web escalables y eficientes, desde la concepción hasta el despliegue.",
+    "viewPortfolio": "Ver Proyectos",
+    "contactMe": "Contáctame",
+    "experienceTitle": "Posición Actual & Experiencia",
+    "cearTitle": "Desarrollador Full-Stack en CEAR Latinoamericano",
+    "cearPeriod": "Octubre 2025 - Agosto 2026",
+    "cearBullet1": "Desarrollo y mantenimiento de plataformas y sistemas web escalables.",
+    "cearBullet2": "Optimización de rendimiento de APIs, consultas SQL y arquitectura de datos.",
+    "cearBullet3": "Mentoría técnica y aplicación de buenas prácticas de código limpio.",
     "title": {
       "text1": "Disfruto",
       "step1": "construyendo",
@@ -9,8 +20,24 @@
       "text3": "para la web"
     },
     "buttonText": "Proyectos",
-    "projectsTitle": "Mis Proyectos",
-    "projectsDescription": "Aquí encontrarás algunos de mis proyectos más relevantes y populares 🧑‍💻.",
+    "projectsTitle": "Casos profesionales destacados",
+    "projectsDescription": "Una selección de productos y soluciones web en los que participé y estuve a cargo durante mi experiencia laboral.",
+    "professionalCase": {
+      "role": "Desarrollador Full-Stack",
+      "type": "Caso profesional",
+      "title": "Plataforma web de formación continua",
+      "subtitle": "CEAR Latinoamericano",
+      "description": "Desarrollo y mantenimiento de una plataforma web para programas especializados en Derecho e Ingeniería, con una experiencia clara para consultar programas, certificaciones, instituciones y servicios académicos.",
+      "visit": "Visitar sitio"
+      ,"crmRole": "Desarrollador Full-Stack"
+      ,"crmTitle": "CRM interno para CEAR Latinoamericano"
+      ,"crmSubtitle": "Sistema de gestión y seguimiento institucional"
+      ,"crmDescription": "Desarrollo y evolución de una solución interna para centralizar información y apoyar los procesos de gestión de CEAR Latinoamericano."
+      ,"mailerRole": "Desarrollador Full-Stack"
+      ,"mailerTitle": "Sistema Mailer"
+      ,"mailerSubtitle": "Plataforma de gestión de campañas y plantillas"
+      ,"mailerDescription": "Sistema para organizar campañas, administrar plantillas y consultar métricas de comunicación desde una interfaz centralizada."
+    },
     "projects": {
       "project1": {
         "name": "Editor de Código",
@@ -35,32 +62,21 @@
         "description": "Una aplicación para explorar películas, con un diseño elegante y una experiencia de usuario intuitiva.",
         "githubLink": "https://github.com/marlon12796/t-movies/",
         "previewLink": "https://marlon12796.github.io/t-movies/"
-      },
-      "project5": {
-        "name": "Aplicación de Tareas",
-        "description": "Una aplicación de tareas con un diseño minimalista y una interfaz elegante.",
-        "githubLink": "https://github.com/marlon12796/tasks-manager",
-        "previewLink": "https://marlon12796.github.io/tasks-manager/"
-      },
-      "project6": {
-        "name": "Tres en Raya",
-        "description": "Un clásico juego de Tres en Raya con una interfaz atractiva y divertida. Ideal para jugar con amigos .",
-        "githubLink": "https://github.com/marlon12796/tateti",
-        "previewLink": ""
-      },
-      "project7": {
-        "name": "¡Tic Tac Toe!",
-        "description": "Una versión divertida y atractiva del clásico juego de Tic Tac Toe, que ofrece emocionantes modos de juego para un solo jugador y multijugador. Cada jugada introduce nuevos emojis, agregando un toque único a la experiencia.",
-        "githubLink": "https://github.com/marlon12796/Tic-Tac-Toe-Emoji",
-        "previewLink": "https://marlon12796.github.io/Tic-Tac-Toe-Emoji/"
-      },
-      "project8": {
-        "name": "Pronóstico del Tiempo",
-        "description": "Una aplicación de pronóstico del tiempo con un diseño minimalista y una interfaz fácil de usar.",
-        "githubLink": "https://github.com/marlon12796/open-weather",
-        "previewLink": "https://open-weather-lyart.vercel.app/"
       }
     },
-    "techTitle": "Tecnologías"
+    "techTitle": "Tecnologías",
+    "stackLabel": "Stack principal",
+    "techDescription": "Un stack enfocado en construir productos confiables, desde la interfaz hasta su despliegue, probado en producción.",
+    "technologyCategories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloudDevOps": "Nube y DevOps",
+      "uiPerformance": "UI y rendimiento"
+    },
+    "technologyItems": {
+      "responsiveDesign": "Diseño responsive",
+      "accessibility": "Accesibilidad",
+      "performance": "Rendimiento"
+    }
   }
 }

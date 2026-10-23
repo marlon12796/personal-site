@@ -1,6 +1,17 @@
 {
   "home": {
     "greeting": "Hello, I'm Marlon!",
+    "heroRole": "Full-Stack Developer",
+    "heroHeadline": "Architecting High-Performance Systems",
+    "heroSub": "Specializing in building scalable, efficient web applications from concept to deployment.",
+    "viewPortfolio": "View Portfolio",
+    "contactMe": "Contact Me",
+    "experienceTitle": "Current Position & Experience",
+    "cearTitle": "Full-Stack Developer at CEAR Latinoamericano",
+    "cearPeriod": "October 2025 - August 2026",
+    "cearBullet1": "Led development of scalable web platforms and internal management systems.",
+    "cearBullet2": "Optimized API response times, database queries, and data architecture.",
+    "cearBullet3": "Mentored junior developers and implemented clean code best practices.",
     "title": {
       "text1": "I enjoy",
       "step1": "building",
@@ -9,8 +20,24 @@
       "text3": "for the web"
     },
     "buttonText": "Projects",
-    "projectsTitle": "My projects",
-    "projectsDescription": "Here are a few things I&apos;ve created during my free time. 🧑‍💻",
+    "projectsTitle": "Featured professional case studies",
+    "projectsDescription": "A selection of professional products and web solutions I contributed to and owned throughout my experience.",
+    "professionalCase": {
+      "role": "Full-Stack Developer",
+      "type": "Professional case study",
+      "title": "Continuing education web platform",
+      "subtitle": "CEAR Latinoamericano",
+      "description": "Development and maintenance of a web platform for specialized Law and Engineering programs, creating a clear experience for exploring programs, certifications, institutions and academic services.",
+      "visit": "Visit website"
+      ,"crmRole": "Full-Stack Developer"
+      ,"crmTitle": "Internal CRM for CEAR Latinoamericano"
+      ,"crmSubtitle": "Institutional management and tracking system"
+      ,"crmDescription": "Development and evolution of an internal solution to centralize information and support CEAR Latinoamericano's management processes."
+      ,"mailerRole": "Full-Stack Developer"
+      ,"mailerTitle": "Mailer System"
+      ,"mailerSubtitle": "Campaign and template management platform"
+      ,"mailerDescription": "A system for organizing campaigns, managing templates and reviewing communication metrics from a centralized interface."
+    },
     "projects": {
       "project1": {
         "name": "Code Editor",
@@ -35,32 +62,21 @@
         "description": "An application for exploring movies, featuring a sleek design and intuitive user experience.",
         "githubLink": "https://github.com/marlon12796/t-movies/",
         "previewLink": "https://marlon12796.github.io/t-movies/"
-      },
-      "project5": {
-        "name": "Task Manager App",
-        "description": "A task management application with a minimalist design and a sleek interface.",
-        "githubLink": "https://github.com/marlon12796/tasks-manager",
-        "previewLink": "https://marlon12796.github.io/tasks-manager/"
-      },
-      "project6": {
-        "name": "Tic-Tac-Toe",
-        "description": "A classic Tic-Tac-Toe game with a fun and engaging interface. Ideal for playing with friends",
-        "githubLink": "https://github.com/marlon12796/tateti",
-        "previewLink": ""
-      },
-      "project7": {
-        "name": "Tic Tac Toe!",
-        "description": "A fun and engaging twist on the classic Tic Tac Toe game, offering exciting gameplay modes for both single and multiplayer. Each play introduces new emojis, adding a unique touch to the experience.",
-        "githubLink": "https://github.com/marlon12796/Tic-Tac-Toe-Emoji",
-        "previewLink": "https://marlon12796.github.io/Tic-Tac-Toe-Emoji/"
-      },
-      "project8": {
-        "name": "Weather Forecast",
-        "description": "A weather forecast application with a minimalistic design and easy-to-use interface.",
-        "githubLink": "https://github.com/marlon12796/open-weather",
-        "previewLink": "https://open-weather-lyart.vercel.app/"
       }
     },
-    "techTitle": "Technologies"
+    "techTitle": "Technologies",
+    "stackLabel": "Core stack",
+    "techDescription": "A focused toolkit for building reliable products from interface to production.",
+    "technologyCategories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloudDevOps": "Cloud & DevOps",
+      "uiPerformance": "UI & Performance"
+    },
+    "technologyItems": {
+      "responsiveDesign": "Responsive Design",
+      "accessibility": "Accessibility",
+      "performance": "Performance"
+    }
   }
 }

@@ -1,91 +1,66 @@
-import { useTranslations } from 'next-intl'
-import Image from 'next/image'
-import Link from 'next/link'
+"use client";
+
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Mail } from "lucide-react";
+
 export const Hero = () => {
-  const t = useTranslations('home')
+  const t = useTranslations("home");
+
   return (
-    <>
-      <div
-        className='relative animate-scale-down-in w-full  [padding-block:5em] flex justify-center text-center flex-col items-center z-1  overflow-hidden'
-        style={{ maxWidth: '1200px' }}
-      >
-        <p className='text-xl mb-5 text-white'>{t('greeting')}</p>
-        <h1 className='heroTitle inline-block max-w-2xl lg:max-w-4xl  w-auto relative text-5xl md:text-6xl lg:text-7xl tracking-tighter mb-10 font-bold heroShinyBg text-white'>
-          {t('title.text1')} {''}
-          <span className='heroShiny1 text-blue-500'>{t('title.step1')}</span> {''}
-          {t('title.text2')} <span className='heroShiny2 text-blue-500'>{t('title.step2')}</span> {''}
-          {t('title.text3')}
-          <Image
-            className='sqD squiggle-hero-html w-auto h-auto top-[-90px] right-[3%] sm:top-[-90px] sm:right-[170px]'
-            style={{ animationDelay: '0.1s' }}
-            src='/static/doodles/hero/html.svg'
-            alt='HTML Logo'
-            width={100}
-            height={100}
-          />
-          <Image
-            className='sqD squiggle-hero-nextjs  top-[75px] right-0 w-11'
-            style={{ animationDelay: '0.2s' }}
-            src='/static/doodles/hero/nextjs.svg'
-            alt='Nextjs Logo'
-            width={100}
-            height={100}
-          />
-          <Image
-            className='sqD w-13 aspect-square  top-14 sm:top-6  sm:-left-[10%] sm:block'
-            style={{ animationDelay: '0.4s' }}
-            src='/static/doodles/hero/coder.svg'
-            alt='coder'
-            width={100}
-            height={100}
-          />
-          <Image
-            className='sqD hidden w-13 aspect-square sm:block left-[100px] lg:left-[160px] bottom-[-150px]'
-            style={{ animationDelay: '0.5s' }}
-            src='/static/doodles/hero/js.svg'
-            alt='hero logo'
-            width={100}
-            height={100}
-          />
-          <Image
-            className='sqD w-13 aspect-square bottom-[-180px] right-[65%] sm:bottom-[-200px] sm:right-[45%]'
-            style={{ animationDelay: '0.6s' }}
-            src='/static/doodles/hero/dino.svg'
-            alt='chrome dino'
-            width={100}
-            height={100}
-          />
-          <Image
-            className='sqD w-[10rem] aspect-square right-[-20px] sm:right-0 bottom-[-180px] lg:[5%]'
-            style={{ animationDelay: '0.7s' }}
-            src='/static/doodles/hero/paintbrush.svg'
-            alt='paint logo'
-            width={120}
-            height={120}
-          />
-          <Image
-            className='sqD squiggle-hero-pop1 w-[8rem] aspect-square top-[-110px] opacity-75 sm:block sm:top-[-120px] sm:left-[15%] sm:opacity-100'
-            src='/static/doodles/hero/pop1.svg'
-            alt='pop logo'
-            width={130}
-            height={130}
-          />
-          <Image
-            className='sqD left-[-35px] w-[2.7rem] aspect-square bottom-[-85px] sm:bottom-[-70px] sm:left-5 opacity-40'
-            style={{ animationDelay: '0.9s' }}
-            src='/static/doodles/hero/code.svg'
-            alt='code logo'
-            width={100}
-            height={100}
-          />
-        </h1>
-        <Link
-          href='#projects'
-          className='cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white text-white bg-black hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-colors'
-        >
-          {t('buttonText')}
-        </Link>
+    <section className="relative w-full max-w-screen-xl mx-auto px-4 pt-12 pb-20 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Left Column: Headline and CTAs */}
+        <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
+          <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-white leading-[1.12] mb-6">
+            <span className="text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,0.35)]">
+              {t("heroRole")}
+            </span>{" "}
+            <span className="text-white">{t("heroHeadline")}</span>
+          </h1>
+
+          <p className="text-slate-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl">
+            {t("heroSub")}
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              href="#projects"
+              className="px-7 py-3.5 rounded-xl font-semibold bg-cyan-400 text-slate-950 shadow-[0_0_25px_rgba(34,211,238,0.45)] hover:bg-cyan-300 hover:shadow-[0_0_35px_rgba(34,211,238,0.7)] transition-all flex items-center gap-2"
+            >
+              <span>{t("viewPortfolio")}</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+
+            <Link
+              href="/contact"
+              className="px-7 py-3.5 rounded-xl font-semibold border border-white/15 bg-white/5 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-md transition-all flex items-center gap-2"
+            >
+              <Mail className="w-4 h-4 text-slate-300" />
+              <span>{t("contactMe")}</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Right Column: 3D Laptop with Ambient Glow */}
+        <div className="lg:col-span-5 relative flex justify-center items-center">
+          {/* Ambient light blooms */}
+          <div className="absolute w-72 h-72 sm:w-80 sm:h-80 bg-emerald-500/25 rounded-full blur-[80px] -top-10 -right-4 pointer-events-none" />
+          <div className="absolute w-64 h-64 bg-cyan-500/20 rounded-full blur-[70px] -bottom-6 -left-6 pointer-events-none" />
+
+          <div className="relative z-10 w-full max-w-[420px] transition-transform duration-500 hover:scale-[1.02]">
+            <Image
+              src="/hero-laptop.png"
+              alt="Marlon Developer Setup & Cloud Architecture"
+              width={520}
+              height={520}
+              priority
+              className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
+            />
+          </div>
+        </div>
       </div>
-    </>
-  )
-}
+    </section>
+  );
+};

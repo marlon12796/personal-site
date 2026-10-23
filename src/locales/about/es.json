@@ -1,12 +1,12 @@
 {
   "about": {
-    "heading": "Simplificando las experiencias digitales para todos.",
-    "description": "Creando soluciones accesibles e intuitivas junto al Programador Marlon para mejorar las interacciones de los usuarios.",
+    "heading": "Creo experiencias digitales claras y accesibles.",
+    "description": "Diseño y desarrollo productos web modernos que convierten ideas complejas en experiencias simples, rápidas y fáciles de usar.",
     "downloadCV": "Descargar CV",
-    "intro": "Soy Marlon, dedicado a hacer las experiencias digitales más simples y amigables para todos.",
-    "paragraph1": "¡Hola! Mi nombre es Marlon. Soy apasionado por desmitificar la tecnología y crear interfaces que hablen a todos. Con un ojo agudo para el diseño y un corazón para el código, cierro la brecha entre lo complejo y lo accesible. Comencé mi carrera como desarrollador web hace unos 8 años.",
-    "paragraph2": "He probado algunos lenguajes de programación y tecnologías, tanto en el Back-End como en el Front-End.",
-    "paragraph3": "Aunque el alcance del desarrollo web es amplio, me interesé mucho y me enfoqué en el Desarrollo Front-End y SQL.",
+    "intro": "Soy Marlon, desarrollador Full-Stack enfocado en crear productos digitales simples, accesibles y de alto rendimiento.",
+    "paragraph1": "Me apasiona convertir problemas complejos en interfaces claras y soluciones que realmente ayuden a las personas. Combino criterio de diseño, desarrollo frontend y arquitectura backend para construir experiencias consistentes desde la primera interacción hasta el despliegue.",
+    "paragraph2": "He trabajado con aplicaciones web, APIs, bases de datos y herramientas cloud, participando en todo el ciclo de desarrollo: análisis, implementación, optimización y mantenimiento de productos reales.",
+    "paragraph3": "Actualmente me especializo en Next.js, React, TypeScript, Node.js y PostgreSQL, con especial atención al rendimiento, la accesibilidad, el diseño responsive y las buenas prácticas de código.",
     "education": "Educación",
     "eductionData": {
       "zegelIpaeInstitute": {

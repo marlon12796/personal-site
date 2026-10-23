@@ -1,29 +1,21 @@
-'server-only';
+import 'server-only';
 
-import { notFound } from 'next/navigation';
 import { getRequestConfig } from 'next-intl/server';
-import { locales, type Locale } from '@/i18n/config';
 import { routing } from './routing';
 
-// export function isValidLocale(locale: unknown): locale is Locale {
-// 	return locales.some((l) => l === locale);
-// }
-
-export default getRequestConfig(async ({ requestLocale }) => {
-	let locale = await requestLocale;
-	// if (!isValidLocale(locale)) notFound();
-	if (!locale || !routing.locales.includes(locale as 'en' | 'es')) locale = routing.defaultLocale;
-
-	// if (!isValidLocale(baseLocale)) notFound();
+export default getRequestConfig(async ({ locale }) => {
+	const activeLocale = routing.locales.includes(locale as (typeof routing.locales)[number])
+		? (locale as (typeof routing.locales)[number])
+		: routing.defaultLocale;
 
 	return {
 		messages: {
-			...(await import(`../locales/contact/${locale}.json`)).default,
-			...(await import(`../locales/about/${locale}.json`)).default,
-			...(await import(`../locales/home/${locale}.json`)).default,
-			...(await import(`../locales/layout/${locale}.json`)).default,
+			...(await import(`../locales/contact/${activeLocale}.json`)).default,
+			...(await import(`../locales/about/${activeLocale}.json`)).default,
+			...(await import(`../locales/home/${activeLocale}.json`)).default,
+			...(await import(`../locales/layout/${activeLocale}.json`)).default,
 		},
-		locale: locale,
+		locale: activeLocale,
 		defaultLocale: routing.defaultLocale,
 		locales: routing.locales,
 	};

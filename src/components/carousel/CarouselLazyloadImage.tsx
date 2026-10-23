@@ -8,16 +8,17 @@ type PropType = {
   index: number
   isFirst: boolean
   isCover: boolean
+  alt: string
 }
 
 export const LazyLoadImage: React.FC<PropType> = (props) => {
-  const { imgSrc, inView, isCover } = props
+  const { imgSrc, inView, isCover, alt } = props
 
   return (
     <li className={`${styles['embla__slide']} size-full relative`}>
       <Image
         src={props.isFirst ? imgSrc : inView ? imgSrc : urlGeneretePreview()}
-        alt='Your alt text'
+        alt={`${alt} screenshot`}
         className={`size-full ${isCover ? 'object-cover' : 'object-contain'}`}
         height={500}
         width={500}

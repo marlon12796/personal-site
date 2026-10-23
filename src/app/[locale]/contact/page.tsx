@@ -3,15 +3,14 @@ import { ContactForm } from '@/components/ContactForm';
 import { iconsMethod } from '@/app/data/content/contact';
 import imgSetup from '/public/static/setup.webp';
 import { getTranslations } from 'next-intl/server';
+import type { Locale } from '@/i18n/config';
 import { Toaster } from '@/components/ui/sonner';
-import { setRequestLocale } from 'next-intl/server';
 type Props = {
 	params: Promise<{ locale: string }>;
 };
 const Page = async ({ params }: Props) => {
 	const locale = (await params).locale;
-	setRequestLocale(locale);
-	const t = await getTranslations('contact');
+	const t = await getTranslations({ locale: locale as Locale, namespace: 'contact' });
 	const keys = ['email', 'phone'] as const;
 	return (
 		<main className='grow grid'>

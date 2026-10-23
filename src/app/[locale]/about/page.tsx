@@ -1,15 +1,15 @@
 import Image from 'next/image';
-import AboutImage from '/public/static/about.avif';
+import AboutImage from '/public/sobre-mi.png';
 import { ListEducation } from '@/components/education/ListEducation';
 import Link from 'next/link';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import type { Locale } from '@/i18n/config';
 type Props = {
 	params: Promise<{ locale: string }>;
 };
 const Page = async ({ params }: Props) => {
 	const locale = (await params).locale;
-	setRequestLocale(locale);
-	const t = await getTranslations('about');
+	const t = await getTranslations({ locale: locale as Locale, namespace: 'about' });
 
 	return (
 		<main className='w-full  mb-16'>
@@ -54,7 +54,7 @@ const Page = async ({ params }: Props) => {
 				<p className='[padding-block-start:0.5em]'>{t('paragraph2')}</p>
 				<p className='[padding-block-start:0.5em]'>{t('paragraph3')} </p>
 			</section>
-			<section className='max-w-screen-xl px-8 [margin-inline:auto] sm:px-4'>
+			<section className='mx-auto w-full max-w-7xl px-8 sm:px-10'>
 				<h2 className='font-bold text-slate-300 text-center text-2xl [padding-block-start:0.5em] sm:text-4xl'>
 					{t('education')}
 				</h2>

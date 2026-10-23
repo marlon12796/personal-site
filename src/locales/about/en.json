@@ -1,12 +1,12 @@
 {
   "about": {
-    "heading": "Simplifying digital experiences for everyone.",
-    "description": "Crafting accessible, intuitive solutions alongside Programmer Marlon to enhance user interactions.",
+    "heading": "I build clear, accessible digital experiences.",
+    "description": "I turn complex ideas into modern web products that feel simple, fast and intuitive to use.",
     "downloadCV": "Download CV",
-    "intro": "I'm Marlon, dedicated to making digital experiences simpler and more user-friendly for everyone.",
-    "paragraph1": "Hey there! My name is Marlon. I'm passionate about demystifying technology and crafting interfaces that speak to everyone. With a keen eye for design and a heart for code, I bridge the gap between the complex and the accessible. I started my career as a web developer about 8 years ago.",
-    "paragraph2": "I've tried some programming languages and tech stack, both Back-End, and Front-End.",
-    "paragraph3": "Even though the scope of web development is broad, I was very interested and focused on Front-End Development and SQL.",
+    "intro": "I'm Marlon, a Full-Stack Developer focused on building simple, accessible and high-performance digital products.",
+    "paragraph1": "I enjoy turning complex problems into clear interfaces and solutions that genuinely help people. I combine design thinking, frontend development and backend architecture to create consistent experiences from the first interaction to production.",
+    "paragraph2": "I've worked with web applications, APIs, databases and cloud tools across the full development cycle: planning, implementation, optimization and maintenance of real products.",
+    "paragraph3": "Today, I specialize in Next.js, React, TypeScript, Node.js and PostgreSQL, with a strong focus on performance, accessibility, responsive design and clean code.",
     "education": "Education",
     "eductionData": {
       "zegelIpaeInstitute": {

@@ -2,7 +2,6 @@ import { type Locale, locales } from '@/i18n/config';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/Select';
 import { useTransition } from 'react';
 import { usePathname, useRouter } from '@/i18n/navigation';
-import { useParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 export const NavbarLanguages = () => {
 	const [isPending, startTransition] = useTransition();
@@ -10,12 +9,10 @@ export const NavbarLanguages = () => {
 	const router = useRouter();
 	const value = useLocale();
 	const pathname = usePathname();
-	const params = useParams();
 	const onSelectChange = (val: string) => {
 		const nextLocale = val as Locale;
 		startTransition(() => {
-			// @ts-expect-error -- TypeScript will validate that only known `params
-			router.replace({ pathname, params }, { locale: nextLocale });
+			router.replace(pathname, { locale: nextLocale });
 		});
 	};
 	return (
