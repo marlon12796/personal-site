@@ -27,5 +27,9 @@ export const pathnames: Pathnames<typeof locales> = {
   '/projects/campus-virtual': {
     en: '/projects/virtual-campus',
     es: '/proyectos/campus-virtual'
+  },
+  '/experience/cear': {
+    en: '/experience/cear',
+    es: '/experiencia/cear'
   }
 }

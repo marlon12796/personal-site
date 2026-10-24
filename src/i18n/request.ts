@@ -15,6 +15,7 @@ export default getRequestConfig(async ({ locale }) => {
 			...(await import(`../locales/home/${activeLocale}.json`)).default,
 			...(await import(`../locales/layout/${activeLocale}.json`)).default,
 			...(await import(`../locales/projects/${activeLocale}.json`)).default,
+			...(await import(`../locales/experience/${activeLocale}.json`)).default,
 		},
 		locale: activeLocale,
 		defaultLocale: routing.defaultLocale,

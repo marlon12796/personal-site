@@ -2,53 +2,65 @@
   "cearProject": {
     "backText": "Back to Projects",
     "role": "Full-Stack Developer",
-    "type": "Professional Case Study",
+    "type": "Professional Case Study • 1.5 months",
     "title": "Continuing Education Web Platform",
     "institution": "CEAR Latinoamericano",
-    "subtitle": "Development and maintenance of a web platform for specialized Law and Engineering programs, creating a clear experience for exploring programs, certifications, institutions, and academic services.",
+    "subtitle": "Public website that replaced a fully manual WhatsApp-based enrollment process: digital catalog of JRD, Arbitration, NEC and FIDIC programs for arbitrators, experts and adjudicators — with integrated enrollment and contact forms.",
     "visitLive": "Visit live site",
     "metrics": [
-      { "label": "LCP Load Time", "value": "< 1.2s" },
-      { "label": "Rendering Strategy", "value": "SSR / SSG" },
-      { "label": "Database", "value": "PostgreSQL ACID" },
-      { "label": "Containerization", "value": "Docker + AWS" }
+      {
+        "label": "LCP Load Time",
+        "value": "< 1.2s"
+      },
+      {
+        "label": "Render Strategy",
+        "value": "SSR + ISR"
+      },
+      {
+        "label": "Programs Listed",
+        "value": "4 specializations"
+      },
+      {
+        "label": "Delivery Time",
+        "value": "1.5 months"
+      }
     ],
     "businessProblem": {
       "title": "The Challenge / Business Need",
-      "description": "CEAR Latinoamericano needed a complete revamp of its web infrastructure to host and showcase its growing catalog of executive degrees and specialized certificates. Key requirements included:",
+      "description": "CEAR Latinoamericano managed all enrollment inquiries from arbitrators, experts and adjudicators exclusively through WhatsApp — no public website, no digital catalog, no structured contact forms. The goal was clear:",
       "points": [
-        "Centralizing dozens of academic programs across Construction Law, Arbitration, and Engineering.",
-        "Automating lead capture and direct enrollment funnels for prospective students.",
-        "SEO-optimized architecture to dynamically index curriculums and enrollment dates on search engines.",
-        "High availability and responsive design tailored for working professionals browsing on mobile devices."
+        "Digitize and centralize the catalog of 4 key programs: JRD Arbitration, International Arbitration, NEC and FIDIC, targeting arbitrators, expert witnesses and adjudicators.",
+        "Replace the manual WhatsApp flow with enrollment and contact forms integrated directly into the public website.",
+        "Build on Next.js with SSR/ISR for first-class Google organic indexing — each specialization must appear when professionals search for continuing education.",
+        "100% informational platform: payments and content access are handled inside the existing Campus Virtual system."
       ]
     },
     "architecture": {
       "title": "Technical Architecture & Decisions",
-      "subtitle": "How the solution was structured end-to-end as a Full-Stack developer:",
+      "subtitle": "Full-stack solution designed, built and deployed in 1.5 months by a single developer:",
       "layers": {
         "frontend": {
-          "name": "Frontend (Next.js & TypeScript)",
+          "name": "Frontend & SEO (Next.js, TypeScript & Tailwind CSS)",
           "details": [
-            "Built with Next.js (App Router) leveraging SSR and SSG for top-tier search engine indexing.",
-            "Strict TypeScript across the entire client codebase to guarantee type safety and clear contracts.",
-            "Modular UI styling with Tailwind CSS, ensuring lightweight bundles and reusable components."
+            "Next.js (App Router) with SSR for program pages and ISR for static content — achieving LCP < 1.2s and organic Google indexing for each specialization.",
+            "Strict TypeScript across the entire client codebase for type-safe forms, API responses and course data contracts.",
+            "Responsive design with Tailwind CSS, optimized for professionals browsing on mobile during breaks."
           ]
         },
         "backend": {
-          "name": "Backend & Database (Node.js & PostgreSQL)",
+          "name": "Backend & Database (Node.js, Express & PostgreSQL)",
           "details": [
-            "RESTful API built with Node.js / NestJS featuring strict DTOs and schema validations.",
-            "Relational PostgreSQL database with normalized schemas for courses, modules, faculty, and inquiries.",
-            "Optimized queries with custom indexing on high-traffic filter columns and ACID transaction control."
+            "RESTful API with Node.js and Express for managing the program catalog, courses and enrollment form submissions.",
+            "Normalized PostgreSQL schema: programs, modules, faculty and enrollment inquiries in a single source of truth.",
+            "Rate limiting and dual validation (client + server) on forms to guarantee clean, deduplicated leads with no bot spam."
           ]
         },
         "devops": {
-          "name": "DevOps, Cloud & Deployment (AWS & Docker)",
+          "name": "Infrastructure & Deployment (Docker & VPS On-Premise)",
           "details": [
-            "Containerized environments with Docker ensuring zero discrepancy between staging and production.",
-            "AWS infrastructure utilizing Amazon S3 for media assets and Amazon CloudFront CDN for global caching.",
-            "Automated HTTPS with SSL/TLS certificates and automated deployment pipelines (CI/CD)."
+            "Docker containerization: Next.js frontend, Express API and PostgreSQL on the same CEAR On-Premise VPS.",
+            "HTTPS with SSL/TLS certificates and production domain configuration for cearlatinoamericano.edu.pe.",
+            "Incremental Static Regeneration (ISR) to refresh the course catalog without full redeploys or unnecessary database load."
           ]
         }
       }
@@ -57,69 +69,91 @@
       "title": "Key Engineering Challenges Overcome",
       "items": [
         {
-          "title": "Core Web Vitals Optimization",
-          "description": "Automated conversion to modern WebP format, image lazy-loading, intelligent route prefetching, and critical font sub-setting, achieving 90+ Lighthouse performance scores."
+          "title": "Technical SEO for Specialized Programs",
+          "description": "SSR and dynamic routes with server-generated metadata so each program page (JRD, FIDIC, NEC, Arbitration) is individually indexed by Google with proper title, description and semantic HTML structure."
         },
         {
-          "title": "Smart Caching & Resilience",
-          "description": "Incremental Static Regeneration (ISR) strategies to display fresh curriculums and courses without burdening the PostgreSQL database during high-traffic ad campaigns."
+          "title": "Lead Capture Forms with Dual Validation",
+          "description": "Enrollment and contact forms with client-side validation (React Hook Form + Zod) and server-side middleware (Express), IP-based rate limiting and data sanitization to prevent spam and duplicates in the leads database."
         },
         {
-          "title": "Form Security & CRM Ingestion",
-          "description": "Protection against automated spam bots via rate limiting and dual-layer validation (client and server), ensuring qualified leads enter the sales pipeline cleanly."
+          "title": "Solo Full-Stack Delivery in 1.5 Months",
+          "description": "Complete design, architecture, frontend, backend, database and deployment as a single developer in 1.5 months — prioritizing reusable components, clear conventions and an automated deploy pipeline from day one."
         }
       ]
-    }
+    },
+    "galleryTitle": "Platform Gallery",
+    "gallerySubtitle": "Public site screenshots: program catalog, enrollment forms and contact page."
   },
   "mailerProject": {
     "backText": "Back to Projects",
     "role": "Full-Stack Developer",
     "type": "Professional Case Study",
-    "title": "Mailer System",
-    "institution": "Campaign & Template Management Platform",
-    "subtitle": "System for organizing email campaigns, managing reusable templates, and monitoring communication deliverability and engagement metrics from a centralized, high-throughput interface.",
+    "title": "Mailer System & Lead Automation",
+    "institution": "CEAR Latinoamericano",
+    "subtitle": "Proprietary high-throughput email prospecting and nurture platform directly integrated with CEAR Latinoamericano's internal lead database for arbitration and executive programs, featuring Unlayer visual builder, BullMQ queues, and real-time SendGrid analytics.",
     "metrics": [
-      { "label": "Throughput", "value": "50K+ / batch" },
-      { "label": "Job Queue", "value": "BullMQ + Redis" },
-      { "label": "Live Metrics", "value": "Webhooks" },
-      { "label": "Environments", "value": "Docker + AWS" }
+      {
+        "label": "Dispatch Rate",
+        "value": "1,000 / min"
+      },
+      {
+        "label": "Reliability",
+        "value": "Inbox Pattern"
+      },
+      {
+        "label": "Real Conversion",
+        "value": "10 Clients"
+      },
+      {
+        "label": "Deliverability",
+        "value": "SendGrid + DNS"
+      }
     ],
     "businessProblem": {
       "title": "The Challenge / Business Need",
-      "description": "The organization relied on fragmented external tools to communicate with its student and customer base, facing high costs, limited template customization, and lack of visibility into campaign engagement. Key goals included:",
+      "description": "CEAR Latinoamericano needed an independent, self-hosted solution to communicate at scale with prospective leads, legal experts, and alumni without recurring per-contact subscription fees from third-party marketing tools. Key objectives included:",
       "points": [
-        "Centralizing audience contacts and segmentation within a single secure proprietary platform.",
-        "Developing a visual template manager for reusable, responsive HTML emails across various clients.",
-        "Executing high-volume batch deliveries without degrading server responsiveness or daily operations.",
-        "Tracking real-time open rates, click-through rates, bounce events, and unsubscribes with complete audit logs."
+        "Native synchronization with the internal lead database to target campaigns for specialized arbitration and postgraduate offerings.",
+        "Integrating a drag-and-drop visual email builder with Unlayer, supporting dual desktop/mobile viewports and dynamic merge tags.",
+        "Reliably dispatching high-volume batches (1,000 emails/minute) without overloading on-premise CPU or freezing transactional services.",
+        "Capturing opens, link clicks, and intent signals in real time to empower sales and admissions to convert high-ticket arbitration cases."
       ]
     },
     "architecture": {
       "title": "Technical Architecture & Decisions",
-      "subtitle": "Event-driven, asynchronous worker architecture designed for high deliverability:",
+      "subtitle": "Decoupled, event-driven architecture engineered for high-throughput transactional campaigns:",
       "layers": {
         "frontend": {
-          "name": "Frontend & Dashboard (Next.js & TypeScript)",
+          "name": "Frontend & Visual Builder (Next.js & Unlayer SDK)",
           "details": [
-            "Interactive administrative dashboard built with Next.js Server Components for sub-second analytics rendering.",
-            "Live email template renderer with instant desktop and mobile viewport previewing.",
-            "Multi-step campaign creation wizard with recipient filtering and schedule controls."
+            "Administrative panel built with Next.js (App Router) and TypeScript offering an intuitive campaign workflow and recipient filtering.",
+            "Embedded Unlayer drag-and-drop builder enabling responsive email design and instant dual-screen previewing.",
+            "Secure dynamic variable injection ({{name}}, {{course}}, {{offer}}) and HTML sanitization compatible with Outlook and Gmail."
           ]
         },
         "backend": {
-          "name": "Backend & Workers (Node.js, PostgreSQL & Redis)",
+          "name": "Backend & Resilient Queues (NestJS, BullMQ & Inbox Pattern)",
           "details": [
-            "Queue-based task architecture powered by Redis and BullMQ to process thousands of dispatches concurrently.",
-            "Intelligent rate limiting and exponential backoff retry algorithms to protect sender domain reputation.",
-            "Normalized PostgreSQL schema optimized for high-write event streaming (sent, delivered, opened, clicked, bounced)."
+            "Modular microservices with NestJS and BullMQ backed by Redis to dispatch bulk batches across dedicated workers without blocking the main event loop.",
+            "Implementation of the Inbox / Outbox Pattern guaranteeing idempotency: zero lost or duplicated emails across network retries.",
+            "Strict per-minute rate limiting and exponential backoff policies to safeguard sender domain reputation."
+          ]
+        },
+        "deliverability": {
+          "name": "Deliverability & Webhooks (SendGrid & DNS Security)",
+          "details": [
+            "High-throughput cloud email delivery powered by SendGrid API with low latency and optimal routing.",
+            "Real-time event streaming ingesting delivery, open, click, bounce, and unsubscribe webhooks.",
+            "Hardened DNS records (SPF, DKIM, DMARC) across corporate domains to guarantee direct inbox placement instead of Spam."
           ]
         },
         "devops": {
-          "name": "Infrastructure & Cloud (Docker & AWS)",
+          "name": "Database & On-Premise Infrastructure (PostgreSQL & Docker)",
           "details": [
-            "Full containerization with Docker and Docker Compose separating API endpoints, background workers, and Redis.",
-            "Webhook ingestion pipeline capturing delivery statuses in near-real-time from email providers.",
-            "Strict email DNS authentication setup (SPF, DKIM, and DMARC records) to ensure maximum inbox placement."
+            "PostgreSQL schema optimized for audiences, lead segmentation, suppression lists, and aggregated campaign performance.",
+            "Full containerization with Docker Compose unifying NestJS API, Redis workers, and database on an On-Premise VPS.",
+            "Absolute sovereignty over institutional lead data with zero variable per-contact licensing costs."
           ]
         }
       }
@@ -128,90 +162,106 @@
       "title": "Key Engineering Challenges Overcome",
       "items": [
         {
-          "title": "High-Concurrency Asynchronous Queueing",
-          "description": "Decoupling user-facing requests from batch dispatch execution using isolated background worker processes, preventing gateway timeouts and providing pause/resume capabilities."
+          "title": "Zero-Loss Resilient Dispatch with Inbox Pattern & BullMQ",
+          "description": "Completely decoupled email dispatch into background Redis workers via BullMQ, combining transactional Inbox patterns to guarantee idempotent, controlled execution at 1,000 emails/min."
         },
         {
-          "title": "Real-Time Metric Streaming & Ingestion",
-          "description": "High-throughput webhook processing engine with deduplication and debouncing to log engagement events without locking the primary database tables."
+          "title": "Real-Time Streaming Ingestion of SendGrid Webhooks",
+          "description": "Engineered an asynchronous webhook receiver with deduplication and debouncing to log engagement events and update analytics dashboards without locking relational tables."
         },
         {
-          "title": "Email Client CSS Compatibility & Sanitization",
-          "description": "Template compiler injecting dynamic recipient variables, applying inline CSS rules, and sanitizing payloads to ensure pixel-perfect rendering across Outlook, Gmail, and Apple Mail."
+          "title": "Unlayer Visual Builder with Dynamic Personalization",
+          "description": "Seamlessly embedded Unlayer SDK with merge tag interpolation, generating cross-client HTML compatible with legacy Outlook desktop, modern Gmail, and Apple Mail."
         }
       ]
-    }
+    },
+    "galleryTitle": "Mailer System Gallery",
+    "gallerySubtitle": "Screenshots of the main dashboard, campaigns, email templates and deliverability metrics."
   },
   "crmProject": {
     "backText": "Back to Projects",
     "role": "Full-Stack Developer",
-    "type": "Professional Case Study",
-    "title": "Internal CRM for CEAR Latinoamericano",
-    "institution": "Institutional Management & Tracking System",
-    "subtitle": "Development and evolution of an internal CRM solution to centralize lead information, manage institutional entities, and track tasks and commercial opportunities across the CEAR Latinoamericano ecosystem.",
+    "type": "Professional Case Study • 2 Months Delivery",
+    "title": "Internal CRM & RNP Lead Management",
+    "institution": "CEAR Latinoamericano",
+    "subtitle": "Internal platform to centralize and qualify over 200,000 RNP procurement entities and leads: sales prospecting pipeline, Marketing Manager task assignments for sales reps, and smart feedback loop with the Mailer System.",
     "metrics": [
-      { "label": "Core Modules", "value": "4 modules" },
-      { "label": "Lead Management", "value": "Visual pipeline" },
-      { "label": "Database", "value": "PostgreSQL ACID" },
-      { "label": "Environments", "value": "Docker + AWS" }
+      {
+        "label": "RNP Entities & Leads",
+        "value": "+200,000 records"
+      },
+      {
+        "label": "Data & Performance",
+        "value": "Drizzle + PostgreSQL"
+      },
+      {
+        "label": "Operational Roles",
+        "value": "Marketing & Sales Reps"
+      },
+      {
+        "label": "Delivery Timeline",
+        "value": "2 months (Solo Dev)"
+      }
     ],
     "businessProblem": {
-      "title": "The Challenge / Business Need",
-      "description": "CEAR Latinoamericano managed its commercial and academic relationships through scattered spreadsheets and manual processes, leading to lost data, poor visibility, and high reliance on key individuals. The core goals were:",
+      "title": "The Business Challenge",
+      "description": "CEAR's sales reps and Marketing Manager handled prospective student acquisition via direct phone calls and WhatsApp with zero centralization, tracking outreach in scattered Excel spreadsheets. This caused massive data loss, zero performance visibility, and duplicate outreach across more than 200,000 RNP suppliers. The core goals were:",
       "points": [
-        "Centralizing lead records and allied institution tracking into a single source of truth.",
-        "Implementing a visual commercial pipeline to manage the full client acquisition funnel.",
-        "Providing a task assignment and tracking system for the commercial and academic teams.",
-        "Ensuring full traceability of all interactions with each entity and related institution."
+        "Centralize and structure a massive database of over 200,000 National Registry of Suppliers (RNP) entities in PostgreSQL using Drizzle ORM.",
+        "Eliminate scattered spreadsheets with a central Leads module featuring history logs, call logs, and verified email capture.",
+        "Implement a Tasks module where the Marketing Manager assigns prospect batches to sales reps and monitors progress, effectiveness, and productivity in real time.",
+        "Bidirectional synergy with the Mailer System: the CRM qualifies the contact list via sales calls, and the Mailer feeds back email opens to target campaigns toward highly engaged leads."
       ]
     },
     "architecture": {
       "title": "Technical Architecture & Decisions",
-      "subtitle": "Modular CRM design with specialized views per business area:",
+      "subtitle": "High-performance full-stack solution built in 2 months as a solo developer for high-volume corporate data:",
       "layers": {
         "frontend": {
-          "name": "Frontend & Views (Next.js & TypeScript)",
+          "name": "Frontend & High-Performance Data Tables (Next.js, TanStack Table & TypeScript)",
           "details": [
-            "UI built on Next.js with React Server Components for optimized list and table rendering.",
-            "Advanced data table components with dynamic filters, server-side pagination, and inline record actions.",
-            "Visual lead pipeline with drag-and-drop across funnel stages for the commercial team."
+            "Next.js with TypeScript and TanStack Table to render, paginate, and server-filter massive lists across 200k+ RNP entities with sub-second response times.",
+            "TanStack Query for reactive cache synchronization and optimized optimistic mutations on call logs without page reloads.",
+            "Typed forms with dual validation via Zod ensuring every email address and phone number logged by reps strictly adheres to standard format."
           ]
         },
         "backend": {
-          "name": "Backend & Data (Node.js & PostgreSQL)",
+          "name": "Modular Backend & Data Layer (NestJS, Drizzle ORM & PostgreSQL)",
           "details": [
-            "Robust RESTful API built with NestJS following clean architecture and domain-based module separation.",
-            "Relational PostgreSQL schema with entities for Leads, Entities, Tasks, and their many-to-many relationships.",
-            "Granular role-based access control (RBAC) per resource to segment access across commercial, academic, and operational areas."
+            "NestJS with clean modular architecture, decoupled controllers, specialized services per domain (Leads, Entities, Tasks), and RBAC guards for roles (Marketing Manager vs. Sales Rep).",
+            "Drizzle ORM over PostgreSQL: ultra-fast typed queries, optimized joins, and compound indexes for instantaneous lookups by tax ID (RUC), company name, and status.",
+            "Task management module with dynamic prospect batch assignment and tracking workflows (Pending, In Progress, Contacted, Discarded, Enrolled)."
           ]
         },
         "devops": {
-          "name": "Infrastructure & Deployment (Docker & AWS)",
+          "name": "Infrastructure, On-Premise VPS & Mailer Synergy",
           "details": [
-            "Full service containerization with Docker to guarantee consistent environments across development and production.",
-            "Deployed on AWS infrastructure with managed RDS (PostgreSQL) database instance and load balancing.",
-            "Controlled migration strategy with automatic rollback protection to safeguard production data integrity."
+            "Docker Compose containerization for Next.js, NestJS API, and PostgreSQL on CEAR's On-Premise VPS, guaranteeing complete data sovereignty over sensitive customer records.",
+            "Strategic pipeline with CEAR's Mailer System: leads qualified by reps sync for targeted campaigns, and Mailer engagement metrics prioritize follow-up calls.",
+            "Network hardening, SSL/TLS certificates, and automated scheduled backups of the prospecting database."
           ]
         }
       }
     },
     "engineeringChallenges": {
-      "title": "Key Engineering Challenges Overcome",
+      "title": "Engineering Challenges Overcome",
       "items": [
         {
-          "title": "Flexible & Extensible Data Model",
-          "description": "Designed a relational schema capable of representing polymorphic entity types (institutions, individuals, organizations) without compromising query consistency or performance."
+          "title": "Query Performance & Filtering on 200k+ RNP Entities",
+          "description": "Handling a database of over 200,000 records without performance bottlenecks through efficient cursor-based queries in PostgreSQL with Drizzle ORM and TanStack Table in Next.js."
         },
         {
-          "title": "Task System with Assignment & Priorities",
-          "description": "Task module supporting multi-user assignment, deadlines, priority levels, and internal notifications, all linked to specific leads or entities for complete traceability."
+          "title": "Task Tracking & Commercial Productivity",
+          "description": "Designing an operational workflow where the Marketing Head distributes leads and assigns targets, enabling clear measurement of contact and closing rates per sales representative."
         },
         {
-          "title": "Performance at Scale for Data-Heavy Views",
-          "description": "Query optimization with composite indexes, cursor-based pagination, and frontend list virtualization to handle hundreds of records without degrading user experience."
+          "title": "Integrated Ecosystem: CRM ↔ Mailer Synergy",
+          "description": "Preventing data silos by connecting the CRM with the bulk SendGrid/BullMQ mailer engine so reps prioritize warm leads who have already demonstrated high engagement."
         }
       ]
-    }
+    },
+    "galleryTitle": "Internal CRM Gallery",
+    "gallerySubtitle": "Screenshots: Institutional dashboard, RNP entities module, lead tracking and task distribution."
   },
   "campusProject": {
     "backText": "Back to Projects",
@@ -222,10 +272,22 @@
     "subtitle": "Institutional virtual learning and management platform engineered during a strategic 5-month assignment to centralize virtual classrooms, synchronous Google Meet lectures, Niubiz online payment gateway, high-definition recordings, and academic administration for hundreds of attorneys and forensic experts.",
     "visitLive": "Visit official campus",
     "metrics": [
-      { "label": "Peak Concurrency", "value": "200+ Active" },
-      { "label": "Access Security", "value": "MFA + Magic Link" },
-      { "label": "Fintech Automation", "value": "Niubiz Online" },
-      { "label": "Delivery Timeline", "value": "5 Months" }
+      {
+        "label": "Peak Concurrency",
+        "value": "200+ Active"
+      },
+      {
+        "label": "Access Security",
+        "value": "MFA + Magic Link"
+      },
+      {
+        "label": "Fintech Automation",
+        "value": "Niubiz Online"
+      },
+      {
+        "label": "Delivery Timeline",
+        "value": "5 Months"
+      }
     ],
     "businessProblem": {
       "title": "The Challenge / Business Need",
@@ -291,6 +353,8 @@
           "description": "Architected a granular RBAC structure across Students, Academic Affairs, and Finance, fortified with two-factor authentication (MFA) and frictionless Magic Link login for non-technical users."
         }
       ]
-    }
+    },
+    "galleryTitle": "Module Gallery (Student & Admin Experience)",
+    "gallerySubtitle": "Screenshots of the student experience, exam module, grade management and RBAC administration."
   }
 }

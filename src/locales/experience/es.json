@@ -1,0 +1,82 @@
+{
+  "cearExperience": {
+    "backText": "Volver al inicio",
+    "badge": "Trayectoria Profesional • Experiencia Comprobada",
+    "role": "Desarrollador Full-Stack",
+    "company": "CEAR Latinoamericano",
+    "period": "Octubre 2025 - Agosto 2026",
+    "location": "Lima, Perú • Modalidad Híbrida / Remota",
+    "summary": "Desarrollé la ingeniería de software y la modernización de la infraestructura tecnológica de CEAR Latinoamericano. Diseñé y desplegué de punta a punta un ecosistema de 4 plataformas web escalables que transformaron integralmente las operaciones académicas, comerciales, de marketing y captación de la institución.",
+    "metrics": [
+      {
+        "label": "Sistemas Desarrollados",
+        "value": "4 plataformas core"
+      },
+      {
+        "label": "Entidades & Leads",
+        "value": "+200k en base de datos"
+      },
+      {
+        "label": "Rendimiento Web",
+        "value": "LCP < 1.2s (SSR)"
+      },
+      {
+        "label": "Capacidad de Envío",
+        "value": "1,000 correos/min"
+      }
+    ],
+    "pillarsTitle": "Ejes Clave de Responsabilidad Técnica",
+    "pillarsSubtitle": "Pilares fundamentales que guiaron mi trabajo diario en el equipo de desarrollo:",
+    "pillars": [
+      {
+        "title": "Arquitectura & Backend de Alto Rendimiento",
+        "description": "Diseño de APIs modulares y escalables con NestJS y Express, modelado relacional en PostgreSQL optimizado con Drizzle ORM, y procesamiento asíncrono en segundo plano mediante BullMQ y Redis."
+      },
+      {
+        "title": "Frontend Moderno & Experiencia de Usuario",
+        "description": "Desarrollo de interfaces con Next.js (App Router), TypeScript y Tailwind CSS. Implementación de tablas dinámicas con TanStack Table para datos masivos y estrategias de renderizado híbrido SSR/ISR."
+      },
+      {
+        "title": "DevOps, VPS On-Premise & Soberanía de Datos",
+        "description": "Contenerización integral con Docker y Docker Compose, aprovisionamiento de VPS On-Premise de CEAR, hardening de red, certificados SSL/TLS y copias de seguridad automatizadas."
+      },
+      {
+        "title": "Transformación Digital de Procesos de Negocio",
+        "description": "Sustitución de flujos manuales basados en WhatsApp y hojas de cálculo por un ecosistema unificado entre captación web, CRM con supervisión de tareas y prospección masiva por email."
+      }
+    ],
+    "systemsTitle": "El Ecosistema de 4 Plataformas que Construí",
+    "systemsSubtitle": "Cada solución resolvió un cuello de botella institucional crítico. Explora cada caso de estudio técnico:",
+    "systems": [
+      {
+        "id": "campus",
+        "title": "Campus Virtual CEAR",
+        "tag": "Académico & Fintech",
+        "description": "Plataforma integral de aprendizaje y evaluaciones en línea con pasarela Niubiz, streaming de clases sincrónicas, soporte de +200 alumnos y gestión RBAC.",
+        "href": "/projects/campus-virtual"
+      },
+      {
+        "id": "mailer",
+        "title": "Sistema Mailer & Automatización",
+        "tag": "Marketing & Infraestructura",
+        "description": "Motor interno de despacho a 1,000 correos/minuto con BullMQ, SendGrid, constructor visual Unlayer y analíticas en tiempo real de aperturas y rebotes.",
+        "href": "/projects/sistema-mailer"
+      },
+      {
+        "id": "crm",
+        "title": "CRM Interno & Prospección RNP",
+        "tag": "Operaciones & Ventas",
+        "description": "Solución para centralizar y cualificar +200,000 entidades RNP, con asignación de tareas del Jefe de Marketing a asesores y sincronización inteligente con el Mailer.",
+        "href": "/projects/crm-interno"
+      },
+      {
+        "id": "web",
+        "title": "Plataforma Web de Formación Continua",
+        "tag": "SEO & Captación Pública",
+        "description": "Sitio público con Next.js (SSR/ISR) para programas JRD, Arbitraje, NEC y FIDIC, con formularios de inscripción integrados que reemplazaron la captación por WhatsApp.",
+        "href": "/projects/cear-plataforma"
+      }
+    ],
+    "exploreCase": "Ver caso de estudio técnico"
+  }
+}

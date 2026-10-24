@@ -1,0 +1,82 @@
+{
+  "cearExperience": {
+    "backText": "Back to Home",
+    "badge": "Professional Career • Proven Experience",
+    "role": "Full-Stack Developer",
+    "company": "CEAR Latinoamericano",
+    "period": "October 2025 - August 2026",
+    "location": "Lima, Peru • Hybrid / Remote",
+    "summary": "I developed the software engineering and technological modernization at CEAR Latinoamericano. I designed and deployed an end-to-end ecosystem of 4 scalable web platforms that thoroughly transformed the institution's academic, sales, marketing, and lead acquisition operations.",
+    "metrics": [
+      {
+        "label": "Systems Delivered",
+        "value": "4 core platforms"
+      },
+      {
+        "label": "Entities & Leads",
+        "value": "+200k in database"
+      },
+      {
+        "label": "Web Performance",
+        "value": "LCP < 1.2s (SSR)"
+      },
+      {
+        "label": "Email Throughput",
+        "value": "1,000 emails/min"
+      }
+    ],
+    "pillarsTitle": "Key Pillars of Technical Responsibility",
+    "pillarsSubtitle": "Fundamental engineering principles that guided my day-to-day work:",
+    "pillars": [
+      {
+        "title": "High-Availability Architecture & Backend",
+        "description": "Design of modular, scalable APIs using NestJS and Express, relational data modeling in PostgreSQL optimized with Drizzle ORM, and asynchronous background job queues powered by BullMQ and Redis."
+      },
+      {
+        "title": "Modern Frontend & User Experience",
+        "description": "Development of responsive interfaces using Next.js (App Router), TypeScript, and Tailwind CSS. Implementation of dynamic TanStack Table modules for heavy data catalogs and hybrid SSR/ISR rendering."
+      },
+      {
+        "title": "DevOps, On-Premise VPS & Data Sovereignty",
+        "description": "Comprehensive containerization with Docker and Docker Compose, provisioning of CEAR's On-Premise VPS, network hardening, SSL/TLS certificates, and automated scheduled backups."
+      },
+      {
+        "title": "Digital Transformation of Business Workflows",
+        "description": "Replacement of manual WhatsApp and spreadsheet processes with a unified pipeline connecting public web enrollment, CRM with task supervision, and automated bulk email prospecting."
+      }
+    ],
+    "systemsTitle": "The Ecosystem of 4 Platforms I Built",
+    "systemsSubtitle": "Each solution eliminated a critical operational bottleneck. Explore each technical case study:",
+    "systems": [
+      {
+        "id": "campus",
+        "title": "CEAR Virtual Campus",
+        "tag": "Academic & Fintech",
+        "description": "Official online learning and exam platform with Niubiz payment integration, synchronized live lectures, 200+ concurrent student support, and RBAC administration.",
+        "href": "/projects/campus-virtual"
+      },
+      {
+        "id": "mailer",
+        "title": "Mailer System & Automation",
+        "tag": "Marketing & Infrastructure",
+        "description": "Internal 1,000 emails/minute dispatch engine with BullMQ, SendGrid API, Unlayer drag-and-drop template builder, and real-time open and bounce tracking.",
+        "href": "/projects/sistema-mailer"
+      },
+      {
+        "id": "crm",
+        "title": "Internal CRM & RNP Lead Management",
+        "tag": "Operations & Sales",
+        "description": "Internal platform to centralize and qualify +200,000 RNP procurement entities, featuring Marketing Manager task distribution to sales reps and Mailer feedback integration.",
+        "href": "/projects/crm-interno"
+      },
+      {
+        "id": "web",
+        "title": "Continuing Education Web Platform",
+        "tag": "SEO & Public Acquisition",
+        "description": "Public Next.js (SSR/ISR) website showcasing specialized JRD, Arbitration, NEC, and FIDIC programs, with integrated enrollment forms replacing WhatsApp outreach.",
+        "href": "/projects/cear-plataforma"
+      }
+    ],
+    "exploreCase": "View technical case study"
+  }
+}

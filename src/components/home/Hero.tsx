@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { ArrowRight, Mail, Zap, Globe, Shield } from "lucide-react";
+import { ArrowRight, Mail, Zap, Globe, Shield, ChevronDown } from "lucide-react";
 import {
   motion,
   type Transition,
@@ -52,7 +52,7 @@ export const Hero = () => {
       </div>
 
       {/* ── Content ── */}
-      <div className="relative z-10 w-full max-w-screen-xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="relative z-10 w-full max-w-screen-xl mx-auto px-6 pt-16 pb-28 sm:pb-32 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         {/* Left: text block */}
         <div className="lg:col-span-7 flex flex-col items-start">
           {/* Eyebrow badge */}
@@ -140,16 +140,37 @@ export const Hero = () => {
         </motion.div>
       </div>
 
-      {/* ── Scroll indicator ── */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-600"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
+      {/* ── Mouse Scroll indicator ── */}
+      <motion.a
+        href="#experience"
+        className="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5 cursor-pointer group"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.1, duration: 0.6 }}
+        title="Desplazarse hacia abajo"
+        aria-label="Scroll down to experience"
       >
-        <div className="w-px h-8 bg-gradient-to-b from-transparent to-slate-600/50 animate-pulse" />
-        <span className="text-xs tracking-widest uppercase">scroll</span>
-      </motion.div>
+        {/* Mouse outline */}
+        <div className="w-5 h-8 sm:w-6 sm:h-9 rounded-full border-2 border-cyan-400/40 bg-slate-950/70 p-1 flex justify-center group-hover:border-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.25)] group-hover:shadow-[0_0_20px_rgba(6,182,212,0.45)] transition-all">
+          {/* Animated mouse wheel */}
+          <motion.div
+            className="w-1 h-2 rounded-full bg-cyan-300 shadow-[0_0_8px_rgba(103,232,249,0.9)]"
+            animate={{ y: [0, 8, 0], opacity: [1, 0.2, 1] }}
+            transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+          />
+        </div>
+
+        {/* Text & animated chevron */}
+        <div className="flex items-center gap-1 text-[10px] font-mono tracking-[0.2em] uppercase text-slate-400 group-hover:text-cyan-300 transition-colors">
+          <span>scroll</span>
+          <motion.div
+            animate={{ y: [0, 3, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+          >
+            <ChevronDown className="w-3 h-3 text-cyan-400/80 group-hover:text-cyan-300 transition-colors" />
+          </motion.div>
+        </div>
+      </motion.a>
     </section>
   );
 };
