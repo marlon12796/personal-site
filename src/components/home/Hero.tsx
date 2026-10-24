@@ -1,25 +1,35 @@
-﻿'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { ArrowRight, Mail, Zap, Globe, Shield } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Hero3DCard } from './Hero3DCard';
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { ArrowRight, Mail, Zap, Globe, Shield } from "lucide-react";
+import {
+  motion,
+  type Transition,
+  type TargetAndTransition,
+} from "framer-motion";
+import { Hero3DCard } from "./Hero3DCard";
 
 const PILLS = [
-  { icon: Zap,    label: 'Alto rendimiento' },
-  { icon: Globe,  label: 'Fullstack & Cloud' },
-  { icon: Shield, label: 'Código de calidad' },
+  { icon: Zap, label: "Alto rendimiento" },
+  { icon: Globe, label: "Fullstack & Cloud" },
+  { icon: Shield, label: "Código de calidad" },
 ];
 
-const fadeUp = (delay = 0) => ({
-  initial:   { opacity: 0, y: 28 },
-  animate:   { opacity: 1, y: 0 },
-  transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1], delay },
+const fadeUp = (
+  delay = 0,
+): {
+  initial: TargetAndTransition;
+  animate: TargetAndTransition;
+  transition: Transition;
+} => ({
+  initial: { opacity: 0, y: 28 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] as const, delay },
 });
 
 export const Hero = () => {
-  const t = useTranslations('home');
+  const t = useTranslations("home");
 
   return (
     <section className="relative w-full min-h-[92vh] flex items-center overflow-hidden">
@@ -28,9 +38,9 @@ export const Hero = () => {
         className="pointer-events-none absolute inset-0 z-0 opacity-[0.07]"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(34,211,238,1) 1px, transparent 1px),' +
-            'linear-gradient(90deg, rgba(34,211,238,1) 1px, transparent 1px)',
-          backgroundSize: '52px 52px',
+            "linear-gradient(rgba(34,211,238,1) 1px, transparent 1px)," +
+            "linear-gradient(90deg, rgba(34,211,238,1) 1px, transparent 1px)",
+          backgroundSize: "52px 52px",
         }}
       />
 
@@ -43,12 +53,13 @@ export const Hero = () => {
 
       {/* ── Content ── */}
       <div className="relative z-10 w-full max-w-screen-xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-
         {/* Left: text block */}
         <div className="lg:col-span-7 flex flex-col items-start">
-
           {/* Eyebrow badge */}
-          <motion.div {...fadeUp(0)} className="mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-400/25 bg-cyan-400/5 backdrop-blur-sm text-cyan-400 text-sm font-medium">
+          <motion.div
+            {...fadeUp(0)}
+            className="mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-400/25 bg-cyan-400/5 backdrop-blur-sm text-cyan-400 text-sm font-medium"
+          >
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
             Disponible para proyectos
           </motion.div>
@@ -60,16 +71,22 @@ export const Hero = () => {
           >
             <span
               className="block bg-clip-text text-transparent"
-              style={{ backgroundImage: 'linear-gradient(135deg, #22d3ee 0%, #a78bfa 60%, #34d399 100%)' }}
+              style={{
+                backgroundImage:
+                  "linear-gradient(135deg, #22d3ee 0%, #a78bfa 60%, #34d399 100%)",
+              }}
             >
-              {t('heroRole')}
+              {t("heroRole")}
             </span>
-            <span className="block text-white mt-1">{t('heroHeadline')}</span>
+            <span className="block text-white mt-1">{t("heroHeadline")}</span>
           </motion.h1>
 
           {/* Sub */}
-          <motion.p {...fadeUp(0.2)} className="text-slate-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-lg">
-            {t('heroSub')}
+          <motion.p
+            {...fadeUp(0.2)}
+            className="text-slate-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-lg"
+          >
+            {t("heroSub")}
           </motion.p>
 
           {/* Pills */}
@@ -86,12 +103,15 @@ export const Hero = () => {
           </motion.div>
 
           {/* CTAs */}
-          <motion.div {...fadeUp(0.4)} className="flex flex-wrap items-center gap-4">
+          <motion.div
+            {...fadeUp(0.4)}
+            className="flex flex-wrap items-center gap-4"
+          >
             <Link
               href="#projects"
               className="group px-7 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_45px_rgba(34,211,238,0.65)] hover:scale-[1.03] transition-all duration-300 flex items-center gap-2"
             >
-              <span>{t('viewPortfolio')}</span>
+              <span>{t("viewPortfolio")}</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
 
@@ -100,7 +120,7 @@ export const Hero = () => {
               className="px-7 py-3.5 rounded-xl font-semibold border border-white/15 bg-white/5 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-md hover:scale-[1.02] transition-all duration-300 flex items-center gap-2"
             >
               <Mail className="w-4 h-4 text-slate-300" />
-              <span>{t('contactMe')}</span>
+              <span>{t("contactMe")}</span>
             </Link>
           </motion.div>
         </div>
@@ -118,7 +138,6 @@ export const Hero = () => {
 
           <Hero3DCard />
         </motion.div>
-
       </div>
 
       {/* ── Scroll indicator ── */}

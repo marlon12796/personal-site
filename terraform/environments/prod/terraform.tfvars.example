@@ -1,0 +1,6 @@
+﻿aws_region     = "us-east-1"
+environment    = "prod"
+contact_emails = [
+  "fabrisio021@gmail.com",
+  "marlon.tafur.21@gmail.com"
+]

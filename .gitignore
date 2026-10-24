@@ -36,3 +36,11 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
