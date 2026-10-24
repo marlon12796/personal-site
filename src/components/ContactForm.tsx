@@ -1,102 +1,145 @@
-'use client'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
+"use client";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/Form'
-import { Input } from '@/components/ui/Input'
-import { Textarea } from '@/components/ui/Textarea'
-import { getData } from '@/actions/contactForm'
-import { formSchema, type formSchemaType } from '@/lib/validatons/form'
-import { useState } from 'react'
-import { toast } from 'sonner'
-import { useTranslations } from 'next-intl'
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/Form";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
+import { formSchema, type formSchemaType } from "@/lib/validatons/form";
+import { useState } from "react";
+import { toast } from "sonner";
+import { useTranslations } from "next-intl";
+import { Send, Loader2 } from "lucide-react";
 
 export const ContactForm = () => {
-  const t = useTranslations('contact')
+  const t = useTranslations("contact");
 
-  const [contactStatus, setContactStatus] = useState<'success' | 'pending' | 'initial'>('initial')
+  const [contactStatus, setContactStatus] = useState<
+    "success" | "pending" | "initial"
+  >("initial");
   const form = useForm<formSchemaType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      email: '',
-      message: ''
-    }
-  })
+      email: "",
+      message: "",
+    },
+  });
 
   const onSubmit = async (values: formSchemaType) => {
     try {
-      setContactStatus('pending')
-      const response = await getData(values)
-      if (response.status === 200) {
-        toast.success('Message sent successfully!', {})
-        setContactStatus('success')
-        return
+      setContactStatus("pending");
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success("¡Mensaje enviado con éxito!", {
+          description:
+            "Gracias por ponerte en contacto. Te responderé a la brevedad.",
+        });
+        setContactStatus("success");
+        form.reset();
+        return;
       }
-      if (response.status === 422) {
-        const errorMessages = response?.errors?.map((error) => error.detail).join(', ')
-        toast.error('Error in validation fields', { description: errorMessages ?? 'Failed to send message.' })
-        return
+
+      if (res.status === 422) {
+        const errorMessages = data?.errors
+          ?.map((error: { detail: string }) => error.detail)
+          .join(", ");
+        toast.error("Error de validación", {
+          description: errorMessages ?? "Revisa los campos del formulario.",
+        });
+        return;
       }
+
+      toast.error("Error al enviar", {
+        description:
+          data?.errors?.[0]?.detail ??
+          "No se pudo enviar el mensaje. Intenta de nuevo más tarde.",
+      });
     } catch (_error) {
-      toast.error('An unexpected error occurred.')
+      toast.error("Error de conexión", {
+        description:
+          "No se pudo contactar con el servidor. Verifica tu conexión.",
+      });
     } finally {
-      setContactStatus('success')
-      form.reset()
+      setContactStatus((prev) => (prev === "pending" ? "initial" : prev));
     }
-  }
+  };
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-5 [padding-block:1.5em]'>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6 pt-2 pb-6"
+      >
         <FormField
           control={form.control}
-          name='email'
+          name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-slate-400'>{t('inputEmail')}</FormLabel>
+              <FormLabel className="text-sm font-medium text-slate-300">
+                {t("inputEmail")}
+              </FormLabel>
               <FormControl>
-                <Input placeholder='marc@gmail.com' className='placeholder:text-slate-700' {...field} />
+                <Input placeholder="tu-correo@ejemplo.com" {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-red-400 text-xs" />
             </FormItem>
           )}
         />
         <FormField
           control={form.control}
-          name='message'
+          name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className='text-slate-400'>{t('inputMessage')}</FormLabel>
+              <FormLabel className="text-sm font-medium text-slate-300">
+                {t("inputMessage")}
+              </FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder={t('labelMessage')}
-                  className='resize-none [form-sizing:content] placeholder:text-slate-700'
+                  placeholder={t("labelMessage")}
+                  className="resize-none"
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-red-400 text-xs" />
             </FormItem>
           )}
         />
-        <button type='submit' disabled={contactStatus === 'pending'}>
-          <div className='relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-slate-200 dark:bg-gray-700 dark:text-white dark:hover:text-gray-200 dark:shadow-none group'>
-            <span className='absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full' />
-            <span className='absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12'>
-              <svg viewBox='0 0 24 24' stroke='currentColor' fill='none' className='size-5 text-green-400'>
-                <path d='M14 5l7 7m0 0l-7 7m7-7H3' strokeWidth='2' strokeLinejoin='round' strokeLinecap='round' />
-              </svg>
-            </span>
-            <span className='absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200'>
-              <svg viewBox='0 0 24 24' stroke='currentColor' fill='none' className='size-5 text-green-400'>
-                <path d='M14 5l7 7m0 0l-7 7m7-7H3' strokeWidth='2' strokeLinejoin='round' strokeLinecap='round' />
-              </svg>
-            </span>
-            <span className='relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200'>
-              {t('button')}
-            </span>
-          </div>
-        </button>
+        <div>
+          <button
+            type="submit"
+            disabled={contactStatus === "pending"}
+            className="group relative inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 shadow-[0_0_25px_rgba(34,211,238,0.35)] hover:shadow-[0_0_35px_rgba(34,211,238,0.6)] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none transition-all duration-200 cursor-pointer"
+          >
+            {contactStatus === "pending" ? (
+              <>
+                <Loader2 className="w-4 h-4 animate-spin text-slate-950" />
+                <span>Enviando...</span>
+              </>
+            ) : (
+              <>
+                <span>{t("button")}</span>
+                <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
+              </>
+            )}
+          </button>
+        </div>
       </form>
     </Form>
-  )
-}
+  );
+};

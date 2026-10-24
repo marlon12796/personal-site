@@ -1,9 +1,9 @@
 {
   "home": {
     "greeting": "Hello, I'm Marlon!",
-    "heroRole": "Full-Stack Developer",
-    "heroHeadline": "Architecting High-Performance Systems",
-    "heroSub": "Specializing in building scalable, efficient web applications from concept to deployment.",
+    "heroRole": "Full-Stack Engineer",
+    "heroHeadline": "Building systems that scale.",
+    "heroSub": "Robust architecture, high performance, and end-to-end product delivery.",
     "viewPortfolio": "View Portfolio",
     "contactMe": "Contact Me",
     "experienceTitle": "Current Position & Experience",
@@ -29,21 +29,21 @@
       "subtitle": "CEAR Latinoamericano",
       "description": "Development and maintenance of a web platform for specialized Law and Engineering programs, creating a clear experience for exploring programs, certifications, institutions and academic services.",
       "visit": "Visit website",
-      "howItWasDone": "How it was built"
-      ,"crmRole": "Full-Stack Developer"
-      ,"crmTitle": "Internal CRM for CEAR Latinoamericano"
-      ,"crmSubtitle": "Institutional management and tracking system"
-      ,"crmDescription": "Development and evolution of an internal solution to centralize information and support CEAR Latinoamericano's management processes."
-      ,"mailerRole": "Full-Stack Developer"
-      ,"mailerTitle": "Mailer System"
-      ,"mailerSubtitle": "Campaign and template management platform"
-      ,"mailerDescription": "A system for organizing campaigns, managing templates and reviewing communication metrics from a centralized interface."
-      ,"campusRole": "Full-Stack Developer"
-      ,"campusDuration": "5-month assignment"
-      ,"campusTitle": "Virtual Campus"
-      ,"campusSubtitle": "CEAR Latinoamericano"
-      ,"campusDescription": "Comprehensive virtual learning platform assigned for 5 months. Engineered for student academic management, live classes, recordings, forums, and resources for Law and Engineering programs."
-      ,"campusVisit": "Visit official campus"
+      "howItWasDone": "How it was built",
+      "crmRole": "Full-Stack Developer",
+      "crmTitle": "Internal CRM for CEAR Latinoamericano",
+      "crmSubtitle": "Institutional management and tracking system",
+      "crmDescription": "Development and evolution of an internal solution to centralize information and support CEAR Latinoamericano's management processes.",
+      "mailerRole": "Full-Stack Developer",
+      "mailerTitle": "Mailer System",
+      "mailerSubtitle": "Campaign and template management platform",
+      "mailerDescription": "A system for organizing campaigns, managing templates and reviewing communication metrics from a centralized interface.",
+      "campusRole": "Full-Stack Developer",
+      "campusDuration": "5-month assignment",
+      "campusTitle": "Virtual Campus",
+      "campusSubtitle": "CEAR Latinoamericano",
+      "campusDescription": "Comprehensive virtual learning platform assigned for 5 months. Engineered for student academic management, live classes, recordings, forums, and resources for Law and Engineering programs.",
+      "campusVisit": "Visit official campus"
     },
     "projects": {
       "project1": {

@@ -1,66 +1,136 @@
-"use client";
+﻿'use client';
 
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Mail } from "lucide-react";
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { ArrowRight, Mail, Zap, Globe, Shield } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Hero3DCard } from './Hero3DCard';
+
+const PILLS = [
+  { icon: Zap,    label: 'Alto rendimiento' },
+  { icon: Globe,  label: 'Fullstack & Cloud' },
+  { icon: Shield, label: 'Código de calidad' },
+];
+
+const fadeUp = (delay = 0) => ({
+  initial:   { opacity: 0, y: 28 },
+  animate:   { opacity: 1, y: 0 },
+  transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1], delay },
+});
 
 export const Hero = () => {
-  const t = useTranslations("home");
+  const t = useTranslations('home');
 
   return (
-    <section className="relative w-full max-w-screen-xl mx-auto px-4 pt-12 pb-20 overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Column: Headline and CTAs */}
-        <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold tracking-tight text-white leading-[1.12] mb-6">
-            <span className="text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,0.35)]">
-              {t("heroRole")}
-            </span>{" "}
-            <span className="text-white">{t("heroHeadline")}</span>
-          </h1>
+    <section className="relative w-full min-h-[92vh] flex items-center overflow-hidden">
+      {/* ── Animated background grid ── */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(34,211,238,1) 1px, transparent 1px),' +
+            'linear-gradient(90deg, rgba(34,211,238,1) 1px, transparent 1px)',
+          backgroundSize: '52px 52px',
+        }}
+      />
 
-          <p className="text-slate-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl">
-            {t("heroSub")}
-          </p>
+      {/* ── Background orbs ── */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-[640px] h-[640px] bg-cyan-500/10 rounded-full blur-[140px]" />
+        <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-1/3 w-[400px] h-[400px] bg-emerald-500/8 rounded-full blur-[110px]" />
+      </div>
 
-          <div className="flex flex-wrap items-center gap-4">
+      {/* ── Content ── */}
+      <div className="relative z-10 w-full max-w-screen-xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+        {/* Left: text block */}
+        <div className="lg:col-span-7 flex flex-col items-start">
+
+          {/* Eyebrow badge */}
+          <motion.div {...fadeUp(0)} className="mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-400/25 bg-cyan-400/5 backdrop-blur-sm text-cyan-400 text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+            Disponible para proyectos
+          </motion.div>
+
+          {/* Headline */}
+          <motion.h1
+            {...fadeUp(0.1)}
+            className="text-5xl sm:text-6xl lg:text-[4rem] xl:text-[4.4rem] font-extrabold tracking-tight leading-[1.08] mb-6"
+          >
+            <span
+              className="block bg-clip-text text-transparent"
+              style={{ backgroundImage: 'linear-gradient(135deg, #22d3ee 0%, #a78bfa 60%, #34d399 100%)' }}
+            >
+              {t('heroRole')}
+            </span>
+            <span className="block text-white mt-1">{t('heroHeadline')}</span>
+          </motion.h1>
+
+          {/* Sub */}
+          <motion.p {...fadeUp(0.2)} className="text-slate-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-lg">
+            {t('heroSub')}
+          </motion.p>
+
+          {/* Pills */}
+          <motion.div {...fadeUp(0.3)} className="flex flex-wrap gap-2 mb-10">
+            {PILLS.map(({ icon: Icon, label }) => (
+              <span
+                key={label}
+                className="flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-medium text-slate-300 border border-white/8 bg-white/5 backdrop-blur-sm"
+              >
+                <Icon className="w-3.5 h-3.5 text-cyan-400" />
+                {label}
+              </span>
+            ))}
+          </motion.div>
+
+          {/* CTAs */}
+          <motion.div {...fadeUp(0.4)} className="flex flex-wrap items-center gap-4">
             <Link
               href="#projects"
-              className="px-7 py-3.5 rounded-xl font-semibold bg-cyan-400 text-slate-950 shadow-[0_0_25px_rgba(34,211,238,0.45)] hover:bg-cyan-300 hover:shadow-[0_0_35px_rgba(34,211,238,0.7)] transition-all flex items-center gap-2"
+              className="group px-7 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_45px_rgba(34,211,238,0.65)] hover:scale-[1.03] transition-all duration-300 flex items-center gap-2"
             >
-              <span>{t("viewPortfolio")}</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>{t('viewPortfolio')}</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
 
             <Link
               href="/contact"
-              className="px-7 py-3.5 rounded-xl font-semibold border border-white/15 bg-white/5 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-md transition-all flex items-center gap-2"
+              className="px-7 py-3.5 rounded-xl font-semibold border border-white/15 bg-white/5 text-white hover:bg-white/10 hover:border-white/30 backdrop-blur-md hover:scale-[1.02] transition-all duration-300 flex items-center gap-2"
             >
               <Mail className="w-4 h-4 text-slate-300" />
-              <span>{t("contactMe")}</span>
+              <span>{t('contactMe')}</span>
             </Link>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Right Column: 3D Laptop with Ambient Glow */}
-        <div className="lg:col-span-5 relative flex justify-center items-center">
-          {/* Ambient light blooms */}
-          <div className="absolute w-72 h-72 sm:w-80 sm:h-80 bg-emerald-500/25 rounded-full blur-[80px] -top-10 -right-4 pointer-events-none" />
-          <div className="absolute w-64 h-64 bg-cyan-500/20 rounded-full blur-[70px] -bottom-6 -left-6 pointer-events-none" />
+        {/* Right: 3D tilt card */}
+        <motion.div
+          className="lg:col-span-5 flex justify-center items-center"
+          initial={{ opacity: 0, x: 50, rotateY: -15 }}
+          animate={{ opacity: 1, x: 0, rotateY: 0 }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
+        >
+          {/* Glow behind card */}
+          <div className="absolute w-80 h-80 bg-cyan-500/15 rounded-full blur-[90px] pointer-events-none" />
+          <div className="absolute w-64 h-64 bg-violet-500/10 rounded-full blur-[70px] pointer-events-none translate-x-16 translate-y-12" />
 
-          <div className="relative z-10 w-full max-w-[420px] transition-transform duration-500 hover:scale-[1.02]">
-            <Image
-              src="/hero-laptop.png"
-              alt="Marlon Developer Setup & Cloud Architecture"
-              width={520}
-              height={520}
-              priority
-              className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
-            />
-          </div>
-        </div>
+          <Hero3DCard />
+        </motion.div>
+
       </div>
+
+      {/* ── Scroll indicator ── */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-600"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+      >
+        <div className="w-px h-8 bg-gradient-to-b from-transparent to-slate-600/50 animate-pulse" />
+        <span className="text-xs tracking-widest uppercase">scroll</span>
+      </motion.div>
     </section>
   );
 };

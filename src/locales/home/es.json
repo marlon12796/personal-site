@@ -1,9 +1,9 @@
 {
   "home": {
     "greeting": "¡Hola, soy Marlon!",
-    "heroRole": "Desarrollador Full-Stack",
-    "heroHeadline": "Diseñando sistemas de alto rendimiento",
-    "heroSub": "Especializado en construir aplicaciones web escalables y eficientes, desde la concepción hasta el despliegue.",
+    "heroRole": "Full-Stack Engineer",
+    "heroHeadline": "Construyo sistemas que escalan.",
+    "heroSub": "Arquitectura sólida, alto rendimiento y producto de punta a punta.",
     "viewPortfolio": "Ver Proyectos",
     "contactMe": "Contáctame",
     "experienceTitle": "Posición Actual & Experiencia",
