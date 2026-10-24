@@ -5,6 +5,7 @@ import {
   Layout,
   Database,
   Cloud,
+  CreditCard,
   Zap,
   ShieldCheck,
   CheckCircle2,
@@ -18,6 +19,7 @@ import {
   type ProfessionalCaseSlide,
 } from "@/components/project/ProfessionalCaseCarousel";
 import { CaseVideoPlayer } from "@/components/project/CaseVideoPlayer";
+import { TechStackGrid } from "@/components/project/TechStackGrid";
 import {
   MotionContainer,
   MotionHeroText,
@@ -34,7 +36,7 @@ import type { Locale } from "@/i18n/config";
 export const metadata: Metadata = {
   title: "Campus Virtual CEAR Latinoamericano | Caso Profesional Full-Stack",
   description:
-    "Arquitectura y desarrollo del Campus Virtual oficial de CEAR Latinoamericano durante una asignación estratégica de 5 meses con Next.js, Node.js, PostgreSQL y AWS.",
+    "Arquitectura y desarrollo del Campus Virtual oficial de CEAR Latinoamericano durante una asignación estratégica de 5 meses con Next.js, NestJS, PostgreSQL, Redis, Niubiz y Docker.",
 };
 
 type Props = {
@@ -93,16 +95,6 @@ const Page = async ({ params }: Props) => {
     namespace: "campusProject",
   });
 
-  const techStack = [
-    "Next.js",
-    "TypeScript",
-    "Node.js",
-    "PostgreSQL",
-    "AWS",
-    "Docker",
-    "Tailwind CSS",
-  ];
-
   const metrics = t.raw("metrics") as Metric[];
   const businessPoints = t.raw("businessProblem.points") as string[];
   const engineeringChallenges = t.raw(
@@ -111,24 +103,51 @@ const Page = async ({ params }: Props) => {
 
   const architectureLayers = [
     {
+      badge: "Capa 01 • Experiencia de Usuario",
+      badgeColor: "text-teal-300 border-teal-400/30 bg-teal-400/10",
+      colSpan: "lg:col-span-7",
+      gradient: "from-[#0c222e]/80 via-[#07131e]/90 to-[#050b14]",
       icon: Layout,
       name: t("architecture.layers.frontend.name"),
       color: "text-teal-400",
-      borderColor: "border-teal-400/20",
+      borderColor: "border-teal-400/30 hover:border-teal-400/60 shadow-[0_0_30px_rgba(45,212,191,0.08)]",
+      chips: ["Next.js (App Router)", "TypeScript", "TanStack Query", "Tailwind CSS"],
       details: t.raw("architecture.layers.frontend.details") as string[],
     },
     {
+      badge: "Capa 02 • Seguridad & Core",
+      badgeColor: "text-cyan-300 border-cyan-400/30 bg-cyan-400/10",
+      colSpan: "lg:col-span-5",
+      gradient: "from-[#0a1e36]/80 via-[#071224]/90 to-[#050b14]",
       icon: Database,
       name: t("architecture.layers.backend.name"),
       color: "text-cyan-400",
-      borderColor: "border-cyan-400/20",
+      borderColor: "border-cyan-400/30 hover:border-cyan-400/60 shadow-[0_0_30px_rgba(34,211,238,0.08)]",
+      chips: ["NestJS API", "PostgreSQL ACID", "Redis Cache", "MFA + Magic Links"],
       details: t.raw("architecture.layers.backend.details") as string[],
     },
     {
-      icon: Cloud,
+      badge: "Capa 03 • Fintech & Almacenamiento",
+      badgeColor: "text-indigo-300 border-indigo-400/30 bg-indigo-400/10",
+      colSpan: "lg:col-span-5",
+      gradient: "from-[#14163b]/80 via-[#0c0e25]/90 to-[#050b14]",
+      icon: CreditCard,
+      name: t("architecture.layers.fintech.name"),
+      color: "text-indigo-400",
+      borderColor: "border-indigo-400/30 hover:border-indigo-400/60 shadow-[0_0_30px_rgba(129,140,248,0.08)]",
+      chips: ["Pasarela Niubiz", "AWS S3", "Google Meet", "Streaming Local"],
+      details: t.raw("architecture.layers.fintech.details") as string[],
+    },
+    {
+      badge: "Capa 04 • Infraestructura & Escala",
+      badgeColor: "text-emerald-300 border-emerald-400/30 bg-emerald-400/10",
+      colSpan: "lg:col-span-7",
+      gradient: "from-[#0a261e]/80 via-[#061813]/90 to-[#050b14]",
+      icon: Server,
       name: t("architecture.layers.devops.name"),
       color: "text-emerald-400",
-      borderColor: "border-emerald-400/20",
+      borderColor: "border-emerald-400/30 hover:border-emerald-400/60 shadow-[0_0_30px_rgba(52,211,153,0.08)]",
+      chips: ["Docker Compose", "VPS On-Premise", "200+ Concurrentes", "Connection Pool"],
       details: t.raw("architecture.layers.devops.details") as string[],
     },
   ];
@@ -163,10 +182,11 @@ const Page = async ({ params }: Props) => {
           </Link>
         </MotionBackLink>
 
-        {/* Header / Hero with Integrated Carousel */}
+        {/* Header / Hero with Video and Full-Width Tech Ticker */}
         <header className="border-b border-white/10 pb-12 mb-14">
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
-            <MotionHeroText>
+          <div className="grid lg:grid-cols-12 gap-10 items-center mb-10">
+            {/* Left Column: Hero Text */}
+            <MotionHeroText className="lg:col-span-7 min-w-0">
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-teal-400/10 text-teal-300 border border-teal-400/30 shadow-[0_0_15px_rgba(45,212,191,0.25)]">
                   <Sparkles className="w-3 h-3 text-teal-300" />
@@ -184,21 +204,9 @@ const Page = async ({ params }: Props) => {
               <p className="text-xl font-medium text-teal-300 mb-5">
                 {t("institution")}
               </p>
-              <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
                 {t("subtitle")}
               </p>
-
-              {/* Technologies */}
-              <div className="flex flex-wrap items-center gap-2 mb-8">
-                {techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3.5 py-1.5 rounded-lg border border-white/10 bg-white/[0.04] text-xs font-medium text-slate-300 hover:border-teal-300/40 hover:text-white transition-colors"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
 
               {/* CTAs */}
               <div className="flex flex-wrap items-center gap-4">
@@ -215,8 +223,8 @@ const Page = async ({ params }: Props) => {
               </div>
             </MotionHeroText>
 
-            {/* Video de Presentación Oficial en lugar de carrusel */}
-            <MotionHeroMedia className="w-full">
+            {/* Right Column: Video de Presentación Oficial */}
+            <MotionHeroMedia className="lg:col-span-5 min-w-0 w-full">
               <CaseVideoPlayer
                 src="https://cearlatinoamericano.edu.pe/sisdocs/video-presentacion/campus_virtual.mp4"
                 poster="/projects/campus/home-students.png"
@@ -224,6 +232,17 @@ const Page = async ({ params }: Props) => {
                 accentColor="teal"
               />
             </MotionHeroMedia>
+          </div>
+
+          {/* 3 Pilares del Stack: Frontend, Backend y DevOps (Estático, Limpio y Profesional para Reclutadores) */}
+          <div className="w-full pt-8 border-t border-white/5">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-teal-400" />
+              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-teal-300">
+                Stack Tecnológico del Proyecto (Frontend, Backend & DevOps)
+              </span>
+            </div>
+            <TechStackGrid />
           </div>
         </header>
 
@@ -273,35 +292,66 @@ const Page = async ({ params }: Props) => {
             <p className="text-slate-400">{t("architecture.subtitle")}</p>
           </div>
 
-          <MotionStaggerList className="grid lg:grid-cols-3 gap-6">
+          {/* Bento Grid Layout: 7+5 / 5+7 balance */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {architectureLayers.map((layer) => {
               const Icon = layer.icon;
               return (
-                <MotionStaggerItem key={layer.name}>
-                  <div
-                    className={`h-full p-6 rounded-2xl border ${layer.borderColor} bg-white/[0.02] hover:bg-white/[0.05] hover:shadow-[0_0_25px_rgba(45,212,191,0.15)] transition-all`}
-                  >
-                    <div className="flex items-center gap-3 mb-5">
-                      <div className="p-2.5 rounded-xl bg-white/[0.05] border border-white/10">
-                        <Icon className={`w-6 h-6 ${layer.color}`} />
+                <div
+                  key={layer.name}
+                  className={`${layer.colSpan} rounded-3xl border ${layer.borderColor} bg-gradient-to-br ${layer.gradient} p-7 md:p-8 transition-all flex flex-col justify-between`}
+                >
+                  <div>
+                    {/* Header: Icono + Pill de Capa */}
+                    <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
+                      <div className="flex items-center gap-3">
+                        <div className="p-3 rounded-2xl bg-white/[0.06] border border-white/10 shadow-inner">
+                          <Icon className={`w-6 h-6 ${layer.color}`} />
+                        </div>
+                        <span
+                          className={`px-3 py-1 rounded-full text-xs font-mono font-medium border ${layer.badgeColor}`}
+                        >
+                          {layer.badge}
+                        </span>
                       </div>
-                      <h3 className="text-lg font-bold text-white">
-                        {layer.name}
-                      </h3>
                     </div>
-                    <ul className="space-y-3 text-sm text-slate-300 leading-relaxed">
-                      {layer.details.map((detail) => (
-                        <li key={detail} className="flex items-start gap-2.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-2 shrink-0" />
-                          <span>{detail}</span>
-                        </li>
+
+                    {/* Título de la Capa */}
+                    <h3 className="text-xl md:text-2xl font-extrabold text-white mb-3 tracking-tight">
+                      {layer.name}
+                    </h3>
+
+                    {/* Chips de Tecnologías */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {layer.chips.map((chip) => (
+                        <span
+                          key={chip}
+                          className="px-2.5 py-1 rounded-lg border border-white/10 bg-white/[0.04] text-[11px] font-mono text-slate-300"
+                        >
+                          {chip}
+                        </span>
                       ))}
-                    </ul>
+                    </div>
+
+                    {/* Puntos de ingeniería en micro-tarjetas legibles */}
+                    <div className="space-y-3">
+                      {layer.details.map((detail) => (
+                        <div
+                          key={detail}
+                          className="flex items-start gap-3 p-3.5 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors"
+                        >
+                          <span className="w-2 h-2 rounded-full bg-teal-400 mt-2 shrink-0 shadow-[0_0_8px_rgba(45,212,191,0.7)]" />
+                          <span className="text-sm text-slate-300 leading-relaxed">
+                            {detail}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </MotionStaggerItem>
+                </div>
               );
             })}
-          </MotionStaggerList>
+          </div>
         </MotionSection>
 
         {/* Engineering Challenges */}

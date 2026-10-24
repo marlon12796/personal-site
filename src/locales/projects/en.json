@@ -219,22 +219,22 @@
     "type": "Professional Case Study • 5-Month Assignment",
     "title": "Continuing Education Virtual Campus",
     "institution": "CEAR Latinoamericano",
-    "subtitle": "Tailored virtual learning environment built during a strategic 5-month assignment to manage virtual classrooms, live sessions, recordings, assessments, and academic resources for specialized diploma and postgraduate programs.",
+    "subtitle": "Institutional virtual learning and management platform engineered during a strategic 5-month assignment to centralize virtual classrooms, synchronous Google Meet lectures, Niubiz online payment gateway, high-definition recordings, and academic administration for hundreds of attorneys and forensic experts.",
     "visitLive": "Visit official campus",
     "metrics": [
-      { "label": "Project Duration", "value": "5 Months" },
-      { "label": "Core Technology", "value": "Next.js + Node" },
-      { "label": "Data Management", "value": "PostgreSQL ACID" },
-      { "label": "Cloud Infrastructure", "value": "AWS + Docker" }
+      { "label": "Peak Concurrency", "value": "200+ Active" },
+      { "label": "Access Security", "value": "MFA + Magic Link" },
+      { "label": "Fintech Automation", "value": "Niubiz Online" },
+      { "label": "Delivery Timeline", "value": "5 Months" }
     ],
     "businessProblem": {
       "title": "The Challenge / Business Need",
-      "description": "CEAR Latinoamericano assigned me for 5 months to develop and scale their official Virtual Campus, aiming to deliver a modern, resilient, high-performance academic platform for hundreds of professionals and faculty in Law and Engineering. Key objectives included:",
+      "description": "CEAR Latinoamericano assigned me for 5 months to develop and scale their official Virtual Campus, aiming to deliver a modern, resilient, high-performance academic platform for hundreds of professionals and faculty in Law and Engineering. Key challenges included:",
       "points": [
-        "Unifying access for students and lecturers to synchronous lectures, high-definition recordings, and course literature.",
-        "Engineering a robust, secure, and intuitive authentication workflow for classroom access and discussion boards.",
-        "Ensuring high availability and low latency during peak traffic coinciding with prime lecture schedules.",
-        "Delivering a modern, accessible interface fully optimized for mobile devices, tablets, and desktop workstations."
+        "Unifying access for students and lecturers to synchronous Google Meet sessions, high-definition lecture recordings, and academic literature.",
+        "Engineering a hardened authentication workflow featuring MFA (2FA) and passwordless Magic Links tailored for legal professionals and technical experts.",
+        "Automating tuition and installment billing online via the Niubiz payment gateway, phasing out manual voucher verification.",
+        "Guaranteeing continuous uptime and low latency during prime concurrency spikes without saturating the on-premise infrastructure."
       ]
     },
     "architecture": {
@@ -242,27 +242,35 @@
       "subtitle": "Comprehensive architecture built throughout the 5-month assignment:",
       "layers": {
         "frontend": {
-          "name": "Frontend & User Experience (Next.js & TypeScript)",
+          "name": "Frontend & User Experience (Next.js & TanStack Query)",
           "details": [
-            "Modular architecture powered by Next.js (App Router) and TypeScript ensuring strict typing, code hygiene, and long-term maintainability.",
-            "Modern, distraction-free responsive design maximizing student focus and academic retention.",
-            "Efficient client state handling for progressive content hydration, dynamic class schedules, and embedded session media."
+            "Modular architecture powered by Next.js (App Router), TypeScript, and Tailwind CSS delivering an accessible, responsive, and clutter-free UI.",
+            "Asynchronous state management and client-side caching with TanStack Query for prefetching class schedules, grades, and attendance without API thrashing.",
+            "Seamless context-aware access to live Google Meet sessions and an integrated lecture video player."
           ]
         },
         "backend": {
-          "name": "Backend & Database (Node.js & PostgreSQL)",
+          "name": "Backend & Security (NestJS, PostgreSQL & Redis)",
           "details": [
-            "Secure RESTful APIs built with Node.js and NestJS, strict schema validation, and Role-Based Access Control (RBAC: Student, Faculty, Admin).",
-            "Relational data model in PostgreSQL handling course enrollments, attendance records, exam submissions, and grade tracking.",
-            "Optimized query plans with dedicated indexing and ACID transactions safeguarding educational records."
+            "Hardened RESTful APIs engineered with Node.js and NestJS, strict schema validation, and Role-Based Access Control (RBAC: Students, Academic Affairs, Finance).",
+            "Robust authentication powered by JWTs, Multi-Factor Authentication (2FA / MFA), and secure Magic Link password recovery via email.",
+            "Relational modeling in PostgreSQL with connection pooling, strategic indexing, and cursor pagination, bolstered by in-memory Redis caching."
+          ]
+        },
+        "fintech": {
+          "name": "Fintech & Storage (Niubiz & AWS S3)",
+          "details": [
+            "End-to-end integration with the Niubiz payment gateway for automatic online installment payments and instant academic clearance.",
+            "Secured Amazon S3 storage buckets for high-speed delivery of syllabi, course literature, and academic documentation.",
+            "Dedicated on-premise streaming server optimized for smooth playback of masterclass recordings."
           ]
         },
         "devops": {
-          "name": "DevOps, Storage & Cloud (AWS & Docker)",
+          "name": "DevOps & On-Premise Infrastructure (Docker & VPS)",
           "details": [
-            "Dockerized services ensuring unified staging and production deployments.",
-            "Integrated cloud object storage (Amazon S3) paired with CloudFront CDN for instantaneous delivery of course syllabi and multimedia.",
-            "Automated CI/CD pipelines enabling zero-downtime releases throughout the ongoing academic semesters."
+            "Full containerization with Docker Compose standardizing frontend, backend API, Redis cache, and PostgreSQL database.",
+            "On-Premise VPS deployment ensuring absolute data sovereignty, low network latency, and predictable operational costs.",
+            "Continuous health monitoring configured to comfortably absorb peak workloads of over 200 concurrent active users."
           ]
         }
       }
@@ -271,16 +279,16 @@
       "title": "Key Engineering Challenges Overcome",
       "items": [
         {
-          "title": "High Concurrency & Peak Traffic Handling",
-          "description": "PostgreSQL connection pooling and caching layers configured to seamlessly support simultaneous student logins right at the start of live classes."
+          "title": "Peak Concurrency Handling (200+ concurrent professionals)",
+          "description": "Engineered PostgreSQL connection pooling, Redis caching for hot query paths, and TanStack Query on the client, ensuring rock-solid stability during synchronized lecture logins without database degradation."
         },
         {
-          "title": "Hardened Security & Session Integrity",
-          "description": "Implemented secure JWT tokens, anti-CSRF/XSS measures, and rate-limiting policies to safeguard sensitive student and institutional data."
+          "title": "Financial Automation with Niubiz",
+          "description": "Integrated Niubiz payment gateway and transactional webhooks to instantly process tuition installments and unlock examination access, eradicating manual voucher review."
         },
         {
-          "title": "Rapid Delivery Within 5 Months",
-          "description": "Delivered production-ready modules iteratively across the 5 months, resulting in smooth deployment and immediate adoption by the academic community."
+          "title": "Multi-Role Security with MFA & Magic Links",
+          "description": "Architected a granular RBAC structure across Students, Academic Affairs, and Finance, fortified with two-factor authentication (MFA) and frictionless Magic Link login for non-technical users."
         }
       ]
     }

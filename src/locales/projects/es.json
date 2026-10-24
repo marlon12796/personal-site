@@ -219,22 +219,22 @@
     "type": "Caso profesional • Asignación de 5 meses",
     "title": "Campus Virtual de Formación Continua",
     "institution": "CEAR Latinoamericano",
-    "subtitle": "Entorno virtual de aprendizaje desarrollado a medida durante una asignación estratégica de 5 meses para gestionar aulas virtuales, sesiones en vivo, grabaciones, evaluaciones y materiales académicos de diplomados y especializaciones.",
+    "subtitle": "Entorno virtual de aprendizaje y gestión institucional desarrollado durante una asignación estratégica de 5 meses para centralizar aulas virtuales, clases sincrónicas en Google Meet, pasarela de pagos Niubiz, grabaciones y administración académica para cientos de abogados y peritos.",
     "visitLive": "Visitar campus oficial",
     "metrics": [
-      { "label": "Duración del Proyecto", "value": "5 Meses" },
-      { "label": "Tecnología Principal", "value": "Next.js + Node" },
-      { "label": "Gestión de Datos", "value": "PostgreSQL ACID" },
-      { "label": "Infraestructura Cloud", "value": "AWS + Docker" }
+      { "label": "Concurrencia Pico", "value": "200+ Activos" },
+      { "label": "Seguridad de Acceso", "value": "MFA + Magic Link" },
+      { "label": "Automatización Fintech", "value": "Niubiz Online" },
+      { "label": "Duración de Entrega", "value": "5 Meses" }
     ],
     "businessProblem": {
       "title": "El Reto / Problema de Negocio",
       "description": "CEAR Latinoamericano me asignó durante 5 meses el desarrollo y evolución de su Campus Virtual oficial, con la meta de ofrecer una plataforma académica moderna, confiable y de alto rendimiento para cientos de profesionales y docentes en Derecho e Ingeniería. Los desafíos clave fueron:",
       "points": [
-        "Unificar el acceso de estudiantes y docentes a clases sincrónicas, grabaciones de alta calidad y material bibliográfico.",
-        "Implementar un flujo de autenticación robusto, seguro y ágil para el ingreso a aulas virtuales y foros de debate.",
-        "Garantizar disponibilidad continua y baja latencia durante picos de concurrencia en horarios de clases magistrales.",
-        "Brindar una interfaz limpia, accesible y completamente adaptada a dispositivos móviles, tablets y computadoras de escritorio."
+        "Unificar el acceso de estudiantes y docentes a clases sincrónicas en Google Meet, grabaciones de alta calidad y material bibliográfico.",
+        "Implementar un flujo de autenticación robusto y seguro con MFA (2FA) y recuperación de contraseñas mediante Magic Links para abogados y peritos.",
+        "Automatizar la recaudación de cuotas académicas en línea integrando la pasarela Niubiz, reemplazando la verificación manual de vouchers.",
+        "Garantizar disponibilidad continua y baja latencia durante picos de concurrencia simultánea en horarios de clases magistrales sin saturar el servidor on-premise."
       ]
     },
     "architecture": {
@@ -242,27 +242,35 @@
       "subtitle": "Estructura integral construida a lo largo de los 5 meses de asignación:",
       "layers": {
         "frontend": {
-          "name": "Frontend & Experiencia de Usuario (Next.js & TypeScript)",
+          "name": "Frontend & Experiencia de Usuario (Next.js & TanStack Query)",
           "details": [
-            "Arquitectura modular con Next.js (App Router) y TypeScript para asegurar código limpio, tipado estricto y mantenibilidad a largo plazo.",
-            "Interfaz moderna y responsiva diseñada para optimizar la experiencia de estudio sin distracciones.",
-            "Gestión de estado eficiente para carga progresiva de contenidos, cronogramas interactivos y reproductor de sesiones académicas."
+            "Arquitectura modular con Next.js (App Router), TypeScript y Tailwind CSS, ofreciendo una interfaz accesible, limpia y optimizada para cualquier dispositivo.",
+            "Gestión asíncrona de estado y caching en cliente con TanStack Query para prefetching de cronogramas, notas y asistencias sin saturar la API.",
+            "Acceso directo y contextual a sesiones sincrónicas en Google Meet e integración de reproductor de grabaciones."
           ]
         },
         "backend": {
-          "name": "Backend & Base de Datos (Node.js & PostgreSQL)",
+          "name": "Backend & Seguridad (NestJS, PostgreSQL & Redis)",
           "details": [
-            "APIs RESTful seguras con Node.js y NestJS, validaciones de esquemas y control de acceso basado en roles (RBAC: Alumno, Docente, Coordinador).",
-            "Modelado relacional en PostgreSQL para inscripciones, historial de asistencia, calificaciones y entrega de actividades.",
-            "Consultas optimizadas con índices dedicados y transacciones ACID para garantizar consistencia en registros académicos."
+            "APIs RESTful seguras con Node.js y NestJS, validaciones estrictas y control de acceso basado en roles (RBAC: Estudiantes, Área Académica y Finanzas).",
+            "Autenticación robusta con JWT, factor doble de autenticación (2FA / MFA) y recuperación segura mediante Magic Links por correo.",
+            "Modelado relacional en PostgreSQL con connection pooling, índices estratégicos y paginación optimizada, respaldado por caché en memoria con Redis."
+          ]
+        },
+        "fintech": {
+          "name": "Fintech & Almacenamiento (Niubiz & AWS S3)",
+          "details": [
+            "Integración completa con la pasarela de pagos Niubiz para el pago digital de cuotas académicas con actualización automática del estado de matrícula.",
+            "Almacenamiento seguro en Amazon S3 para entrega rápida de PDFs, sílabos y material didáctico institucional.",
+            "Servidor multimedia dedicado on-premise para streaming fluido de grabaciones de clases magistrales."
           ]
         },
         "devops": {
-          "name": "DevOps, Almacenamiento & Cloud (AWS & Docker)",
+          "name": "DevOps & Infraestructura On-Premise (Docker & VPS)",
           "details": [
-            "Contenerización con Docker para entornos de staging y producción totalmente estandarizados.",
-            "Integración con almacenamiento cloud (Amazon S3) y CDN para entrega ultra rápida de PDFs, sílabos y material audiovisual.",
-            "Monitoreo de disponibilidad y pipelines CI/CD automatizados para despliegues continuos sin interrupción del servicio."
+            "Contenerización con Docker para estandarizar servicios de frontend, backend, base de datos y Redis.",
+            "Despliegue en servidores VPS On-Premise garantizando soberanía de datos, latencia mínima y control total de costos operativos.",
+            "Monitoreo de disponibilidad y procesos optimizados para soportar picos de más de 200 usuarios concurrentes sin degradación."
           ]
         }
       }
@@ -271,16 +279,16 @@
       "title": "Retos de Ingeniería Superados",
       "items": [
         {
-          "title": "Manejo de Concurrencia y Picos de Acceso",
-          "description": "Optimización del pool de conexiones en PostgreSQL y caching en capas de datos para soportar el ingreso simultáneo de cientos de alumnos al inicio de cada sesión formativa."
+          "title": "Picos de Concurrencia (200+ usuarios concurrentes)",
+          "description": "Optimización del connection pool en PostgreSQL, caching en Redis de consultas frecuentes y TanStack Query en cliente, logrando estabilidad total al inicio simultáneo de clases sin caídas de base de datos."
         },
         {
-          "title": "Seguridad y Control de Sesiones",
-          "description": "Implementación de tokens JWT protegidos, protección contra ataques CSRF/XSS y políticas de contraseñas con verificación para proteger la información de los usuarios."
+          "title": "Automatización Financiera con Niubiz",
+          "description": "Integración de pasarela de pagos Niubiz y procesamiento de transacciones para actualizar cuotas al instante y habilitar accesos académicos, eliminando el procesamiento manual de vouchers."
         },
         {
-          "title": "Entrega y Despliegue en 5 Meses",
-          "description": "Entrega rigurosa de hitos funcionales en tiempo récord durante los 5 meses de asignación, logrando la puesta en producción exitosa y adopción fluida por la comunidad académica."
+          "title": "Autenticación Multi-Rol con MFA & Magic Links",
+          "description": "Implementación de control de acceso RBAC para Estudiantes, Área Académica y Finanzas, reforzado con autenticación de dos factores (MFA) y flujo de acceso por Magic Links sin fricción."
         }
       ]
     }
