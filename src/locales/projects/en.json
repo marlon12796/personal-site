@@ -1,0 +1,288 @@
+{
+  "cearProject": {
+    "backText": "Back to Projects",
+    "role": "Full-Stack Developer",
+    "type": "Professional Case Study",
+    "title": "Continuing Education Web Platform",
+    "institution": "CEAR Latinoamericano",
+    "subtitle": "Development and maintenance of a web platform for specialized Law and Engineering programs, creating a clear experience for exploring programs, certifications, institutions, and academic services.",
+    "visitLive": "Visit live site",
+    "metrics": [
+      { "label": "LCP Load Time", "value": "< 1.2s" },
+      { "label": "Rendering Strategy", "value": "SSR / SSG" },
+      { "label": "Database", "value": "PostgreSQL ACID" },
+      { "label": "Containerization", "value": "Docker + AWS" }
+    ],
+    "businessProblem": {
+      "title": "The Challenge / Business Need",
+      "description": "CEAR Latinoamericano needed a complete revamp of its web infrastructure to host and showcase its growing catalog of executive degrees and specialized certificates. Key requirements included:",
+      "points": [
+        "Centralizing dozens of academic programs across Construction Law, Arbitration, and Engineering.",
+        "Automating lead capture and direct enrollment funnels for prospective students.",
+        "SEO-optimized architecture to dynamically index curriculums and enrollment dates on search engines.",
+        "High availability and responsive design tailored for working professionals browsing on mobile devices."
+      ]
+    },
+    "architecture": {
+      "title": "Technical Architecture & Decisions",
+      "subtitle": "How the solution was structured end-to-end as a Full-Stack developer:",
+      "layers": {
+        "frontend": {
+          "name": "Frontend (Next.js & TypeScript)",
+          "details": [
+            "Built with Next.js (App Router) leveraging SSR and SSG for top-tier search engine indexing.",
+            "Strict TypeScript across the entire client codebase to guarantee type safety and clear contracts.",
+            "Modular UI styling with Tailwind CSS, ensuring lightweight bundles and reusable components."
+          ]
+        },
+        "backend": {
+          "name": "Backend & Database (Node.js & PostgreSQL)",
+          "details": [
+            "RESTful API built with Node.js / NestJS featuring strict DTOs and schema validations.",
+            "Relational PostgreSQL database with normalized schemas for courses, modules, faculty, and inquiries.",
+            "Optimized queries with custom indexing on high-traffic filter columns and ACID transaction control."
+          ]
+        },
+        "devops": {
+          "name": "DevOps, Cloud & Deployment (AWS & Docker)",
+          "details": [
+            "Containerized environments with Docker ensuring zero discrepancy between staging and production.",
+            "AWS infrastructure utilizing Amazon S3 for media assets and Amazon CloudFront CDN for global caching.",
+            "Automated HTTPS with SSL/TLS certificates and automated deployment pipelines (CI/CD)."
+          ]
+        }
+      }
+    },
+    "engineeringChallenges": {
+      "title": "Key Engineering Challenges Overcome",
+      "items": [
+        {
+          "title": "Core Web Vitals Optimization",
+          "description": "Automated conversion to modern WebP format, image lazy-loading, intelligent route prefetching, and critical font sub-setting, achieving 90+ Lighthouse performance scores."
+        },
+        {
+          "title": "Smart Caching & Resilience",
+          "description": "Incremental Static Regeneration (ISR) strategies to display fresh curriculums and courses without burdening the PostgreSQL database during high-traffic ad campaigns."
+        },
+        {
+          "title": "Form Security & CRM Ingestion",
+          "description": "Protection against automated spam bots via rate limiting and dual-layer validation (client and server), ensuring qualified leads enter the sales pipeline cleanly."
+        }
+      ]
+    }
+  },
+  "mailerProject": {
+    "backText": "Back to Projects",
+    "role": "Full-Stack Developer",
+    "type": "Professional Case Study",
+    "title": "Mailer System",
+    "institution": "Campaign & Template Management Platform",
+    "subtitle": "System for organizing email campaigns, managing reusable templates, and monitoring communication deliverability and engagement metrics from a centralized, high-throughput interface.",
+    "metrics": [
+      { "label": "Throughput", "value": "50K+ / batch" },
+      { "label": "Job Queue", "value": "BullMQ + Redis" },
+      { "label": "Live Metrics", "value": "Webhooks" },
+      { "label": "Environments", "value": "Docker + AWS" }
+    ],
+    "businessProblem": {
+      "title": "The Challenge / Business Need",
+      "description": "The organization relied on fragmented external tools to communicate with its student and customer base, facing high costs, limited template customization, and lack of visibility into campaign engagement. Key goals included:",
+      "points": [
+        "Centralizing audience contacts and segmentation within a single secure proprietary platform.",
+        "Developing a visual template manager for reusable, responsive HTML emails across various clients.",
+        "Executing high-volume batch deliveries without degrading server responsiveness or daily operations.",
+        "Tracking real-time open rates, click-through rates, bounce events, and unsubscribes with complete audit logs."
+      ]
+    },
+    "architecture": {
+      "title": "Technical Architecture & Decisions",
+      "subtitle": "Event-driven, asynchronous worker architecture designed for high deliverability:",
+      "layers": {
+        "frontend": {
+          "name": "Frontend & Dashboard (Next.js & TypeScript)",
+          "details": [
+            "Interactive administrative dashboard built with Next.js Server Components for sub-second analytics rendering.",
+            "Live email template renderer with instant desktop and mobile viewport previewing.",
+            "Multi-step campaign creation wizard with recipient filtering and schedule controls."
+          ]
+        },
+        "backend": {
+          "name": "Backend & Workers (Node.js, PostgreSQL & Redis)",
+          "details": [
+            "Queue-based task architecture powered by Redis and BullMQ to process thousands of dispatches concurrently.",
+            "Intelligent rate limiting and exponential backoff retry algorithms to protect sender domain reputation.",
+            "Normalized PostgreSQL schema optimized for high-write event streaming (sent, delivered, opened, clicked, bounced)."
+          ]
+        },
+        "devops": {
+          "name": "Infrastructure & Cloud (Docker & AWS)",
+          "details": [
+            "Full containerization with Docker and Docker Compose separating API endpoints, background workers, and Redis.",
+            "Webhook ingestion pipeline capturing delivery statuses in near-real-time from email providers.",
+            "Strict email DNS authentication setup (SPF, DKIM, and DMARC records) to ensure maximum inbox placement."
+          ]
+        }
+      }
+    },
+    "engineeringChallenges": {
+      "title": "Key Engineering Challenges Overcome",
+      "items": [
+        {
+          "title": "High-Concurrency Asynchronous Queueing",
+          "description": "Decoupling user-facing requests from batch dispatch execution using isolated background worker processes, preventing gateway timeouts and providing pause/resume capabilities."
+        },
+        {
+          "title": "Real-Time Metric Streaming & Ingestion",
+          "description": "High-throughput webhook processing engine with deduplication and debouncing to log engagement events without locking the primary database tables."
+        },
+        {
+          "title": "Email Client CSS Compatibility & Sanitization",
+          "description": "Template compiler injecting dynamic recipient variables, applying inline CSS rules, and sanitizing payloads to ensure pixel-perfect rendering across Outlook, Gmail, and Apple Mail."
+        }
+      ]
+    }
+  },
+  "crmProject": {
+    "backText": "Back to Projects",
+    "role": "Full-Stack Developer",
+    "type": "Professional Case Study",
+    "title": "Internal CRM for CEAR Latinoamericano",
+    "institution": "Institutional Management & Tracking System",
+    "subtitle": "Development and evolution of an internal CRM solution to centralize lead information, manage institutional entities, and track tasks and commercial opportunities across the CEAR Latinoamericano ecosystem.",
+    "metrics": [
+      { "label": "Core Modules", "value": "4 modules" },
+      { "label": "Lead Management", "value": "Visual pipeline" },
+      { "label": "Database", "value": "PostgreSQL ACID" },
+      { "label": "Environments", "value": "Docker + AWS" }
+    ],
+    "businessProblem": {
+      "title": "The Challenge / Business Need",
+      "description": "CEAR Latinoamericano managed its commercial and academic relationships through scattered spreadsheets and manual processes, leading to lost data, poor visibility, and high reliance on key individuals. The core goals were:",
+      "points": [
+        "Centralizing lead records and allied institution tracking into a single source of truth.",
+        "Implementing a visual commercial pipeline to manage the full client acquisition funnel.",
+        "Providing a task assignment and tracking system for the commercial and academic teams.",
+        "Ensuring full traceability of all interactions with each entity and related institution."
+      ]
+    },
+    "architecture": {
+      "title": "Technical Architecture & Decisions",
+      "subtitle": "Modular CRM design with specialized views per business area:",
+      "layers": {
+        "frontend": {
+          "name": "Frontend & Views (Next.js & TypeScript)",
+          "details": [
+            "UI built on Next.js with React Server Components for optimized list and table rendering.",
+            "Advanced data table components with dynamic filters, server-side pagination, and inline record actions.",
+            "Visual lead pipeline with drag-and-drop across funnel stages for the commercial team."
+          ]
+        },
+        "backend": {
+          "name": "Backend & Data (Node.js & PostgreSQL)",
+          "details": [
+            "Robust RESTful API built with NestJS following clean architecture and domain-based module separation.",
+            "Relational PostgreSQL schema with entities for Leads, Entities, Tasks, and their many-to-many relationships.",
+            "Granular role-based access control (RBAC) per resource to segment access across commercial, academic, and operational areas."
+          ]
+        },
+        "devops": {
+          "name": "Infrastructure & Deployment (Docker & AWS)",
+          "details": [
+            "Full service containerization with Docker to guarantee consistent environments across development and production.",
+            "Deployed on AWS infrastructure with managed RDS (PostgreSQL) database instance and load balancing.",
+            "Controlled migration strategy with automatic rollback protection to safeguard production data integrity."
+          ]
+        }
+      }
+    },
+    "engineeringChallenges": {
+      "title": "Key Engineering Challenges Overcome",
+      "items": [
+        {
+          "title": "Flexible & Extensible Data Model",
+          "description": "Designed a relational schema capable of representing polymorphic entity types (institutions, individuals, organizations) without compromising query consistency or performance."
+        },
+        {
+          "title": "Task System with Assignment & Priorities",
+          "description": "Task module supporting multi-user assignment, deadlines, priority levels, and internal notifications, all linked to specific leads or entities for complete traceability."
+        },
+        {
+          "title": "Performance at Scale for Data-Heavy Views",
+          "description": "Query optimization with composite indexes, cursor-based pagination, and frontend list virtualization to handle hundreds of records without degrading user experience."
+        }
+      ]
+    }
+  },
+  "campusProject": {
+    "backText": "Back to Projects",
+    "role": "Full-Stack Developer",
+    "type": "Professional Case Study • 5-Month Assignment",
+    "title": "Continuing Education Virtual Campus",
+    "institution": "CEAR Latinoamericano",
+    "subtitle": "Tailored virtual learning environment built during a strategic 5-month assignment to manage virtual classrooms, live sessions, recordings, assessments, and academic resources for specialized diploma and postgraduate programs.",
+    "visitLive": "Visit official campus",
+    "metrics": [
+      { "label": "Project Duration", "value": "5 Months" },
+      { "label": "Core Technology", "value": "Next.js + Node" },
+      { "label": "Data Management", "value": "PostgreSQL ACID" },
+      { "label": "Cloud Infrastructure", "value": "AWS + Docker" }
+    ],
+    "businessProblem": {
+      "title": "The Challenge / Business Need",
+      "description": "CEAR Latinoamericano assigned me for 5 months to develop and scale their official Virtual Campus, aiming to deliver a modern, resilient, high-performance academic platform for hundreds of professionals and faculty in Law and Engineering. Key objectives included:",
+      "points": [
+        "Unifying access for students and lecturers to synchronous lectures, high-definition recordings, and course literature.",
+        "Engineering a robust, secure, and intuitive authentication workflow for classroom access and discussion boards.",
+        "Ensuring high availability and low latency during peak traffic coinciding with prime lecture schedules.",
+        "Delivering a modern, accessible interface fully optimized for mobile devices, tablets, and desktop workstations."
+      ]
+    },
+    "architecture": {
+      "title": "Technical Architecture & Decisions",
+      "subtitle": "Comprehensive architecture built throughout the 5-month assignment:",
+      "layers": {
+        "frontend": {
+          "name": "Frontend & User Experience (Next.js & TypeScript)",
+          "details": [
+            "Modular architecture powered by Next.js (App Router) and TypeScript ensuring strict typing, code hygiene, and long-term maintainability.",
+            "Modern, distraction-free responsive design maximizing student focus and academic retention.",
+            "Efficient client state handling for progressive content hydration, dynamic class schedules, and embedded session media."
+          ]
+        },
+        "backend": {
+          "name": "Backend & Database (Node.js & PostgreSQL)",
+          "details": [
+            "Secure RESTful APIs built with Node.js and NestJS, strict schema validation, and Role-Based Access Control (RBAC: Student, Faculty, Admin).",
+            "Relational data model in PostgreSQL handling course enrollments, attendance records, exam submissions, and grade tracking.",
+            "Optimized query plans with dedicated indexing and ACID transactions safeguarding educational records."
+          ]
+        },
+        "devops": {
+          "name": "DevOps, Storage & Cloud (AWS & Docker)",
+          "details": [
+            "Dockerized services ensuring unified staging and production deployments.",
+            "Integrated cloud object storage (Amazon S3) paired with CloudFront CDN for instantaneous delivery of course syllabi and multimedia.",
+            "Automated CI/CD pipelines enabling zero-downtime releases throughout the ongoing academic semesters."
+          ]
+        }
+      }
+    },
+    "engineeringChallenges": {
+      "title": "Key Engineering Challenges Overcome",
+      "items": [
+        {
+          "title": "High Concurrency & Peak Traffic Handling",
+          "description": "PostgreSQL connection pooling and caching layers configured to seamlessly support simultaneous student logins right at the start of live classes."
+        },
+        {
+          "title": "Hardened Security & Session Integrity",
+          "description": "Implemented secure JWT tokens, anti-CSRF/XSS measures, and rate-limiting policies to safeguard sensitive student and institutional data."
+        },
+        {
+          "title": "Rapid Delivery Within 5 Months",
+          "description": "Delivered production-ready modules iteratively across the 5 months, resulting in smooth deployment and immediate adoption by the academic community."
+        }
+      ]
+    }
+  }
+}

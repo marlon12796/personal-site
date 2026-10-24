@@ -28,7 +28,8 @@
       "title": "Plataforma web de formación continua",
       "subtitle": "CEAR Latinoamericano",
       "description": "Desarrollo y mantenimiento de una plataforma web para programas especializados en Derecho e Ingeniería, con una experiencia clara para consultar programas, certificaciones, instituciones y servicios académicos.",
-      "visit": "Visitar sitio"
+      "visit": "Visitar sitio",
+      "howItWasDone": "Cómo se hizo"
       ,"crmRole": "Desarrollador Full-Stack"
       ,"crmTitle": "CRM interno para CEAR Latinoamericano"
       ,"crmSubtitle": "Sistema de gestión y seguimiento institucional"
@@ -37,6 +38,12 @@
       ,"mailerTitle": "Sistema Mailer"
       ,"mailerSubtitle": "Plataforma de gestión de campañas y plantillas"
       ,"mailerDescription": "Sistema para organizar campañas, administrar plantillas y consultar métricas de comunicación desde una interfaz centralizada."
+      ,"campusRole": "Desarrollador Full-Stack"
+      ,"campusDuration": "5 meses de desarrollo"
+      ,"campusTitle": "Campus Virtual"
+      ,"campusSubtitle": "CEAR Latinoamericano"
+      ,"campusDescription": "Plataforma integral de aprendizaje y aula virtual asignada durante 5 meses. Desarrollada para la gestión académica de estudiantes, clases en vivo, grabaciones, foros y materiales de programas especializados en Derecho e Ingeniería."
+      ,"campusVisit": "Visitar campus oficial"
     },
     "projects": {
       "project1": {

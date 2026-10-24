@@ -2,17 +2,26 @@
 
 import { useTranslations } from 'next-intl';
 import Subtitle from '../Subtitle';
-import { ExternalLink } from 'lucide-react';
-import { ProfessionalCaseCarousel, type ProfessionalCaseSlide } from './ProfessionalCaseCarousel';
+import type { ProfessionalCaseSlide } from './ProfessionalCaseCarousel';
+import { ProfessionalCaseCard } from './ProfessionalCaseCard';
 
 export const ListProjects: React.FC = () => {
 	const h = useTranslations('home');
-	const technologies = ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'];
-	const crmSlides: ProfessionalCaseSlide[] = [
-		{ src: '/projects/cear-crm/home.png', alt: 'Panel principal del CRM de CEAR Latinoamericano' },
-		{ src: '/projects/cear-crm/ENTIDADES2.png', alt: 'Módulo de entidades del CRM de CEAR Latinoamericano' },
-		{ src: '/projects/cear-crm/LEAD.png', alt: 'Módulo de leads del CRM de CEAR Latinoamericano' },
-		{ src: '/projects/cear-crm/TAREAS.png', alt: 'Módulo de tareas del CRM de CEAR Latinoamericano' },
+	const defaultTech = ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS', 'Docker'];
+
+	const campusSlides: ProfessionalCaseSlide[] = [
+		{ src: '/projects/campus/home-students.png', alt: 'Portal del estudiante: panel interactivo y cursos matriculados' },
+		{ src: '/projects/campus/home-admin.png', alt: 'Panel de administración general: métricas y control de módulos' },
+		{ src: '/projects/campus/estudiantes-admin-notas.png', alt: 'Gestión académica de notas y registros por alumno' },
+		{ src: '/projects/campus/exam-student.png', alt: 'Módulo de evaluaciones y exámenes en línea para estudiantes' },
+		{ src: '/projects/campus/silabo-admin.png', alt: 'Administración de sílabos, sesiones y contenidos lectivos' },
+		{ src: '/projects/campus/pagos-student.png', alt: 'Módulo de pagos y seguimiento de cuotas académicas' },
+		{ src: '/projects/campus/users-admin.png', alt: 'Gestión de usuarios y asignación de roles en la plataforma' },
+	];
+	const cearSlides: ProfessionalCaseSlide[] = [
+		{ src: '/projects/cear/home.png', alt: 'Inicio de la plataforma CEAR Latinoamericano' },
+		{ src: '/projects/cear/cursos.png', alt: 'Catálogo de cursos de CEAR Latinoamericano' },
+		{ src: '/projects/cear/contacto.png', alt: 'Módulo de contacto y admisión de CEAR Latinoamericano' },
 	];
 	const mailerSlides: ProfessionalCaseSlide[] = [
 		{ src: '/projects/mailer/home.png', alt: 'Panel principal del sistema Mailer' },
@@ -21,86 +30,82 @@ export const ListProjects: React.FC = () => {
 		{ src: '/projects/mailer/metrica.png', alt: 'Métricas del sistema Mailer' },
 		{ src: '/projects/mailer/diseño.png', alt: 'Diseño del sistema Mailer' },
 	];
+	const crmSlides: ProfessionalCaseSlide[] = [
+		{ src: '/projects/cear-crm/home.png', alt: 'Panel principal del CRM de CEAR Latinoamericano' },
+		{ src: '/projects/cear-crm/ENTIDADES2.png', alt: 'Módulo de entidades del CRM de CEAR Latinoamericano' },
+		{ src: '/projects/cear-crm/LEAD.png', alt: 'Módulo de leads del CRM de CEAR Latinoamericano' },
+		{ src: '/projects/cear-crm/TAREAS.png', alt: 'Módulo de tareas del CRM de CEAR Latinoamericano' },
+	];
 
 	return (
 		<section className='w-full px-4 my-16 max-w-screen-xl' id='projects'>
 			<Subtitle text={h('projectsTitle')} />
 			<span className='text-slate-300 block mt-4'>{h('projectsDescription')}</span>
-			<article className='group relative mt-8 overflow-hidden rounded-3xl border border-cyan-300/20 bg-[#0a1220]/80 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition-all hover:-translate-y-1 hover:border-cyan-300/45 sm:p-6'>
-				<div className='pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-cyan-400/10 blur-3xl' />
-				<div className='pointer-events-none absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(103,232,249,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(103,232,249,0.08)_1px,transparent_1px)] [background-size:28px_28px]' />
-				<div className='relative grid gap-7 lg:grid-cols-[1.15fr_0.85fr] lg:items-end'>
-					<ProfessionalCaseCarousel />
-					<div className='max-w-3xl'>
-						<div className='mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300'>
-							<span>{h('professionalCase.role')}</span>
-							<span className='text-slate-600'>/</span>
-							<span className='text-slate-500'>{h('professionalCase.type')}</span>
-						</div>
-						<h3 className='text-2xl font-bold tracking-tight text-white sm:text-3xl'>{h('professionalCase.title')}</h3>
-						<p className='mt-2 text-base font-medium text-slate-300'>{h('professionalCase.subtitle')}</p>
-						<p className='mt-4 max-w-2xl text-sm leading-7 text-slate-400'>{h('professionalCase.description')}</p>
-						<div className='mt-6 flex flex-wrap gap-2'>
-							{technologies.map((technology) => (
-								<span key={technology} className='rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs font-medium text-slate-300'>
-									{technology}
-								</span>
-							))}
-						</div>
-					</div>
-					<a href='https://cearlatinoamericano.edu.pe/' target='_blank' rel='noreferrer' className='relative inline-flex w-fit items-center gap-2 rounded-xl bg-cyan-300 px-4 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200'>
-						{h('professionalCase.visit')}
-						<ExternalLink className='h-4 w-4' />
-					</a>
-				</div>
-			</article>
-			<article className='group relative mt-6 overflow-hidden rounded-3xl border border-amber-300/20 bg-[#0a1220]/80 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition-all hover:-translate-y-1 hover:border-amber-300/45 sm:p-6'>
-				<div className='pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-amber-400/10 blur-3xl' />
-				<div className='pointer-events-none absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(251,191,36,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(251,191,36,0.08)_1px,transparent_1px)] [background-size:28px_28px]' />
-				<div className='relative grid gap-7 lg:grid-cols-[1.15fr_0.85fr] lg:items-end'>
-					<ProfessionalCaseCarousel slides={mailerSlides} />
-					<div className='max-w-3xl'>
-						<div className='mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-amber-300'>
-							<span>{h('professionalCase.mailerRole')}</span>
-							<span className='text-slate-600'>/</span>
-							<span className='text-slate-500'>{h('professionalCase.type')}</span>
-						</div>
-						<h3 className='text-2xl font-bold tracking-tight text-white sm:text-3xl'>{h('professionalCase.mailerTitle')}</h3>
-						<p className='mt-2 text-base font-medium text-slate-300'>{h('professionalCase.mailerSubtitle')}</p>
-						<p className='mt-4 max-w-2xl text-sm leading-7 text-slate-400'>{h('professionalCase.mailerDescription')}</p>
-						<div className='mt-6 flex flex-wrap gap-2'>
-							{['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker'].map((technology) => (
-								<span key={technology} className='rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs font-medium text-slate-300'>
-									{technology}
-								</span>
-							))}
-						</div>
-					</div>
-				</div>
-			</article>
-			<article className='group relative mt-6 overflow-hidden rounded-3xl border border-violet-300/20 bg-[#0a1220]/80 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition-all hover:-translate-y-1 hover:border-violet-300/45 sm:p-8'>
-				<div className='pointer-events-none absolute -left-20 -top-24 h-64 w-64 rounded-full bg-violet-400/10 blur-3xl' />
-				<div className='relative grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center'>
-					<ProfessionalCaseCarousel slides={crmSlides} />
-					<div>
-						<div className='mb-4 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-violet-300'>
-							<span>{h('professionalCase.crmRole')}</span>
-							<span className='text-slate-600'>/</span>
-							<span className='text-slate-500'>{h('professionalCase.type')}</span>
-						</div>
-						<h3 className='text-2xl font-bold tracking-tight text-white sm:text-3xl'>{h('professionalCase.crmTitle')}</h3>
-						<p className='mt-2 text-base font-medium text-slate-300'>{h('professionalCase.crmSubtitle')}</p>
-						<p className='mt-4 text-sm leading-7 text-slate-400'>{h('professionalCase.crmDescription')}</p>
-						<div className='mt-6 flex flex-wrap gap-2'>
-							{technologies.map((technology) => (
-								<span key={technology} className='rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs font-medium text-slate-300'>
-									{technology}
-								</span>
-							))}
-						</div>
-					</div>
-				</div>
-			</article>
+
+			{/* CASO 1: CAMPUS VIRTUAL (TOP PROYECTO - ASIGNACIÓN 5 MESES) */}
+			<ProfessionalCaseCard
+				accent='teal'
+				isFeatured={true}
+				featuredText={h('professionalCase.campusDuration')}
+				role={h('professionalCase.campusRole')}
+				type={h('professionalCase.type')}
+				badge={h('professionalCase.campusDuration')}
+				title={h('professionalCase.campusTitle')}
+				subtitle={h('professionalCase.campusSubtitle')}
+				description={h('professionalCase.campusDescription')}
+				technologies={defaultTech}
+				videoSrc='https://cearlatinoamericano.edu.pe/sisdocs/video-presentacion/campus_virtual.mp4'
+				videoPoster='/projects/campus/home-students.png'
+				slides={campusSlides}
+				caseStudyHref='/projects/campus-virtual'
+				liveUrl='https://campus.cearlatinoamericano.edu.pe/'
+				howItWasDoneText={h('professionalCase.howItWasDone')}
+				visitText={h('professionalCase.campusVisit')}
+			/>
+
+			{/* CASO 2: PLATAFORMA WEB */}
+			<ProfessionalCaseCard
+				accent='cyan'
+				role={h('professionalCase.role')}
+				type={h('professionalCase.type')}
+				title={h('professionalCase.title')}
+				subtitle={h('professionalCase.subtitle')}
+				description={h('professionalCase.description')}
+				technologies={defaultTech}
+				slides={cearSlides}
+				caseStudyHref='/projects/cear-plataforma'
+				liveUrl='https://cearlatinoamericano.edu.pe/'
+				howItWasDoneText={h('professionalCase.howItWasDone')}
+				visitText={h('professionalCase.visit')}
+			/>
+
+			{/* CASO 3: SISTEMA MAILER */}
+			<ProfessionalCaseCard
+				accent='amber'
+				role={h('professionalCase.mailerRole')}
+				type={h('professionalCase.type')}
+				title={h('professionalCase.mailerTitle')}
+				subtitle={h('professionalCase.mailerSubtitle')}
+				description={h('professionalCase.mailerDescription')}
+				technologies={['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker']}
+				slides={mailerSlides}
+				caseStudyHref='/projects/sistema-mailer'
+				howItWasDoneText={h('professionalCase.howItWasDone')}
+			/>
+
+			{/* CASO 4: CRM INTERNO */}
+			<ProfessionalCaseCard
+				accent='violet'
+				role={h('professionalCase.crmRole')}
+				type={h('professionalCase.type')}
+				title={h('professionalCase.crmTitle')}
+				subtitle={h('professionalCase.crmSubtitle')}
+				description={h('professionalCase.crmDescription')}
+				technologies={defaultTech}
+				slides={crmSlides}
+				caseStudyHref='/projects/crm-interno'
+				howItWasDoneText={h('professionalCase.howItWasDone')}
+			/>
 		</section>
 	);
 };
