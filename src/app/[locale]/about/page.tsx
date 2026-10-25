@@ -48,8 +48,8 @@ const Page = async ({ params }: Props) => {
             <Image
               src='/sobre-mi.png'
               className='size-full md:rounded-tl-[108px] object-cover'
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               quality={90}
               alt='about image'
               priority

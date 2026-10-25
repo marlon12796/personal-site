@@ -6,6 +6,8 @@
     "button": "Submit",
     "inputEmail": "Email",
     "inputMessage": "Message",
+    "emailPlaceholder": "your-email@example.com",
+    "messagePlaceholder": "Tell me what you would like to build...",
     "labelMessage": "Enter a message",
     "methods": {
       "email": {

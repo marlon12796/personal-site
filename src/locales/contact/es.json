@@ -6,6 +6,8 @@
     "button": "Enviar",
     "inputEmail": "Correo",
     "inputMessage": "Mensaje",
+    "emailPlaceholder": "tu-correo@ejemplo.com",
+    "messagePlaceholder": "Cuéntame qué quieres construir...",
     "labelMessage": "Ingresa un Mensaje",
     "methods": {
       "email": {

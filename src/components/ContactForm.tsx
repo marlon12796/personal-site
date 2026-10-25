@@ -2,7 +2,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Loader2, Send } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/Form'
@@ -12,8 +12,37 @@ import { formSchema, type formSchemaType } from '@/lib/validatons/form'
 
 export const ContactForm = () => {
   const t = useTranslations('contact')
+  const emailHint = t('emailPlaceholder')
+  const messageHint = t('messagePlaceholder')
 
   const [contactStatus, setContactStatus] = useState<'success' | 'pending' | 'initial'>('initial')
+  const [emailPlaceholder, setEmailPlaceholder] = useState('')
+  const [messagePlaceholder, setMessagePlaceholder] = useState('')
+
+  useEffect(() => {
+    const cleanups: Array<() => void> = []
+
+    const typeOnce = (value: string, setter: (text: string) => void, delay: number) => {
+      const timeout = window.setTimeout(() => {
+        let index = 0
+        const interval = window.setInterval(() => {
+          index += 1
+          setter(value.slice(0, index))
+          if (index >= value.length) window.clearInterval(interval)
+        }, 45)
+
+        cleanups.push(() => window.clearInterval(interval))
+      }, delay)
+
+      cleanups.push(() => window.clearTimeout(timeout))
+    }
+
+    typeOnce(emailHint, setEmailPlaceholder, 250)
+    typeOnce(messageHint, setMessagePlaceholder, 1100)
+
+    return () => cleanups.forEach((cleanup) => cleanup())
+  }, [emailHint, messageHint])
+
   const form = useForm<formSchemaType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -66,15 +95,15 @@ export const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6 pt-2 pb-6'>
+      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8 pt-4 pb-6'>
         <FormField
           control={form.control}
           name='email'
           render={({ field }) => (
-            <FormItem>
+            <FormItem className='space-y-3'>
               <FormLabel className='text-sm font-medium text-slate-300'>{t('inputEmail')}</FormLabel>
               <FormControl>
-                <Input placeholder='tu-correo@ejemplo.com' {...field} />
+                <Input placeholder={emailPlaceholder} {...field} />
               </FormControl>
               <FormMessage className='text-red-400 text-xs' />
             </FormItem>
@@ -84,10 +113,10 @@ export const ContactForm = () => {
           control={form.control}
           name='message'
           render={({ field }) => (
-            <FormItem>
+            <FormItem className='space-y-3'>
               <FormLabel className='text-sm font-medium text-slate-300'>{t('inputMessage')}</FormLabel>
               <FormControl>
-                <Textarea placeholder={t('labelMessage')} className='resize-none' {...field} />
+                <Textarea placeholder={messagePlaceholder || t('labelMessage')} className='resize-none' {...field} />
               </FormControl>
               <FormMessage className='text-red-400 text-xs' />
             </FormItem>
