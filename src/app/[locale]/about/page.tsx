@@ -47,13 +47,11 @@ const Page = async ({ params }: Props) => {
           <div className='relative w-full aspect-square mt-14 md:mt-0 md:max-w-xl '>
             <Image
               src='/sobre-mi.png'
-              className=' md:rounded-tl-[108px] object-cover'
-              fill
-              width={250}
-              height={250}
+              className='size-full md:rounded-tl-[108px] object-cover'
+              width={500}
+              height={500}
               quality={90}
               alt='about image'
-              placeholder='blur'
               priority
             />
           </div>

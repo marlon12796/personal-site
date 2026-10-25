@@ -133,7 +133,6 @@ const Page = async ({ params }: Props) => {
                   sizes='(max-width: 1024px) 100vw, 500px'
                   quality={90}
                   priority
-                  placeholder='blur'
                 />
                 <div className='pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080e1c] via-transparent to-transparent opacity-80' />
               </div>
