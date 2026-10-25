@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { SVGProps } from 'react'
+
 const ReactIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg {...props} xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid' viewBox='0 -14 256 256'>
     <path

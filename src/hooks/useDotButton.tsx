@@ -1,5 +1,6 @@
-import  {  useCallback, useEffect, useState } from 'react'
 import { EmblaCarouselType } from 'embla-carousel'
+import { useCallback, useEffect, useState } from 'react'
+
 type UseDotButtonType = {
   selectedIndex: number
   scrollSnaps: number[]

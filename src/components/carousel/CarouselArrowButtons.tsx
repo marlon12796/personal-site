@@ -1,8 +1,7 @@
-import { ButtonHTMLAttributes } from 'react'
-
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { ButtonHTMLAttributes } from 'react'
 import { Button } from '@/components/ui/Button'
+import { cn } from '@/lib/utils'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode

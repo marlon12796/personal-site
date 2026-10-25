@@ -1,13 +1,13 @@
 'use client'
 import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
-import styles from './Carousel.module.css'
-import { usePrevNextButtons } from '@/hooks/usePrevNextButtons'
-import { useDotButton } from '@/hooks/useDotButton'
-import { LazyLoadImage } from './CarouselLazyloadImage'
-import { CarouselButtons } from '@/components/carousel/CarouselArrowButtons';
+import { CarouselButtons } from '@/components/carousel/CarouselArrowButtons'
 import { DotButton } from '@/components/carousel/CarouselDotButton'
+import { useDotButton } from '@/hooks/useDotButton'
+import { usePrevNextButtons } from '@/hooks/usePrevNextButtons'
 import { useSlidesInView } from '@/hooks/useSlideInView'
+import styles from './Carousel.module.css'
+import { LazyLoadImage } from './CarouselLazyloadImage'
 
 type PropType = {
   slides: number[]

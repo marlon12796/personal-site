@@ -1,9 +1,9 @@
 'use client'
-import styles from '@/components/carousel/Carousel.module.css'
 import useEmblaCarousel from 'embla-carousel-react'
-import { usePrevNextButtons } from '@/hooks/usePrevNextButtons'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import styles from '@/components/carousel/Carousel.module.css'
 import { Button } from '@/components/ui/Button'
+import { usePrevNextButtons } from '@/hooks/usePrevNextButtons'
 
 export const ProjectContainerCarousel = ({ children }: { children: React.ReactNode }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ dragFree: false, watchDrag: false })

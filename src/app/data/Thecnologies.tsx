@@ -1,3 +1,6 @@
+import { Accessibility, Gauge, GitBranch, MonitorSmartphone } from 'lucide-react'
+import AngularIcon from '@/components/svg/AngularIcon'
+import AWSIcon from '@/components/svg/AWSIcon'
 import ChakraUIIcon from '@/components/svg/ChakraUIIcon'
 import CSharpIcon from '@/components/svg/CSharpIcon'
 import CSS3Icon from '@/components/svg/CSS3Icon'
@@ -8,22 +11,19 @@ import FirebaseIcon from '@/components/svg/FirebaseIcon'
 import HTML5Icon from '@/components/svg/HTML5Icon'
 import JavaScriptIcon from '@/components/svg/JavaScriptIcon'
 import MUIIcon from '@/components/svg/MUIIcon'
+import NestjsIcon from '@/components/svg/NestjsIcon'
 import NextjsIcon from '@/components/svg/NextjsIcon'
+import NodejsIcon from '@/components/svg/NodejsIcon'
+import PostgreSQLIcon from '@/components/svg/PostgreSQLIcon'
 import PrismaIcon from '@/components/svg/PrismaIcon'
 import PythonIcon from '@/components/svg/PythonIcon'
 import ReactIcon from '@/components/svg/ReactIcon'
 import ReduxIcon from '@/components/svg/ReduxIcon'
+import SQLIcon from '@/components/svg/SQLIcon'
 import SupabaseIcon from '@/components/svg/SupabaseIcon'
 import TailwindIcon from '@/components/svg/TailwindIcon'
 import TypeScriptIcon from '@/components/svg/TypeScriptIcon'
 import ViteIcon from '@/components/svg/ViteIcon'
-import SQLIcon from '@/components/svg/SQLIcon'
-import AngularIcon from '@/components/svg/AngularIcon'
-import NestjsIcon from '@/components/svg/NestjsIcon'
-import NodejsIcon from '@/components/svg/NodejsIcon'
-import PostgreSQLIcon from '@/components/svg/PostgreSQLIcon'
-import AWSIcon from '@/components/svg/AWSIcon'
-import { Accessibility, Gauge, GitBranch, MonitorSmartphone } from 'lucide-react'
 
 export type TechnologyData = {
   color: string
@@ -223,22 +223,22 @@ export const technologies: Record<(typeof technologiesList)[number], TechnologyD
     color: 'text-orange-100'
   },
   'GitHub Actions': {
-    icon: <GitBranch className="h-5 w-5 text-violet-300" />,
+    icon: <GitBranch className='h-5 w-5 text-violet-300' />,
     bgColor: 'bg-violet-500/20',
     color: 'text-violet-100'
   },
   'Responsive Design': {
-    icon: <MonitorSmartphone className="h-5 w-5 text-cyan-300" />,
+    icon: <MonitorSmartphone className='h-5 w-5 text-cyan-300' />,
     bgColor: 'bg-cyan-500/20',
     color: 'text-cyan-100'
   },
   Accessibility: {
-    icon: <Accessibility className="h-5 w-5 text-pink-300" />,
+    icon: <Accessibility className='h-5 w-5 text-pink-300' />,
     bgColor: 'bg-pink-500/20',
     color: 'text-pink-100'
   },
   Performance: {
-    icon: <Gauge className="h-5 w-5 text-amber-300" />,
+    icon: <Gauge className='h-5 w-5 text-amber-300' />,
     bgColor: 'bg-amber-500/20',
     color: 'text-amber-100'
   }

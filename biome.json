@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.6.2/schema.json",
 	"formatter": {
 		"enabled": true,
 		"formatWithErrors": false,
@@ -9,23 +9,18 @@
 		"lineWidth": 130,
 		"attributePosition": "auto"
 	},
-	"organizeImports": {
-		"enabled": true
-	},
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": false,
-			"a11y": {
-				"noBlankTarget": "error"
-			},
+			"preset": "none",
+			"a11y": {},
 			"complexity": {
 				"noBannedTypes": "error",
 				"noExtraBooleanCast": "error",
-				"noMultipleSpacesInRegularExpressionLiterals": "error",
 				"noUselessCatch": "error",
 				"noUselessTypeConstraint": "error",
-				"noWith": "error"
+				"noAdjacentSpacesInRegex": "error"
 			},
 			"correctness": {
 				"noChildrenProp": "error",
@@ -35,7 +30,6 @@
 				"noEmptyPattern": "error",
 				"noGlobalObjectCalls": "error",
 				"noInvalidConstructorSuper": "error",
-				"noInvalidNewBuiltin": "error",
 				"noNonoctalDecimalEscape": "error",
 				"noPrecisionLoss": "error",
 				"noSelfAssign": "error",
@@ -49,21 +43,24 @@
 				"noUnusedLabels": "error",
 				"noUnusedPrivateClassMembers": "error",
 				"noUnusedVariables": "error",
-				"useArrayLiterals": "off",
 				"useIsNan": "error",
 				"useJsxKeyInIterable": "error",
 				"useValidForDirection": "error",
-				"useYield": "error"
+				"useYield": "error",
+				"noInvalidBuiltinInstantiation": "error",
+				"useValidTypeof": "error"
 			},
 			"security": {
-				"noDangerouslySetInnerHtmlWithChildren": "error"
+				"noDangerouslySetInnerHtmlWithChildren": "error",
+				"noBlankTarget": "error"
 			},
 			"style": {
 				"noNamespace": "error",
 				"useConsistentArrayType": "error",
 				"useLiteralEnumMembers": "error",
 				"useSelfClosingElements": "error",
-				"useAsConstAssertion": "error"
+				"useAsConstAssertion": "error",
+				"useArrayLiterals": "off"
 			},
 			"suspicious": {
 				"noAsyncPromiseExecutor": "error",
@@ -94,7 +91,7 @@
 				"noUnsafeNegation": "error",
 				"useAwait": "error",
 				"useGetterReturn": "error",
-				"useValidTypeof": "error"
+				"noWith": "error"
 			}
 		}
 	},
@@ -235,31 +232,28 @@
 			"ononline"
 		]
 	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
 	"overrides": [
 		{
-			"include": [
-				"**/*.ts",
-				"**/*.tsx",
-				"**/*.mts",
-				"**/*.cts"
-			],
+			"includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
 			"linter": {
 				"rules": {
 					"correctness": {
 						"noConstAssign": "off",
 						"noGlobalObjectCalls": "off",
 						"noInvalidConstructorSuper": "off",
-						"noInvalidNewBuiltin": "off",
-						"noNewSymbol": "off",
 						"noSetterReturn": "off",
 						"noUndeclaredVariables": "off",
 						"noUnreachable": "off",
 						"noUnreachableSuper": "off",
-						"useExhaustiveDependencies": "error"
+						"useExhaustiveDependencies": "error",
+						"noInvalidBuiltinInstantiation": "off"
 					},
 					"style": {
-						"noArguments": "error",
-						"noVar": "error",
 						"useConst": "error"
 					},
 					"suspicious": {
@@ -270,7 +264,11 @@
 						"noImportAssign": "off",
 						"noRedeclare": "off",
 						"noUnsafeNegation": "off",
-						"useGetterReturn": "off"
+						"useGetterReturn": "off",
+						"noVar": "error"
+					},
+					"complexity": {
+						"noArguments": "error"
 					}
 				}
 			}

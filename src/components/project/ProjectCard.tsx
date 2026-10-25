@@ -1,10 +1,10 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
 import { ExternalLink, Github } from 'lucide-react'
-import { PersonalProject } from '@/types'
 import { technologies } from '@/app/data/Thecnologies'
-import { Button } from '@/components/ui/Button'
-import CustomTooltip from '@/components/ui/CustomTooltip'
 import { Carousel } from '@/components/carousel/Carousel'
+import { Button } from '@/components/ui/Button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card'
+import CustomTooltip from '@/components/ui/CustomTooltip'
+import { PersonalProject } from '@/types'
 
 type Props = {
   project: PersonalProject
@@ -17,9 +17,7 @@ const ProjectCard = ({ project }: Props) => {
         <span className='w-2.5 h-2.5 rounded-full bg-rose-500/80' />
         <span className='w-2.5 h-2.5 rounded-full bg-amber-500/80' />
         <span className='w-2.5 h-2.5 rounded-full bg-emerald-500/80' />
-        <span className='text-[11px] text-slate-500 font-mono ml-2 truncate max-w-[200px]'>
-          {project.mainPath}
-        </span>
+        <span className='text-[11px] text-slate-500 font-mono ml-2 truncate max-w-[200px]'>{project.mainPath}</span>
       </div>
 
       <div className='p-0 embla overflow-hidden aspect-[2/1] lg:min-h-[17rem] bg-black/30'>
@@ -27,7 +25,7 @@ const ProjectCard = ({ project }: Props) => {
           slides={Array.from(Array(project.images.length).keys())}
           mainPath={project.mainPath}
           isCover={project.isCover}
-            alt={project.name}
+          alt={project.name}
         />
       </div>
 
@@ -35,9 +33,7 @@ const ProjectCard = ({ project }: Props) => {
         <h3 className='text-xl font-bold text-white tracking-tight mb-2 group-hover:text-cyan-300 transition-colors'>
           {project.name}
         </h3>
-        <p className='text-sm text-slate-400 line-clamp-2 leading-relaxed mb-4'>
-          {project.description}
-        </p>
+        <p className='text-sm text-slate-400 line-clamp-2 leading-relaxed mb-4'>{project.description}</p>
 
         <div className='mt-auto flex flex-wrap gap-1.5 mb-5'>
           {project.stack.map(
@@ -64,7 +60,9 @@ const ProjectCard = ({ project }: Props) => {
               <span>Live Demo</span>
               <ExternalLink className='w-3.5 h-3.5' />
             </a>
-          ) : <div />}
+          ) : (
+            <div />
+          )}
 
           {project.githubLink && (
             <a

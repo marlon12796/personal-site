@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from 'react'
 import { EmblaCarouselType } from 'embla-carousel'
+import { useCallback, useEffect, useState } from 'react'
 
 export const useSlidesInView = (emblaApi?: EmblaCarouselType) => {
   const [slidesInView, setSlidesInView] = useState<number[]>([])
