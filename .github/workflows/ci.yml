@@ -43,7 +43,13 @@ jobs:
 
       - name: Tests
         id: tests
-        run: pnpm run test --if-present
+        shell: bash
+        run: |
+          if node -e "process.exit(Object.hasOwn(require('./package.json').scripts ?? {}, 'test') ? 0 : 1)"; then
+            pnpm test
+          else
+            echo "No test script configured; skipping tests."
+          fi
 
       - name: Build Vinext
         id: build
