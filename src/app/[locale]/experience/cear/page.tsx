@@ -213,10 +213,10 @@ const Page = async ({ params }: Props) => {
                 <Image
                   src='/sobre-mi.png'
                   alt='Marlon - Desarrollador Full-Stack'
-                  width={250}
-                  height={250}
+                  width={400}
+                  height={400}
                   quality={90}
-                  className='object-cover object-top hover:scale-105 transition-transform duration-500'
+                  className='size-full object-cover object-top hover:scale-105 transition-transform duration-500'
                   priority
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent' />
