@@ -40,7 +40,7 @@ export async function POST(request: Request) {
   if (!parsed.success) {
     return NextResponse.json(
       {
-        errors: parsed.error.errors.map((err) => ({
+        errors: parsed.error.issues.map((err) => ({
           title: 'Validation Error',
           detail: err.message
         }))

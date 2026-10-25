@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { ListEducation } from '@/components/education/ListEducation'
 import { type Locale, locales } from '@/i18n/config'
-import AboutImage from '/public/sobre-mi.png'
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
@@ -47,7 +46,7 @@ const Page = async ({ params }: Props) => {
           </div>
           <div className='relative w-full aspect-square mt-14 md:mt-0 md:max-w-xl '>
             <Image
-              src={AboutImage}
+              src='/sobre-mi.png'
               className=' md:rounded-tl-[108px] object-cover'
               fill
               width={250}

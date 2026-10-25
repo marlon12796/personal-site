@@ -5,7 +5,6 @@ import { iconsMethod } from '@/app/data/content/contact'
 import { ContactForm } from '@/components/ContactForm'
 import { Toaster } from '@/components/ui/sonner'
 import { type Locale, locales } from '@/i18n/config'
-import imgSetup from '/public/static/setup.webp'
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
@@ -127,7 +126,7 @@ const Page = async ({ params }: Props) => {
               {/* Setup Photo */}
               <div className='relative h-64 sm:h-72 w-full overflow-hidden group'>
                 <Image
-                  src={imgSetup}
+                  src='/static/setup.webp'
                   fill
                   alt='Marlon Dev Workstation Setup'
                   className='object-cover transition-transform duration-700 ease-out group-hover:scale-105'
