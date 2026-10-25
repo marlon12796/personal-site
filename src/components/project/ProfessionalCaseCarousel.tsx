@@ -10,15 +10,15 @@ export type ProfessionalCaseSlide = {
 
 const defaultSlides: ProfessionalCaseSlide[] = [
   {
-    src: "/projects/cear/home.png",
+    src: "/projects/cear/home.webp",
     alt: "Página principal de CEAR Latinoamericano",
   },
   {
-    src: "/projects/cear/cursos.png",
+    src: "/projects/cear/cursos.webp",
     alt: "Sección de cursos de CEAR Latinoamericano",
   },
   {
-    src: "/projects/cear/contacto.png",
+    src: "/projects/cear/contacto.webp",
     alt: "Página de contacto de CEAR Latinoamericano",
   },
 ];

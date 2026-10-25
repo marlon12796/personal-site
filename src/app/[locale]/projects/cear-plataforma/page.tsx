@@ -42,15 +42,15 @@ type EngineeringItem = { title: string; description: string };
 
 const cearSlides: ProfessionalCaseSlide[] = [
   {
-    src: "/projects/cear/home.png",
+    src: "/projects/cear/home.webp",
     alt: "Inicio de la plataforma CEAR Latinoamericano",
   },
   {
-    src: "/projects/cear/cursos.png",
+    src: "/projects/cear/cursos.webp",
     alt: "Catálogo de cursos de CEAR Latinoamericano",
   },
   {
-    src: "/projects/cear/contacto.png",
+    src: "/projects/cear/contacto.webp",
     alt: "Módulo de contacto y admisión de CEAR Latinoamericano",
   },
 ];

@@ -50,19 +50,19 @@ type EngineeringItem = { title: string; description: string };
 
 const mailerSlides: ProfessionalCaseSlide[] = [
   {
-    src: "/projects/mailer/home.png",
+    src: "/projects/mailer/home.webp",
     alt: "Panel principal del sistema Mailer",
   },
   {
-    src: "/projects/mailer/campaings.png",
+    src: "/projects/mailer/campaings.webp",
     alt: "Gestión de campañas del sistema Mailer",
   },
   {
-    src: "/projects/mailer/plantillas.png",
+    src: "/projects/mailer/plantillas.webp",
     alt: "Gestión de plantillas del sistema Mailer",
   },
-  { src: "/projects/mailer/metrica.png", alt: "Métricas del sistema Mailer" },
-  { src: "/projects/mailer/diseño.png", alt: "Diseño del sistema Mailer" },
+  { src: "/projects/mailer/metrica.webp", alt: "Métricas del sistema Mailer" },
+  { src: "/projects/mailer/diseño.webp", alt: "Diseño del sistema Mailer" },
 ];
 
 const Page = async ({ params }: Props) => {

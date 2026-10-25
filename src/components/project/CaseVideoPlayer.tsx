@@ -13,7 +13,7 @@ export type CaseVideoPlayerProps = {
 
 export const CaseVideoPlayer: React.FC<CaseVideoPlayerProps> = ({
 	src,
-	poster = '/projects/campus/home-students.png',
+  poster = '/projects/campus/home-students.webp',
 	title = 'Presentación Oficial del Campus Virtual',
 	accentColor = 'teal',
 	autoPlay = false,

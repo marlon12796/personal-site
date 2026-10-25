@@ -52,35 +52,35 @@ type EngineeringItem = { title: string; description: string };
 
 const campusSlides: ProfessionalCaseSlide[] = [
   {
-    src: "/projects/campus/home-students.png",
+    src: "/projects/campus/home-students.webp",
     alt: "Vista Estudiante: Panel principal de asignaturas y cronograma de sesiones",
   },
   {
-    src: "/projects/campus/home-admin.png",
+    src: "/projects/campus/home-admin.webp",
     alt: "Vista Administrador: Dashboard general, métricas y control de accesos",
   },
   {
-    src: "/projects/campus/estudiantes-admin-notas.png",
+    src: "/projects/campus/estudiantes-admin-notas.webp",
     alt: "Gestión Administrativa: Registro y ponderación de calificaciones de alumnos",
   },
   {
-    src: "/projects/campus/exam-student.png",
+    src: "/projects/campus/exam-student.webp",
     alt: "Módulo de Exámenes: Interfaz de evaluaciones interactivas para estudiantes",
   },
   {
-    src: "/projects/campus/silabo-admin.png",
+    src: "/projects/campus/silabo-admin.webp",
     alt: "Gestión Académica: Administración modular de sílabos y material didáctico",
   },
   {
-    src: "/projects/campus/pagos-student.png",
+    src: "/projects/campus/pagos-student.webp",
     alt: "Módulo Financiero: Historial de pagos, comprobantes y cuotas del estudiante",
   },
   {
-    src: "/projects/campus/users-admin.png",
+    src: "/projects/campus/users-admin.webp",
     alt: "Seguridad y Accesos: Gestión de usuarios y control de roles (RBAC)",
   },
   {
-    src: "/projects/campus/config-admin.png",
+    src: "/projects/campus/config-admin.webp",
     alt: "Configuración del Sistema: Parámetros institucionales y de plataforma",
   },
 ];
@@ -205,7 +205,7 @@ const Page = async ({ params }: Props) => {
         media={
           <CaseVideoPlayer
             src="https://cearlatinoamericano.edu.pe/sisdocs/video-presentacion/campus_virtual.mp4"
-            poster="/projects/campus/home-students.png"
+            poster="/projects/campus/home-students.webp"
             title="Presentación Oficial del Campus Virtual"
             accentColor="teal"
           />

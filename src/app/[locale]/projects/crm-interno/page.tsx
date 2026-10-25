@@ -49,19 +49,19 @@ type EngineeringItem = { title: string; description: string };
 
 const crmSlides: ProfessionalCaseSlide[] = [
   {
-    src: "/projects/cear-crm/home.png",
+    src: "/projects/cear-crm/home.webp",
     alt: "Panel principal del CRM de CEAR Latinoamericano",
   },
   {
-    src: "/projects/cear-crm/ENTIDADES2.png",
+    src: "/projects/cear-crm/ENTIDADES2.webp",
     alt: "Módulo de entidades RNP del CRM",
   },
   {
-    src: "/projects/cear-crm/LEAD.png",
+    src: "/projects/cear-crm/LEAD.webp",
     alt: "Módulo de gestión y seguimiento de leads",
   },
   {
-    src: "/projects/cear-crm/TAREAS.png",
+    src: "/projects/cear-crm/TAREAS.webp",
     alt: "Módulo de asignación y control de tareas comerciales",
   },
 ];
