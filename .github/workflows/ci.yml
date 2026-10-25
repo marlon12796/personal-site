@@ -27,28 +27,38 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - name: Setup pnpm and Node.js
+        uses: pnpm/setup@v3
         with:
-          version: 10.18.0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+          cache: true
+          require-lockfile: true
 
       - name: Biome lint and format check
+        id: biome
         run: pnpm exec biome check src
 
       - name: Typecheck
+        id: typecheck
         run: pnpm exec tsc --noEmit
 
       - name: Tests
+        id: tests
         run: pnpm run test --if-present
 
       - name: Build Vinext
+        id: build
         run: pnpm run build:vinext
+
+      - name: CI summary
+        if: always()
+        run: |
+          {
+            echo "## CI summary"
+            echo ""
+            echo "| Check | Result |"
+            echo "|---|---|"
+            echo "| Biome | ${{ steps.biome.outcome }} |"
+            echo "| TypeScript | ${{ steps.typecheck.outcome }} |"
+            echo "| Tests | ${{ steps.tests.outcome }} |"
+            echo "| Vinext build | ${{ steps.build.outcome }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
