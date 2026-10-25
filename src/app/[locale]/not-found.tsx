@@ -13,7 +13,7 @@ const NotFoundPage = () => {
           src={'/404.webp'}
           fill
           alt='not-found page'
-          sizes='100vw'
+          sizes='(max-width: 768px) 100vw, 67vw'
           fetchPriority='high'
           className='-z-10 object-cover opacity-75'
         />

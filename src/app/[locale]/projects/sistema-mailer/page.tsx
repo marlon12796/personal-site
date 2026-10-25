@@ -26,7 +26,13 @@ import { ProjectEngineeringChallenges } from "@/components/project/ProjectEngine
 import { ProjectGallerySection } from "@/components/project/ProjectGallerySection";
 import { ProjectBottomCTA } from "@/components/project/ProjectBottomCTA";
 import { getTranslations } from "next-intl/server";
-import type { Locale } from "@/i18n/config";
+import { locales, type Locale } from "@/i18n/config";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title:

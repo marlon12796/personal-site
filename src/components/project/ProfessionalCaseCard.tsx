@@ -192,7 +192,6 @@ export const ProfessionalCaseCard: React.FC<ProfessionalCaseCardProps> = ({
             <ProfessionalCaseCarousel
               slides={slides || []}
               aspect="aspect-[16/9.6]"
-              unoptimized={true}
               showCaption={false}
               allowFullscreen={false}
             />

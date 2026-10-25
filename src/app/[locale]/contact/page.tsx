@@ -3,9 +3,15 @@ import { ContactForm } from "@/components/ContactForm";
 import { iconsMethod } from "@/app/data/content/contact";
 import imgSetup from "/public/static/setup.webp";
 import { getTranslations } from "next-intl/server";
-import type { Locale } from "@/i18n/config";
+import { locales, type Locale } from "@/i18n/config";
 import { Toaster } from "@/components/ui/sonner";
 import { Mail, Phone, MessageSquare, Sparkles } from "lucide-react";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export const dynamic = "force-static";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -137,6 +143,7 @@ const Page = async ({ params }: Props) => {
                   alt="Marlon Dev Workstation Setup"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 500px"
+                  quality={90}
                   priority
                   placeholder="blur"
                 />

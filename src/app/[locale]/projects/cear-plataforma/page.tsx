@@ -18,7 +18,13 @@ import {
   CEAR_WEB_TECH_CATEGORIES,
 } from "@/components/project/ProjectTechStackGrid";
 import { getTranslations } from "next-intl/server";
-import type { Locale } from "@/i18n/config";
+import { locales, type Locale } from "@/i18n/config";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title:

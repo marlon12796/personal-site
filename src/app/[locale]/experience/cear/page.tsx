@@ -29,11 +29,16 @@ import {
   MotionStaggerItem,
 } from "@/components/project/ProjectCaseAnimations";
 import { getTranslations } from "next-intl/server";
-import type { Locale } from "@/i18n/config";
+import { locales, type Locale } from "@/i18n/config";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title:
-    "Experiencia Full-Stack en CEAR Latinoamericano | Marlon",
+  title: "Experiencia Full-Stack en CEAR Latinoamericano | Marlon",
   description:
     "Detalle de responsabilidades, liderazgo de arquitectura y los 4 sistemas empresariales desarrollados para CEAR Latinoamericano: Campus Virtual, Sistema Mailer, CRM Interno y Plataforma Web.",
 };
@@ -49,7 +54,11 @@ type System = {
   title: string;
   tag: string;
   description: string;
-  href: "/projects/campus-virtual" | "/projects/sistema-mailer" | "/projects/crm-interno" | "/projects/cear-plataforma";
+  href:
+    | "/projects/campus-virtual"
+    | "/projects/sistema-mailer"
+    | "/projects/crm-interno"
+    | "/projects/cear-plataforma";
 };
 
 const pillarIcons = [Server, Code2, Cpu, Layers];
@@ -212,7 +221,9 @@ const Page = async ({ params }: Props) => {
                 <Image
                   src="/sobre-mi.png"
                   alt="Marlon - Desarrollador Full-Stack"
-                  fill
+                  width={250}
+                  height={250}
+                  quality={90}
                   className="object-cover object-top hover:scale-105 transition-transform duration-500"
                   priority
                 />
@@ -238,8 +249,9 @@ const Page = async ({ params }: Props) => {
                   <Image
                     src="/logo-white.webp"
                     alt="CEAR Latinoamericano"
-                    width={200}
-                    height={120}
+                    width={150}
+                    height={150}
+                    quality={90}
                     className="h-auto w-full max-w-[170px] object-contain opacity-95"
                     priority
                   />
@@ -331,7 +343,9 @@ const Page = async ({ params }: Props) => {
 
                 <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-slate-400 group-hover:text-white transition-colors">
                   <span>{t("exploreCase")}</span>
-                  <span className={`text-base font-bold ${theme.accent}`}>→</span>
+                  <span className={`text-base font-bold ${theme.accent}`}>
+                    →
+                  </span>
                 </div>
               </Link>
             );

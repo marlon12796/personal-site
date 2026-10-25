@@ -9,6 +9,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "~> 5.0"
+    }
   }
 }
 
@@ -24,6 +28,8 @@ provider "aws" {
   }
 }
 
+provider "cloudflare" {}
+
 
 
 module "ses" {
@@ -35,4 +41,13 @@ module "ses" {
   tags = {
     Component = "EmailNotification"
   }
+}
+
+module "cloudflare" {
+  source = "../../modules/cloudflare"
+
+  account_id                 = var.cloudflare_account_id
+  domain                     = var.cloudflare_domain
+  worker_name                = var.cloudflare_worker_name
+  response_store_bucket_name = var.cloudflare_response_store_bucket_name
 }

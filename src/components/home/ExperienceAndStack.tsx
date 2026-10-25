@@ -21,7 +21,10 @@ export const ExperienceAndStack = () => {
   const t = useTranslations("home");
 
   return (
-    <section id="experience" className="w-full max-w-screen-xl mx-auto px-4 py-8 sm:py-12 scroll-mt-20">
+    <section
+      id="experience"
+      className="w-full max-w-screen-xl mx-auto px-4 py-8 sm:py-12 scroll-mt-20"
+    >
       <Link
         href="/experience/cear"
         className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#0d1729] via-[#0a1220] to-[#07101c] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.35)] sm:p-10 hover:border-cyan-400/40 hover:shadow-[0_20px_70px_rgba(6,182,212,0.15)] transition-all cursor-pointer"
@@ -65,7 +68,9 @@ export const ExperienceAndStack = () => {
 
             <div className="mt-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 text-xs font-semibold group-hover:bg-cyan-400/20 group-hover:border-cyan-400/50 transition-all shadow-[0_0_15px_rgba(6,182,212,0.2)]">
-                <span>Conoce en detalle mi impacto y los 4 sistemas en CEAR</span>
+                <span>
+                  Conoce en detalle mi impacto y los 4 sistemas en CEAR
+                </span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
@@ -88,7 +93,9 @@ export const ExperienceAndStack = () => {
               src="/logo-white.webp"
               alt="CEAR Latinoamericano"
               width={220}
-              height={132}
+              height={175}
+              quality={90}
+              loading="lazy"
               className="relative h-auto w-full max-w-[190px] object-contain opacity-95 group-hover:scale-105 transition-transform"
             />
             <span className="mt-3 text-[11px] font-mono font-medium text-cyan-300/80 group-hover:text-cyan-300 transition-colors flex items-center gap-1">
