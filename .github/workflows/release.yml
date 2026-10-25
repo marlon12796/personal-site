@@ -4,11 +4,12 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 permissions:
   contents: write
+  issues: write
   pull-requests: write
-  actions: write
 
 jobs:
   release-please:
@@ -20,5 +21,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: .github/utils/release-please-config.json
-          manifest-file: .github/utils/.release-please-manifest.json
           skip-labeling: true
