@@ -2,6 +2,7 @@ import { Accessibility, Gauge, GitBranch, MonitorSmartphone } from 'lucide-react
 import AngularIcon from '@/components/svg/AngularIcon'
 import AWSIcon from '@/components/svg/AWSIcon'
 import ChakraUIIcon from '@/components/svg/ChakraUIIcon'
+import CloudflareIcon from '@/components/svg/CloudflareIcon'
 import CSharpIcon from '@/components/svg/CSharpIcon'
 import CSS3Icon from '@/components/svg/CSS3Icon'
 import DockerIcon from '@/components/svg/DockerIcon'
@@ -64,6 +65,7 @@ export const technologiesList = [
   'PostgreSQL',
   'AWS',
   'GitHub Actions',
+  'Cloudflare',
   'Responsive Design',
   'Accessibility',
   'Performance'
@@ -227,6 +229,11 @@ export const technologies: Record<(typeof technologiesList)[number], TechnologyD
     bgColor: 'bg-violet-500/20',
     color: 'text-violet-100'
   },
+  Cloudflare: {
+    icon: <CloudflareIcon className='h-5 w-5' />,
+    bgColor: 'bg-orange-500/20',
+    color: 'text-orange-100'
+  },
   'Responsive Design': {
     icon: <MonitorSmartphone className='h-5 w-5 text-cyan-300' />,
     bgColor: 'bg-cyan-500/20',
@@ -246,6 +253,6 @@ export const technologies: Record<(typeof technologiesList)[number], TechnologyD
 export const mainTechnologies: { [key: string]: TechnologiesList } = {
   Frontend: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
   Backend: ['Node.js', 'Express', 'PostgreSQL', 'NestJS'],
-  'Cloud & DevOps': ['AWS', 'Docker', 'GitHub Actions'],
+  'Cloud & DevOps': ['AWS', 'Docker', 'GitHub Actions', 'Cloudflare'],
   'UI & Performance': ['Responsive Design', 'Accessibility', 'Performance']
 }

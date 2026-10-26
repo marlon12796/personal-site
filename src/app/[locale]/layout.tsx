@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { Footer } from '@/components/Footer'
 import { Navbar } from '@/components/navbar/MainNavbar'
+import { SiteInfoPopup } from '@/components/SiteInfoPopup'
 import { type Locale, locales } from '@/i18n/config'
 
 const notoSansMono = Noto_Sans_Mono({
@@ -38,6 +39,7 @@ const RootLayout = async ({ children, params }: RootLayoutProps) => {
 
           {children}
           <Footer />
+          <SiteInfoPopup locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
